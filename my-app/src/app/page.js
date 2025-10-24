@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [image, setImage] = useState(null);
@@ -15,20 +16,25 @@ export default function Home() {
     }
   };
   return (
-    <div className="p-2 w-[750px] m-auto border">
+    <div className="z-1000 p-2 pt-4 w-[750px] m-auto flex flex-col gap-6">
       <Navbar />
-      <div className="flex justify-center flex-col items-center border">
-        <h1 className="text-3xl">Create Your Story</h1>
-        <p className="text-lg">
-          Lorem nbjehfwe f er erb ergne ng erg en ge g ne g
-        </p>
+      <div className="flex justify-center py-2 flex-col items-center">
+        <h1 className="text-primary sm:text-4xl text-2xl font-semibold">
+          Create Your Story
+        </h1>
+        <p className="text-lg text-secondary">Upload an image to get started</p>
       </div>
-      <div className="flex border gap-5 p-5 h-130 justify-around">
-        <div className="bg-red-200 w-[50%] flex flex-col justify-center items-center border">
-          <label className="border p-4 flex items-center justify-center flex-col gap-2 w-full h-screen cursor-pointer">
-            <h2 className="text-xl font-semibold text-center">
-              Drag and drop your image here or click to upload
-            </h2>
+      <div className="flex gap-5 p-5 h-130 justify-around">
+        <div className="rounded-md w-[50%] flex flex-col justify-center items-center border-2 border-dashed border-primary">
+          <label className="border p-4 flex items-center justify-center flex-col gap-3 w-full h-screen cursor-pointer">
+            <div className="flex flex-col justify-center items-center">
+              <h2 className="text-primary text-lg font-semibold text-center">
+                Drag and drop your image here or click to upload
+              </h2>
+              <p className="text-background opacity-75">
+                Supports JPG, PNG etc
+              </p>
+            </div>
 
             <input
               type="file"
@@ -37,44 +43,41 @@ export default function Home() {
               className="hidden"
             />
             <div className="flex flex-col items-center justify-center">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 15a4 4 0 014-4h10a4 4 0 014 4v4H3v-4zM7 10V6a5 5 0 0110 0v4"
-                />
-              </svg>
-              <span className="">Click to upload image</span>
+              <span className="border-2 text-background border-primary text-sm px-4 py-1 rounded-full">
+                Upload image
+              </span>
             </div>
           </label>
         </div>
-        <div className="bg-green-200 w-[50%] border">
+        <div className="w-[50%] border rounded-md">
           {image ? (
-            <div className="">
+            <div>
               <img
                 src={image}
                 alt="Uploaded"
-                className="w-full object-cover h-120"
+                className="rounded-md w-full object-cover h-120"
               />
             </div>
           ) : (
-            <img src="" alt="Uploaded" className="w-full object-cover h-120" />
+            <img
+              className="h-full max-w-full rounded-md object-cover"
+              src="https://i.imgur.com/lSqHYkf.jpeg"
+              alt="image description"
+            />
           )}
         </div>
       </div>
       {image && (
-        <div className="border m-auto flex justify-center text-center">
-          <Link href="/edit" className="bg-purple-600 text-white p-2 px-4">
+        <div className="m-auto flex justify-center text-center">
+          <Link
+            href="/edit"
+            className="bg-purple-600 rounded-full text-white p-2 px-4"
+          >
             <button>Continue to edit</button>
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

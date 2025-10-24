@@ -14,6 +14,8 @@ export default function Edit() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [uploadImage, setUploadImage] = useState(null);
+  const [boldClick, setBoldClick] = useState(false);
+  const [italicClick, setItalicClick] = useState(false);
 
   useEffect(() => {
     const user_upload_image = localStorage.getItem("upload-image");
@@ -38,6 +40,14 @@ export default function Edit() {
 
   const handleTextButton = () => {
     setTextButtonClick(!textButtonClick);
+  };
+
+  const handleTextBold = () => {
+    setBoldClick(!boldClick);
+  };
+
+  const handleTextItalic = () => {
+    setItalicClick(!italicClick);
   };
 
   const handleMouseDown = (e) => {
@@ -76,20 +86,20 @@ export default function Edit() {
   // };
 
   return (
-    <div className="p-2 sm:w-[750px] m-auto border">
-      <div className="border flex items-center justify-between">
-        <div className="flex items-center gap-2">
+    <div className="p-2 pt-4 sm:w-[750px] m-auto border flex flex-col gap-8">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-blinds-icon lucide-blinds"
+            className="text-primary lucide lucide-blinds-icon lucide-blinds"
           >
             <path d="M3 3h18" />
             <path d="M20 7H8" />
@@ -99,20 +109,24 @@ export default function Edit() {
             <path d="M4 3v14" />
             <circle cx="4" cy="19" r="2" />
           </svg>
-          <h1>StoryEdit</h1>
+          <h1 className="text-background">StoryEdit</h1>
         </div>
-        <div className="flex items-center gap-4">
-          <p className="border py-1 px-3">Save</p>
-          <p className="border py-1 px-3">Back</p>
+        <div className="flex items-center gap-4 text-sm">
+          <p className="border-2 rounded-full px-5 py-1 border-primary text-background">
+            Save
+          </p>
+          <p className="border-2 rounded-full px-5 py-1 border-primary text-background">
+            Back
+          </p>
         </div>
       </div>
-      <div className="flex border gap-5 p-5 h-130 justify-around">
-        <div className="overflow-auto relative w-[60%] border">
-          <div className="">
+      <div className="flex gap-5 h-130 justify-around">
+        <div className="overflow-auto relative w-[60%]">
+          <div>
             <img
               src={uploadImage}
               alt="Uploaded"
-              className="w-full object-cover h-120"
+              className="border border-primary w-full object-cover h-120"
             />
             <div>
               {text && (
@@ -120,7 +134,7 @@ export default function Edit() {
                   className="absolute top-1/2 w-full p-2"
                   style={{
                     fontSize: `${fontSize}px`,
-                    fontFamily: `${fontFamily}`,
+                    fontFamily: italicClick ? "monospace" : `${fontFamily}`,
                     color: `${fontColor}`,
                   }}
                 >
@@ -132,6 +146,7 @@ export default function Edit() {
                       cursor: isDraggable ? "grabbing" : "grab",
                       left: `${position.x}px`,
                       top: `${position.y}px`,
+                      fontWeight: boldClick ? "bold" : "normal",
                     }}
                     className="p-2 w-max"
                   >
@@ -150,13 +165,13 @@ export default function Edit() {
             </div>
           </div>
         </div>
-        <div className="border w-[40%] h-120 p-2 flex flex-col gap-5 overflow-auto">
+        <div className="border border-background w-[40%] h-120 p-2 flex flex-col gap-5 overflow-auto custom-scrollbar">
           <div
             className="flex flex-col gap-2 text-base font-semibold"
             onClick={handleTextButton}
           >
-            <label>Tools</label>
-            <div className="border cursor-pointer p-2 gap-1 flex items-center justify-center">
+            <label className="text-background">Tools</label>
+            <div className="border text-accent border-background cursor-pointer p-2 gap-1 flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -177,10 +192,10 @@ export default function Edit() {
             </div>
           </div>
           <div className="flex flex-col gap-2 text-base font-semibold">
-            <label>Font Family</label>
-            <div className="relative inline-block border">
+            <label className="text-background">Font Family</label>
+            <div className="relative inline-block border border-background">
               <select
-                className="p-2 border outline-none text-sm cursor-pointer appearance-none w-full"
+                className="p-2 text-primary outline-none text-sm cursor-pointer appearance-none w-full"
                 onChange={handleFontFamily}
               >
                 <option value="Arial">Arial</option>
@@ -194,22 +209,22 @@ export default function Edit() {
                 <option value="Lucida Console">Lucida Console</option>
                 <option value="Times New Roman">Times New Roman</option>
               </select>
-              <span className="text-sm absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+              <span className="text-sm text-accent absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
                 ▼
               </span>
             </div>
           </div>
           <div className="flex flex-col gap-2 text-base font-semibold">
-            <label>Font Size</label>
+            <label className="text-background">Font Size</label>
             <input
               type="number"
-              className="border p-2 outline"
+              className="text-accent border border-background p-2 outline"
               value={fontSize}
               onChange={handleFontSize}
             />
           </div>
           <div className="flex flex-col gap-2 text-base font-semibold">
-            <label>Text Color</label>
+            <label className="text-background">Text Color</label>
             <div className="relative flex items-center gap-2">
               <div
                 className="w-5 bg-[#ff0000] h-5 rounded-full"
@@ -280,7 +295,10 @@ export default function Edit() {
           <div className="flex flex-col gap-2 text-base font-semibold">
             <label>Styles & Alignment</label>
             <div className="border flex items-center justify-between">
-              <div className="border p-2 cursor-pointer">
+              <div
+                className="border p-2 cursor-pointer"
+                onClick={handleTextBold}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -296,7 +314,12 @@ export default function Edit() {
                   <path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8" />
                 </svg>
               </div>
-              <div className="border p-2 cursor-pointer">
+              <div
+                className="border p-2 cursor-pointer"
+                onClick={() => {
+                  setItalicClick(!italicClick);
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
