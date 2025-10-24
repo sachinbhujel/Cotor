@@ -1,13 +1,12 @@
 "use client";
 
 import Input from "../components/Input";
-import Main from "../components/Main";
 import React, { useEffect, useState } from "react";
 
 export default function Edit() {
   const [textButtonClick, setTextButtonClick] = useState(false);
-  const [text, setText] = useState("Your Text");
-  const [fontSize, setFontSize] = useState(24);
+  const [text, setText] = useState("");
+  const [fontSize, setFontSize] = useState(22);
   const [fontFamily, setFontFamily] = useState(null);
   const [fontBg, setFontBg] = useState(null);
   const [fontColor, setFontColor] = useState(null);
@@ -33,12 +32,51 @@ export default function Edit() {
     setFontColor(e.target.value);
   };
 
+  const handleFontBg = (e) => {
+    setFontBg(e.target.value);
+  };
+
   const handleTextButton = () => {
     setTextButtonClick(!textButtonClick);
   };
 
+  const handleMouseDown = (e) => {
+    setIsDraggable(true);
+    setOffset({
+      x: e.clientX - position.x,
+      y: e.clientY - position.y,
+    });
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (isDraggable) {
+        setPosition({
+          x: e.clientX - offset.x,
+          y: e.clientY - offset.y,
+        });
+      }
+    };
+
+    const handleMouseUp = () => {
+      setIsDraggable(false);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isDraggable, offset, setPosition, setIsDraggable]);
+
+  // const handleColorPicker = () => {
+  //   document.getElementById("color-input").click();
+  // };
+
   return (
-    <div className="p-2 w-[750px] m-auto border">
+    <div className="p-2 sm:w-[750px] m-auto border">
       <div className="border flex items-center justify-between">
         <div className="flex items-center gap-2">
           <svg
@@ -69,19 +107,50 @@ export default function Edit() {
         </div>
       </div>
       <div className="flex border gap-5 p-5 h-130 justify-around">
-        <div className="relative bg-green-200 w-[60%] border">
+        <div className="overflow-auto relative w-[60%] border">
           <div className="">
             <img
               src={uploadImage}
               alt="Uploaded"
               className="w-full object-cover h-120"
             />
+            <div>
+              {text && (
+                <div
+                  className="absolute top-1/2 w-full p-2"
+                  style={{
+                    fontSize: `${fontSize}px`,
+                    fontFamily: `${fontFamily}`,
+                    color: `${fontColor}`,
+                  }}
+                >
+                  <div
+                    onMouseDown={handleMouseDown}
+                    style={{
+                      backgroundColor: `${fontBg}`,
+                      position: "absolute",
+                      cursor: isDraggable ? "grabbing" : "grab",
+                      left: `${position.x}px`,
+                      top: `${position.y}px`,
+                    }}
+                    className="p-2 w-max"
+                  >
+                    {text}
+                  </div>
+                </div>
+              )}
+            </div>
             <div className="bg-white z-10 absolute w-full top-1/2 -translate-y-1/2">
-              {textButtonClick && <Input setText={setText} />}
+              {textButtonClick && (
+                <Input
+                  setText={setText}
+                  setTextButtonClick={setTextButtonClick}
+                />
+              )}
             </div>
           </div>
         </div>
-        <div className="border bg-blue-200 w-[40%] h-120 p-2 flex flex-col gap-5 overflow-auto">
+        <div className="border w-[40%] h-120 p-2 flex flex-col gap-5 overflow-auto">
           <div
             className="flex flex-col gap-2 text-base font-semibold"
             onClick={handleTextButton}
@@ -118,6 +187,11 @@ export default function Edit() {
                 <option value="Verdana">Verdana</option>
                 <option value="Courier New">Courier New</option>
                 <option value="Georgia">Georgia</option>
+                <option value="monospace">Monospace</option>
+                <option value="cursive">Cursive</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Lucida Console">Lucida Console</option>
                 <option value="Times New Roman">Times New Roman</option>
               </select>
               <span className="text-sm absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -136,7 +210,72 @@ export default function Edit() {
           </div>
           <div className="flex flex-col gap-2 text-base font-semibold">
             <label>Text Color</label>
-            <input type="color" className="w-full" onChange={handleFontColor} />
+            <div className="relative flex items-center gap-2">
+              <div
+                className="w-5 bg-[#ff0000] h-5 rounded-full"
+                onClick={() => setFontColor("#ff0000")}
+              ></div>
+              <div
+                className="w-5 bg-[#2f27ce] h-5 rounded-full"
+                onClick={() => setFontColor("#2f27ce")}
+              ></div>
+              <div
+                className="w-5 bg-[#d42f77] h-5 rounded-full"
+                onClick={() => setFontColor("#d42f77")}
+              ></div>
+              <div
+                className="w-5 bg-[#60aeff] h-5 rounded-full"
+                onClick={() => setFontColor("#60aeff")}
+              ></div>
+              <div
+                className="w-5 bg-[#ffe500] h-5 rounded-full"
+                onClick={() => setFontColor("#ffe500")}
+              ></div>
+              <div
+                className="w-5 bg-[#ff7f00] h-5 rounded-full"
+                onClick={() => setFontColor("#ff7f00")}
+              ></div>
+              <div
+                className="w-5 bg-[#90ff00] h-5 rounded-full"
+                onClick={() => setFontColor("#90ff00")}
+              ></div>
+              <div
+                className="w-5 bg-[#4c00ff] h-5 rounded-full"
+                onClick={() => setFontColor("#4c00ff")}
+              ></div>
+              <div
+                className="w-5 bg-[#00fbff] h-5 rounded-full"
+                onClick={() => setFontColor("#00fbff")}
+              ></div>
+              {/* <div className="bg-black text-white rounded-full">
+                <div
+                  className="w-5 h-5 flex justify-center items-center"
+                  onClick={handleColorPicker}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-plus-icon lucide-plus"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </div>
+              </div> */}
+            </div>
+            <input
+              type="color"
+              id="color-input"
+              className="w-full"
+              onChange={handleFontColor}
+            />
           </div>
           <div className="flex flex-col gap-2 text-base font-semibold">
             <label>Styles & Alignment</label>
@@ -302,32 +441,10 @@ export default function Edit() {
           </div>
           <div className="flex flex-col gap-2 text-base font-semibold">
             <label>Background Color</label>
-            <input type="color" className="w-full" onChange={handleFontColor} />
+            <input type="color" className="w-full" onChange={handleFontBg} />
           </div>
         </div>
       </div>
     </div>
   );
-}
-
-{
-  /* <div>
-<Main
-  text={text}
-  fontSize={fontSize}
-  setFontSize={setFontSize}
-  fontFamily={fontFamily}
-  setFontFamily={setFontFamily}
-  fontBg={fontBg}
-  setFontBg={setFontBg}
-  fontColor={fontColor}
-  setFontColor={setFontColor}
-  isDraggable={isDraggable}
-  setIsDraggable={setIsDraggable}
-  position={position}
-  setPosition={setPosition}
-  offset={offset}
-  setOffset={setOffset}
-/>
-</div> */
 }
