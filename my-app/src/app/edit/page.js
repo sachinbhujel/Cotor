@@ -16,6 +16,9 @@ export default function Edit() {
   const [uploadImage, setUploadImage] = useState(null);
   const [boldClick, setBoldClick] = useState(false);
   const [italicClick, setItalicClick] = useState(false);
+  const [underlineClick, setUnderlineClick] = useState(false);
+  const [spaceClick, setSpaceClick] = useState(false);
+  const [textShadowClick, setTextShadowClick] = useState(false);
 
   useEffect(() => {
     const user_upload_image = localStorage.getItem("upload-image");
@@ -48,6 +51,18 @@ export default function Edit() {
 
   const handleTextItalic = () => {
     setItalicClick(!italicClick);
+  };
+
+  const handleTextUnderline = () => {
+    setUnderlineClick(!underlineClick);
+  };
+
+  const handleTextSpace = () => {
+    setSpaceClick(!spaceClick);
+  };
+
+  const handleTextShadow = () => {
+    setTextShadowClick(!textShadowClick);
   };
 
   const handleMouseDown = (e) => {
@@ -147,6 +162,9 @@ export default function Edit() {
                       left: `${position.x}px`,
                       top: `${position.y}px`,
                       fontWeight: boldClick ? "bold" : "normal",
+                      textDecoration: underlineClick ? "underline" : "none",
+                      letterSpacing: spaceClick ? "8px" : "0px",
+                      textShadow: textShadowClick ? "1.5px 1.5px white" : "",
                     }}
                     className="p-2 w-max"
                   >
@@ -293,8 +311,8 @@ export default function Edit() {
             />
           </div>
           <div className="flex flex-col gap-2 text-base font-semibold">
-            <label>Styles & Alignment</label>
-            <div className="border flex items-center justify-between">
+            <label className="text-background">Styles & Alignment</label>
+            <div className="border border-primary text-background flex items-center justify-between">
               <div
                 className="border p-2 cursor-pointer"
                 onClick={handleTextBold}
@@ -316,9 +334,7 @@ export default function Edit() {
               </div>
               <div
                 className="border p-2 cursor-pointer"
-                onClick={() => {
-                  setItalicClick(!italicClick);
-                }}
+                onClick={handleTextItalic}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -337,7 +353,10 @@ export default function Edit() {
                   <line x1="15" x2="9" y1="4" y2="20" />
                 </svg>
               </div>
-              <div className="border p-2 cursor-pointer">
+              <div
+                className="border p-2 cursor-pointer"
+                onClick={handleTextUnderline}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -354,7 +373,10 @@ export default function Edit() {
                   <line x1="4" x2="20" y1="20" y2="20" />
                 </svg>
               </div>
-              <div className="border p-2 cursor-pointer">
+              <div
+                className="border p-2 cursor-pointer"
+                onClick={handleTextSpace}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -370,7 +392,10 @@ export default function Edit() {
                   <path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" />
                 </svg>
               </div>
-              <div className="border p-2 cursor-pointer">
+              <div
+                className="border p-2 cursor-pointer"
+                onClick={handleTextShadow}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
