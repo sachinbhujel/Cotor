@@ -1,22 +1,23 @@
 import React from "react";
 
-function Input({ setText, setTextButtonClick }) {
+function Input({ setText }) {
   const handleText = (e) => {
     setText(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTextButtonClick(false);
+    setText("");
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
         <textarea
           type="text"
-          rows={3}
-          className="p-2 w-full outline-none resize-none"
+          rows={5}
+          className="p-2 w-full border outline-none resize-none custom-scrollbar"
+          placeholder="Enter your text"
           onChange={handleText}
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
@@ -25,6 +26,7 @@ function Input({ setText, setTextButtonClick }) {
             }
           }}
         ></textarea>
+        <button className="border w-full p-2">Add Text</button>
       </form>
     </div>
   );

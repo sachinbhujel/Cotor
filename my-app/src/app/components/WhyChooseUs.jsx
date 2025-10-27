@@ -4,7 +4,7 @@ function WhyChooseUs() {
   return (
     <div className="m-auto w-[90%] py-10 flex flex-col gap-18">
       <h2 className="text-5xl text-center font-semibold">
-        Why Choose Fotor to Edit Text in Image?
+        Why Choose Cotor to Edit Text in Image?
       </h2>
       <div className="flex items-center gap-16">
         <div className="flex flex-col items-center gap-5">
