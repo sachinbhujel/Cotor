@@ -1,12 +1,14 @@
 import React from "react";
 
-function Input({ setText }) {
+function Input({ textareaTextValue, setTextareaTextValue, setText }) {
   const handleText = (e) => {
-    setText(e.target.value);
+    setTextareaTextValue(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setText((prev) => [...prev, textareaTextValue]);
+    setTextareaTextValue("");
   };
 
   return (
@@ -15,6 +17,7 @@ function Input({ setText }) {
         <textarea
           type="text"
           rows={5}
+          value={textareaTextValue}
           className="p-2 w-full border bg-white rounded-sm outline-none resize-none textarea-scrollbar"
           placeholder="Enter your text"
           onChange={handleText}
@@ -25,7 +28,7 @@ function Input({ setText }) {
             }
           }}
         ></textarea>
-        <button className="font-semibold bg-blue-600 rounded-sm text-white w-full p-2 flex justify-center items-center gap-2">
+        <button className="font-semibold bg-blue-600 rounded-sm text-white w-full p-2 flex justify-center items-center gap-2 hover:bg-blue-700 cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"

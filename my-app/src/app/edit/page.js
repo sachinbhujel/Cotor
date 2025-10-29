@@ -22,7 +22,9 @@ export default function Edit() {
   const [image, setImage] = useState(null);
   const [zoom, setZoom] = useState(1);
 
-  const [text, setText] = useState("");
+  const [textareaTextValue, setTextareaTextValue] = useState("");
+  const [text, setText] = useState([]);
+  console.log("text", text)
   const [textButtonClick, setTextButtonClick] = useState(true);
   const [fontSize, setFontSize] = useState(22);
   const [fontColor, setFontColor] = useState(null);
@@ -144,12 +146,11 @@ export default function Edit() {
   console.log(textEditData);
   return (
     <div className="flex w-full ">
-      <div className="flex w-[30%]">
-        <div className="flex w-[22%] flex-col gap-3 bg-[#161619] text-[#9da2ad] py-2">
+      <div className="flex w-130">
+        <div className="flex w-[22%] h-[100dvh] flex-col gap-3 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar">
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              textDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowText}
           >
             <svg
@@ -171,9 +172,8 @@ export default function Edit() {
             <p className="text-xs text-center">Add Text</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowFontFamily}
           >
             <svg
@@ -197,9 +197,8 @@ export default function Edit() {
             <p className="text-xs text-center">Font-Family</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              textEffectsDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textEffectsDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowTextEffects}
           >
             <svg
@@ -219,9 +218,8 @@ export default function Edit() {
             <p className="text-xs text-center">Effects</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              fontSizeDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${fontSizeDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowFontSize}
           >
             <svg
@@ -244,9 +242,8 @@ export default function Edit() {
             <p className="text-xs text-center">Font Size</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              elementsDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${elementsDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowElements}
           >
             <svg
@@ -277,9 +274,8 @@ export default function Edit() {
             <p className="text-xs text-center">Elements</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              textColorDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textColorDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowTextColor}
           >
             <svg
@@ -303,9 +299,8 @@ export default function Edit() {
             <p className="text-xs text-center">Color</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              uploadsDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${uploadsDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowUploads}
           >
             <svg
@@ -328,9 +323,8 @@ export default function Edit() {
             <p className="text-xs text-center">Uploads</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              moreDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${moreDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowMore}
           >
             <svg
@@ -355,6 +349,8 @@ export default function Edit() {
         <div className="p-2 w-[78%] h-[100dvh] bg-[#2b2b2b] overflow-y-auto custom-scrollbar">
           {textDivShow && (
             <Text
+              textareaTextValue={textareaTextValue}
+              setTextareaTextValue={setTextareaTextValue}
               setText={setText}
               textButtonClick={textButtonClick}
               setTextEditData={setTextEditData}
@@ -393,7 +389,7 @@ export default function Edit() {
           {moreDivShow && <More />}
         </div>
       </div>
-      <div className="relative bg-[#ebebeb] w-[70%] h-[100dvh] flex justify-center items-center">
+      <div className="relative bg-[#ebebeb] w-[100%] h-[100dvh] flex justify-center items-center">
         {image && (
           <div className="absolute bg-[#161619] top-0 left-0 z-100 flex items-center gap-4 mb-4">
             <button
@@ -423,28 +419,29 @@ export default function Edit() {
                 transform: `scale(${zoom})`,
               }}
             />
-            {text && (
-              <div className="absolute flex justify-center items-center">
-                <div
-                  style={{ fontFamily: textFamilyClick ? textFamilyData : "" }}
-                  // style={{
-                  //   fontSize: `${fontSize}px`,
-                  //   color: `${fontColor}`,
-                  //   fontWeight: boldClick ? "bold" : "normal",
-                  //   fontFamily: italicClick ? "cursive" : "",
-                  //   textDecoration: underlineClick ? "underline" : "none",
-                  //   letterSpacing: spaceClick ? "8px" : "0px",
-                  //   fontWeight: textShadowClick ? "900" : "normal",
-                  //   color: textShadowClick ? "transparent" : "black",
-                  //   WebkitTextStroke: textShadowClick ? "2px black" : "none",
-                  // }}
-                  className={`p-2 max-w-[90%] ${
-                    textEditClick ? textEditData : ""
-                  } text-center`}
-                >
-                  {text}
+            {text.length > 0 && (
+              text.map((word, index) => (
+                <div className="absolute flex justify-center items-center">
+                  <div
+                    style={{ fontFamily: textFamilyClick ? textFamilyData : "" }}
+                    // style={{
+                    //   fontSize: `${fontSize}px`,
+                    //   color: `${fontColor}`,
+                    //   fontWeight: boldClick ? "bold" : "normal",
+                    //   fontFamily: italicClick ? "cursive" : "",
+                    //   textDecoration: underlineClick ? "underline" : "none",
+                    //   letterSpacing: spaceClick ? "8px" : "0px",
+                    //   fontWeight: textShadowClick ? "900" : "normal",
+                    //   color: textShadowClick ? "transparent" : "black",
+                    //   WebkitTextStroke: textShadowClick ? "2px black" : "none",
+                    // }}
+                    className={`p-2 max-w-[90%] ${textEditClick ? textEditData : ""
+                      } text-center`}
+                  >
+                    {word}
+                  </div>
                 </div>
-              </div>
+              ))
             )}
           </div>
         ) : (

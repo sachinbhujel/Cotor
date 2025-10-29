@@ -38,6 +38,16 @@
   border-radius: 10px;
 }
 
+.scrollbar::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
 .textarea-scrollbar::-webkit-scrollbar {
   width: 4px;
   height: 10px;
