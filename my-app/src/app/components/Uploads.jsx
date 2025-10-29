@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Uploads() {
-  return (
-    <div>Uploads</div>
-  )
+  return <div></div>;
 }
 
-export default Uploads
+export default Uploads;

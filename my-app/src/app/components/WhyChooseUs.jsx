@@ -6,9 +6,9 @@ function WhyChooseUs() {
       <h2 className="text-5xl text-center font-semibold">
         Why Choose Cotor to Edit Text in Image?
       </h2>
-      <div className="flex items-center gap-16">
+      <div className="flex items-center gap-16 justify-center">
         <div className="flex flex-col items-center gap-5">
-          <div class="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+          <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"
@@ -32,7 +32,7 @@ function WhyChooseUs() {
           </p>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <div class="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+          <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -58,7 +58,7 @@ function WhyChooseUs() {
           </p>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <div class="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+          <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

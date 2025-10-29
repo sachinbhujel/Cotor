@@ -20,9 +20,22 @@ export default function Edit() {
   const [uploadsDivShow, setUploadsDivShow] = useState(false);
   const [moreDivShow, setMoreDivShow] = useState(false);
   const [image, setImage] = useState(null);
+  const [zoom, setZoom] = useState(1);
 
   const [text, setText] = useState("");
   const [textButtonClick, setTextButtonClick] = useState(true);
+  const [fontSize, setFontSize] = useState(22);
+  const [fontColor, setFontColor] = useState(null);
+  const [boldClick, setBoldClick] = useState(false);
+  const [italicClick, setItalicClick] = useState(false);
+  const [underlineClick, setUnderlineClick] = useState(false);
+  const [spaceClick, setSpaceClick] = useState(false);
+  const [textShadowClick, setTextShadowClick] = useState(false);
+
+  const [textEditData, setTextEditData] = useState("");
+  const [textEditClick, setTextEditClick] = useState(false);
+  const [textFamilyData, setTextFamilyData] = useState("");
+  const [textFamilyClick, setTextFamilyClick] = useState(false);
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -30,6 +43,14 @@ export default function Edit() {
       setImage(URL.createObjectURL(file));
       localStorage.setItem("upload-image", URL.createObjectURL(file));
     }
+  };
+
+  const handleZoomIn = () => {
+    setZoom((prev) => Math.min(prev + 0.1, 3));
+  };
+
+  const handleZoomOut = () => {
+    setZoom((prev) => Math.max(prev - 0.1, 0.5));
   };
 
   const handleShowText = () => {
@@ -120,12 +141,15 @@ export default function Edit() {
     setMoreDivShow(true);
   };
 
+  console.log(textEditData);
   return (
-    <div className="flex w-full h-screen">
-      <div className="flex border w-[30%]">
-        <div className="flex w-[22%] flex-col gap-3 bg-red-300 h-screen">
+    <div className="flex w-full ">
+      <div className="flex w-[30%]">
+        <div className="flex w-[22%] flex-col gap-3 bg-[#161619] text-[#9da2ad] py-2">
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              textDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowText}
           >
             <svg
@@ -147,7 +171,9 @@ export default function Edit() {
             <p className="text-xs text-center">Add Text</p>
           </div>
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowFontFamily}
           >
             <svg
@@ -160,16 +186,20 @@ export default function Edit() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-type-icon lucide-type"
+              className="lucide lucide-text-initial-icon lucide-text-initial"
             >
-              <path d="M12 4v16" />
-              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
-              <path d="M9 20h6" />
+              <path d="M15 5h6" />
+              <path d="M15 12h6" />
+              <path d="M3 19h18" />
+              <path d="m3 12 3.553-7.724a.5.5 0 0 1 .894 0L11 12" />
+              <path d="M3.92 10h6.16" />
             </svg>
             <p className="text-xs text-center">Font-Family</p>
           </div>
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              textEffectsDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowTextEffects}
           >
             <svg
@@ -182,16 +212,16 @@ export default function Edit() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-type-icon lucide-type"
+              className="lucide lucide-sparkle-icon lucide-sparkle"
             >
-              <path d="M12 4v16" />
-              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
-              <path d="M9 20h6" />
+              <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
             </svg>
             <p className="text-xs text-center">Effects</p>
           </div>
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              fontSizeDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowFontSize}
           >
             <svg
@@ -204,16 +234,19 @@ export default function Edit() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-type-icon lucide-type"
+              className="lucide lucide-aarrow-up-icon lucide-a-arrow-up"
             >
-              <path d="M12 4v16" />
-              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
-              <path d="M9 20h6" />
+              <path d="m14 11 4-4 4 4" />
+              <path d="M18 16V7" />
+              <path d="m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" />
+              <path d="M3.304 13h6.392" />
             </svg>
             <p className="text-xs text-center">Font Size</p>
           </div>
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              elementsDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowElements}
           >
             <svg
@@ -226,16 +259,27 @@ export default function Edit() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-type-icon lucide-type"
+              className="lucide lucide-boxes-icon lucide-boxes"
             >
-              <path d="M12 4v16" />
-              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
-              <path d="M9 20h6" />
+              <path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" />
+              <path d="m7 16.5-4.74-2.85" />
+              <path d="m7 16.5 5-3" />
+              <path d="M7 16.5v5.17" />
+              <path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" />
+              <path d="m17 16.5-5-3" />
+              <path d="m17 16.5 4.74-2.85" />
+              <path d="M17 16.5v5.17" />
+              <path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" />
+              <path d="M12 8 7.26 5.15" />
+              <path d="m12 8 4.74-2.85" />
+              <path d="M12 13.5V8" />
             </svg>
             <p className="text-xs text-center">Elements</p>
           </div>
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              textColorDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowTextColor}
           >
             <svg
@@ -248,16 +292,20 @@ export default function Edit() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-type-icon lucide-type"
+              className="lucide lucide-palette-icon lucide-palette"
             >
-              <path d="M12 4v16" />
-              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
-              <path d="M9 20h6" />
+              <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+              <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+              <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+              <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+              <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
             </svg>
             <p className="text-xs text-center">Color</p>
           </div>
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              uploadsDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowUploads}
           >
             <svg
@@ -270,16 +318,19 @@ export default function Edit() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-type-icon lucide-type"
+              className="lucide lucide-image-up-icon lucide-image-up"
             >
-              <path d="M12 4v16" />
-              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
-              <path d="M9 20h6" />
+              <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
+              <path d="m14 19.5 3-3 3 3" />
+              <path d="M17 22v-5.5" />
+              <circle cx="9" cy="9" r="2" />
             </svg>
             <p className="text-xs text-center">Uploads</p>
           </div>
           <div
-            className="cursor-pointer p-2 gap-1 flex flex-col items-center justify-center"
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              moreDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowMore}
           >
             <svg
@@ -292,48 +343,114 @@ export default function Edit() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-type-icon lucide-type"
+              className="lucide lucide-ellipsis-icon lucide-ellipsis"
             >
-              <path d="M12 4v16" />
-              <path d="M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" />
-              <path d="M9 20h6" />
+              <circle cx="12" cy="12" r="1" />
+              <circle cx="19" cy="12" r="1" />
+              <circle cx="5" cy="12" r="1" />
             </svg>
             <p className="text-xs text-center">More</p>
           </div>
         </div>
-        <div className="p-2 w-[78%] bg-green-300">
+        <div className="p-2 w-[78%] h-[100dvh] bg-[#2b2b2b] overflow-y-auto custom-scrollbar">
           {textDivShow && (
-            <Text setText={setText} textButtonClick={textButtonClick} />
+            <Text
+              setText={setText}
+              textButtonClick={textButtonClick}
+              setTextEditData={setTextEditData}
+              textEditClick={textEditClick}
+              setTextEditClick={setTextEditClick}
+            />
           )}
-          {fontFamilyDivShow && <FontFamily />}
+          {fontFamilyDivShow && (
+            <FontFamily
+              setTextFamilyData={setTextFamilyData}
+              textFamilyClick={textFamilyClick}
+              setTextFamilyClick={setTextFamilyClick}
+            />
+          )}
           {textEffectsDivShow && <Effects />}
-          {fontSizeDivShow && <FontSize />}
+          {fontSizeDivShow && (
+            <FontSize fontSize={fontSize} setFontSize={setFontSize} />
+          )}
           {elementsDivShow && <Elements />}
-          {textColorDivShow && <Color />}
+          {textColorDivShow && (
+            <Color
+              setFontColor={setFontColor}
+              boldClick={boldClick}
+              setBoldClick={setBoldClick}
+              italicClick={italicClick}
+              setItalicClick={setItalicClick}
+              underlineClick={underlineClick}
+              setUnderlineClick={setUnderlineClick}
+              spaceClick={spaceClick}
+              setSpaceClick={setSpaceClick}
+              textShadowClick={textShadowClick}
+              setTextShadowClick={setTextShadowClick}
+            />
+          )}
           {uploadsDivShow && <Uploads />}
           {moreDivShow && <More />}
         </div>
       </div>
-      <div className="bg-purple-200 w-[70%]">
+      <div className="relative bg-[#ebebeb] w-[70%] h-[100dvh] flex justify-center items-center">
+        {image && (
+          <div className="absolute bg-[#161619] top-0 left-0 z-100 flex items-center gap-4 mb-4">
+            <button
+              onClick={handleZoomOut}
+              className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
+            >
+              -
+            </button>
+            <span className="text-sm text-white font-semibold">
+              {(zoom * 100).toFixed(0)}%
+            </span>
+            <button
+              onClick={handleZoomIn}
+              className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
+            >
+              +
+            </button>
+          </div>
+        )}
         {image ? (
-          <div className="relative flex justify-center items-center h-[100dvh]">
+          <div className="relative h-[90%] w-[95%] overflow-hidden rounded-md bg-white flex items-center justify-center">
             <img
               src={image}
               alt="Uploaded"
-              className="rounded-md object-cover w-[90%] h-[90%]"
+              className="transition-transform w-[95%] h-[90vh] duration-300 ease-in-out object-contain"
+              style={{
+                transform: `scale(${zoom})`,
+              }}
             />
             {text && (
               <div className="absolute flex justify-center items-center">
-                <div className="p-2 max-w-[80%] text-center break-words">
+                <div
+                  style={{ fontFamily: textFamilyClick ? textFamilyData : "" }}
+                  // style={{
+                  //   fontSize: `${fontSize}px`,
+                  //   color: `${fontColor}`,
+                  //   fontWeight: boldClick ? "bold" : "normal",
+                  //   fontFamily: italicClick ? "cursive" : "",
+                  //   textDecoration: underlineClick ? "underline" : "none",
+                  //   letterSpacing: spaceClick ? "8px" : "0px",
+                  //   fontWeight: textShadowClick ? "900" : "normal",
+                  //   color: textShadowClick ? "transparent" : "black",
+                  //   WebkitTextStroke: textShadowClick ? "2px black" : "none",
+                  // }}
+                  className={`p-2 max-w-[90%] ${
+                    textEditClick ? textEditData : ""
+                  } text-center`}
+                >
                   {text}
                 </div>
               </div>
             )}
           </div>
         ) : (
-          <div className="flex justify-center items-center h-[100dvh]">
+          <div className="relative w-full flex flex-col justify-center items-center h-[100dvh]">
             <label
-              className="w-[90%] h-[90%] border-2 rounded-md border-dashed p-4
+              className="w-[95%] h-[95%] border-2 bg-white rounded-md border-dashed p-4
              flex items-center justify-center flex-col gap-3 cursor-pointer"
             >
               <div className="flex flex-col justify-center items-center gap-1">
@@ -347,17 +464,17 @@ export default function Edit() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-image-up-icon lucide-image-up"
+                  className="text-[#232323] lucide lucide-image-up-icon lucide-image-up"
                 >
                   <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
                   <path d="m14 19.5 3-3 3 3" />
                   <path d="M17 22v-5.5" />
                   <circle cx="9" cy="9" r="2" />
                 </svg>
-                <h2 className="text-xl font-bold text-center">
-                  Upload your own image here
+                <h2 className="text-xl text-[#414751] font-bold text-center">
+                  Upload your own images
                 </h2>
-                <p className="opacity-75">Supports JPG, PNG etc</p>
+                {/* <p className="opacity-75">Supports JPG, PNG etc</p> */}
               </div>
 
               <input
@@ -367,7 +484,7 @@ export default function Edit() {
                 className="hidden"
               />
 
-              <div className="text-base px-6 py-2 rounded-full flex items-center bg-white gap-4">
+              <div className="text-base text-white px-6 py-2 rounded-full flex items-center gap-4 bg-[linear-gradient(90deg,rgba(2,0,36,1)_0%,rgba(9,9,121,1)_35%,rgba(0,212,255,1)_100%)]">
                 <span>Upload image</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -385,341 +502,29 @@ export default function Edit() {
                 </svg>
               </div>
             </label>
+            <div className="absolute top-1/2 mt-18 flex flex-col justify-center items-center gap-2 w-max">
+              <p className="text-xs">No photo? Try one of ours.</p>
+              <div className="w-full flex justify-center items-center gap-2">
+                <img
+                  src="demo-image-1.jpg"
+                  className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
+                  onClick={() => setImage("demo-image-1.jpg")}
+                />
+                <img
+                  src="demo-image-2.jpg"
+                  className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
+                  onClick={() => setImage("demo-image-2.jpg")}
+                />
+                <img
+                  src="demo-image-1.jpg"
+                  className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
+                  onClick={() => setImage("demo-image-1.jpg")}
+                />
+              </div>
+            </div>
           </div>
         )}
       </div>
     </div>
   );
-}
-
-{
-  /* <div className="flex gap-5 h-130 justify-around">
-<div className="overflow-auto relative w-[60%]">
-  <div>
-    <div>
-      {text && (
-        <div
-          className="absolute top-1/2 w-full p-2"
-          style={{
-            fontSize: `${fontSize}px`,
-            fontFamily: italicClick ? "monospace" : `${fontFamily}`,
-            color: `${fontColor}`,
-          }}
-        >
-          <div
-            onMouseDown={handleMouseDown}
-            style={{
-              backgroundColor: `${fontBg}`,
-              position: "absolute",
-              cursor: isDraggable ? "grabbing" : "grab",
-              left: `${position.x}px`,
-              top: `${position.y}px`,
-              fontWeight: boldClick ? "bold" : "normal",
-              textDecoration: underlineClick ? "underline" : "none",
-              letterSpacing: spaceClick ? "8px" : "0px",
-              textShadow: textShadowClick ? "1.5px 1.5px white" : "",
-            }}
-            className="p-2 w-max"
-          >
-            {text}
-          </div>
-        </div>
-      )}
-    </div>
-    </div>
-  </div>
-</div>
-<div className="border border-background w-[40%] h-120 p-2 flex flex-col gap-5 overflow-auto custom-scrollbar">
-  <div
-    className="flex flex-col gap-2 text-base font-semibold"
-    onClick={handleTextButton}
-  >
-    <label className="text-background">Tools</label>
-  </div>
-  <div className="flex flex-col gap-2 text-base font-semibold">
-    <label className="text-background">Font Family</label>
-    <div className="relative inline-block border border-background">
-      <select
-        className="p-2 text-primary outline-none text-sm cursor-pointer appearance-none w-full"
-        onChange={handleFontFamily}
-      >
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Courier New">Courier New</option>
-        <option value="Georgia">Georgia</option>
-        <option value="monospace">Monospace</option>
-        <option value="cursive">Cursive</option>
-        <option value="fantasy">Fantasy</option>
-        <option value="Helvetica">Helvetica</option>
-        <option value="Lucida Console">Lucida Console</option>
-        <option value="Times New Roman">Times New Roman</option>
-      </select>
-      <span className="text-sm text-accent absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
-        ▼
-      </span>
-    </div>
-  </div>
-  <div className="flex flex-col gap-2 text-base font-semibold">
-    <label className="text-background">Font Size</label>
-    <input
-      type="number"
-      className="text-accent border border-background p-2 outline"
-      value={fontSize}
-      onChange={handleFontSize}
-    />
-  </div>
-  <div className="flex flex-col gap-2 text-base font-semibold">
-    <label className="text-background">Text Color</label>
-    <div className="relative flex items-center gap-2">
-      <div
-        className="w-5 bg-[#ff0000] h-5 rounded-full"
-        onClick={() => setFontColor("#ff0000")}
-      ></div>
-      <div
-        className="w-5 bg-[#2f27ce] h-5 rounded-full"
-        onClick={() => setFontColor("#2f27ce")}
-      ></div>
-      <div
-        className="w-5 bg-[#d42f77] h-5 rounded-full"
-        onClick={() => setFontColor("#d42f77")}
-      ></div>
-      <div
-        className="w-5 bg-[#60aeff] h-5 rounded-full"
-        onClick={() => setFontColor("#60aeff")}
-      ></div>
-      <div
-        className="w-5 bg-[#ffe500] h-5 rounded-full"
-        onClick={() => setFontColor("#ffe500")}
-      ></div>
-      <div
-        className="w-5 bg-[#ff7f00] h-5 rounded-full"
-        onClick={() => setFontColor("#ff7f00")}
-      ></div>
-      <div
-        className="w-5 bg-[#90ff00] h-5 rounded-full"
-        onClick={() => setFontColor("#90ff00")}
-      ></div>
-      <div
-        className="w-5 bg-[#4c00ff] h-5 rounded-full"
-        onClick={() => setFontColor("#4c00ff")}
-      ></div>
-      <div
-        className="w-5 bg-[#00fbff] h-5 rounded-full"
-        onClick={() => setFontColor("#00fbff")}
-      ></div>
-      <div className="bg-black text-white rounded-full">
-        <div
-          className="w-5 h-5 flex justify-center items-center"
-          onClick={handleColorPicker}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-plus-icon lucide-plus"
-          >
-            <path d="M5 12h14" />
-            <path d="M12 5v14" />
-          </svg>
-        </div>
-      </div> */
-}
-// </div>
-{
-  /* <input
-      type="color"
-      id="color-input"
-      className="w-full"
-      onChange={handleFontColor}
-    />
-  </div>
-  <div className="flex flex-col gap-2 text-base font-semibold">
-    <label className="text-background">Styles & Alignment</label>
-    <div className="border border-primary text-background flex items-center justify-between">
-      <div
-        className="border p-2 cursor-pointer"
-        onClick={handleTextBold}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-bold-icon lucide-bold"
-        >
-          <path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8" />
-        </svg>
-      </div>
-      <div
-        className="border p-2 cursor-pointer"
-        onClick={handleTextItalic}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-italic-icon lucide-italic"
-        >
-          <line x1="19" x2="10" y1="4" y2="4" />
-          <line x1="14" x2="5" y1="20" y2="20" />
-          <line x1="15" x2="9" y1="4" y2="20" />
-        </svg>
-      </div>
-      <div
-        className="border p-2 cursor-pointer"
-        onClick={handleTextUnderline}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-underline-icon lucide-underline"
-        >
-          <path d="M6 4v6a6 6 0 0 0 12 0V4" />
-          <line x1="4" x2="20" y1="20" y2="20" />
-        </svg>
-      </div>
-      <div
-        className="border p-2 cursor-pointer"
-        onClick={handleTextSpace}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-space-icon lucide-space"
-        >
-          <path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" />
-        </svg>
-      </div>
-      <div
-        className="border p-2 cursor-pointer"
-        onClick={handleTextShadow}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-type-outline-icon lucide-type-outline"
-        >
-          <path d="M14 16.5a.5.5 0 0 0 .5.5h.5a2 2 0 0 1 0 4H9a2 2 0 0 1 0-4h.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V8a2 2 0 0 1-4 0V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-4 0v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5Z" />
-        </svg>
-      </div>
-    </div>
-    <div className="border flex items-center justify-between">
-      <div className="border p-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-text-align-start-icon lucide-text-align-start"
-        >
-          <path d="M21 5H3" />
-          <path d="M15 12H3" />
-          <path d="M17 19H3" />
-        </svg>
-      </div>
-      <div className="border p-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-text-align-center-icon lucide-text-align-center"
-        >
-          <path d="M21 5H3" />
-          <path d="M17 12H7" />
-          <path d="M19 19H5" />
-        </svg>
-      </div>
-      <div className="border p-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-text-align-end-icon lucide-text-align-end"
-        >
-          <path d="M21 5H3" />
-          <path d="M21 12H9" />
-          <path d="M21 19H7" />
-        </svg>
-      </div>
-      <div className="border p-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-text-align-justify-icon lucide-text-align-justify"
-        >
-          <path d="M3 5h18" />
-          <path d="M3 12h18" />
-          <path d="M3 19h18" />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div className="flex flex-col gap-2 text-base font-semibold">
-    <label>Background Color</label>
-    <input type="color" className="w-full" onChange={handleFontBg} />
-  </div>
-</div>
-</div> */
 }

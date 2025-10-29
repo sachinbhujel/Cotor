@@ -7,7 +7,6 @@ function Input({ setText }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setText("");
   };
 
   return (
@@ -16,7 +15,7 @@ function Input({ setText }) {
         <textarea
           type="text"
           rows={5}
-          className="p-2 w-full border outline-none resize-none custom-scrollbar"
+          className="p-2 w-full border bg-white rounded-sm outline-none resize-none textarea-scrollbar"
           placeholder="Enter your text"
           onChange={handleText}
           onKeyDown={(e) => {
@@ -26,7 +25,24 @@ function Input({ setText }) {
             }
           }}
         ></textarea>
-        <button className="border w-full p-2">Add Text</button>
+        <button className="font-semibold bg-blue-600 rounded-sm text-white w-full p-2 flex justify-center items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-plus-icon lucide-plus"
+          >
+            <path d="M5 12h14" />
+            <path d="M12 5v14" />
+          </svg>
+          Add Text
+        </button>
       </form>
     </div>
   );

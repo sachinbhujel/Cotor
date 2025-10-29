@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
 @layer base {
   :root {
@@ -10,10 +11,10 @@
   }
   .dark {
     --text: #ebe9fc;
-  --background: #010104;
-  --primary: #3a31d8;
-  --secondary: #020024;
-  --accent: #0600c2;
+    --background: #010104;
+    --primary: #3a31d8;
+    --secondary: #020024;
+    --accent: #0600c2;
   }
 }
 
@@ -33,6 +34,16 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #fb954b;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.textarea-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+}
+
+.textarea-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000000;
   border-radius: 10px;
 }

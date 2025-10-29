@@ -9,7 +9,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 export default function Home() {
   return (
     <div className="m-auto flex flex-col gap-6">
-      <div className="bg-[#007aff] p-2 pb-14 flex flex-col gap-16">
+      <div className="bg-[#007aff] p-2 pb-14 flex flex-col gap-10">
         <div className="flex flex-col gap-4 px-6">
           <Navbar />
           <div className="text-white w-max p-2 flex items-center">
@@ -62,7 +62,7 @@ export default function Home() {
                 seconds. Try it out now!
               </p>
             </div>
-            <Link href="/href">
+            <Link href="/edit">
               <div className="bg-white font-medium px-4 py-2 w-max rounded-md text-lg">
                 <p>Edit Text Now</p>
               </div>
