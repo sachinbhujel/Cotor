@@ -21,10 +21,14 @@ export default function Edit() {
   const [moreDivShow, setMoreDivShow] = useState(false);
   const [image, setImage] = useState(null);
   const [zoom, setZoom] = useState(1);
+  const [isDraggable, setIsDraggable] = useState(false);
+  const [position, setPosition] = useState([]);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [activeTextIndex, setActiveTextIndex] = useState(null);
 
   const [textareaTextValue, setTextareaTextValue] = useState("");
   const [text, setText] = useState([]);
-  console.log("text", text)
+  console.log("text", text);
   const [textButtonClick, setTextButtonClick] = useState(true);
   const [fontSize, setFontSize] = useState(22);
   const [fontColor, setFontColor] = useState(null);
@@ -143,14 +147,49 @@ export default function Edit() {
     setMoreDivShow(true);
   };
 
-  console.log(textEditData);
+  const handleMouseDown = (e, index) => {
+    setActiveTextIndex(index);
+    setIsDraggable(true);
+    setOffset({
+      x: e.clientX - (position[index]?.x || 0),
+      y: e.clientY - (position[index]?.y || 0),
+    });
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (isDraggable && activeTextIndex !== null) {
+        const newPositions = [...position];
+        newPositions[activeTextIndex] = {
+          x: e.clientX - offset.x,
+          y: e.clientY - offset.y,
+        };
+        setPosition(newPositions);
+      }
+    };
+
+    const handleMouseUp = () => {
+      setIsDraggable(false);
+      setActiveTextIndex(null);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isDraggable, offset, setPosition, setIsDraggable]);
+
   return (
     <div className="flex w-full ">
       <div className="flex w-130">
         <div className="flex w-[22%] h-[100dvh] flex-col gap-3 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar">
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              textDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowText}
           >
             <svg
@@ -172,8 +211,9 @@ export default function Edit() {
             <p className="text-xs text-center">Add Text</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowFontFamily}
           >
             <svg
@@ -197,8 +237,9 @@ export default function Edit() {
             <p className="text-xs text-center">Font-Family</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textEffectsDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              textEffectsDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowTextEffects}
           >
             <svg
@@ -218,8 +259,9 @@ export default function Edit() {
             <p className="text-xs text-center">Effects</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${fontSizeDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              fontSizeDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowFontSize}
           >
             <svg
@@ -242,8 +284,9 @@ export default function Edit() {
             <p className="text-xs text-center">Font Size</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${elementsDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              elementsDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowElements}
           >
             <svg
@@ -274,8 +317,9 @@ export default function Edit() {
             <p className="text-xs text-center">Elements</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textColorDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              textColorDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowTextColor}
           >
             <svg
@@ -299,8 +343,9 @@ export default function Edit() {
             <p className="text-xs text-center">Color</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${uploadsDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              uploadsDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowUploads}
           >
             <svg
@@ -323,8 +368,9 @@ export default function Edit() {
             <p className="text-xs text-center">Uploads</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${moreDivShow ? "bg-[#27282c] text-white" : ""
-              }`}
+            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+              moreDivShow ? "bg-[#27282c] text-white" : ""
+            }`}
             onClick={handleShowMore}
           >
             <svg
@@ -419,11 +465,24 @@ export default function Edit() {
                 transform: `scale(${zoom})`,
               }}
             />
-            {text.length > 0 && (
+            {text.length > 0 &&
               text.map((word, index) => (
-                <div className="absolute flex justify-center items-center">
+                <div
+                  className="absolute flex justify-center items-center w-[100%]"
+                  key={index}
+                >
                   <div
-                    style={{ fontFamily: textFamilyClick ? textFamilyData : "" }}
+                    onMouseDown={(e) => handleMouseDown(e, index)}
+                    style={{
+                      fontFamily: textFamilyClick ? textFamilyData : "",
+                      position: "absolute",
+                      cursor:
+                        isDraggable && activeTextIndex === index
+                          ? "grabbing"
+                          : "grab",
+                      left: `${position[index]?.x}px`,
+                      top: `${position[index]?.y}px`,
+                    }}
                     // style={{
                     //   fontSize: `${fontSize}px`,
                     //   color: `${fontColor}`,
@@ -435,14 +494,14 @@ export default function Edit() {
                     //   color: textShadowClick ? "transparent" : "black",
                     //   WebkitTextStroke: textShadowClick ? "2px black" : "none",
                     // }}
-                    className={`p-2 max-w-[90%] ${textEditClick ? textEditData : ""
-                      } text-center`}
+                    className={`p-2 max-w-[90%] ${
+                      textEditClick ? textEditData : ""
+                    } text-center`}
                   >
                     {word}
                   </div>
                 </div>
-              ))
-            )}
+              ))}
           </div>
         ) : (
           <div className="relative w-full flex flex-col justify-center items-center h-[100dvh]">

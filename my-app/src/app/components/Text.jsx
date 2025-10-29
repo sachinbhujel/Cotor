@@ -684,14 +684,10 @@ function Text({
                       className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                       onClick={() => {
                         setTextEditClick(true);
-                        setTextEditData(
-                          "font-bold text-xl bg-[#FFE5B4]"
-                        );
+                        setTextEditData("font-bold text-xl bg-[#FFE5B4]");
                       }}
                     >
-                      <h1 className="font-bold text-xl bg-[#FFE5B4]">
-                        Text
-                      </h1>
+                      <h1 className="font-bold text-xl bg-[#FFE5B4]">Text</h1>
                     </div>
                     <div
                       className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
@@ -710,14 +706,10 @@ function Text({
                       className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                       onClick={() => {
                         setTextEditClick(true);
-                        setTextEditData(
-                          "font-bold text-xl bg-[#C0C0C0]"
-                        );
+                        setTextEditData("font-bold text-xl bg-[#C0C0C0]");
                       }}
                     >
-                      <h1 className="font-bold text-xl bg-[#C0C0C0]">
-                        Text
-                      </h1>
+                      <h1 className="font-bold text-xl bg-[#C0C0C0]">Text</h1>
                     </div>
                     <div
                       className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
@@ -736,14 +728,10 @@ function Text({
                       className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                       onClick={() => {
                         setTextEditClick(true);
-                        setTextEditData(
-                          "font-bold text-xl bg-[#9FE2BF]"
-                        );
+                        setTextEditData("font-bold text-xl bg-[#9FE2BF]");
                       }}
                     >
-                      <h1 className="font-bold text-xl bg-[#9FE2BF]">
-                        Text
-                      </h1>
+                      <h1 className="font-bold text-xl bg-[#9FE2BF]">Text</h1>
                     </div>
                   </div>
                 )}
