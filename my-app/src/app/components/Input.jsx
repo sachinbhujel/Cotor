@@ -18,7 +18,7 @@ function Input({ textareaTextValue, setTextareaTextValue, setText }) {
           type="text"
           rows={5}
           value={textareaTextValue}
-          className="p-2 w-full border bg-white rounded-sm outline-none resize-none textarea-scrollbar"
+          className="p-2 w-full border bg-white outline-none resize-none textarea-scrollbar"
           placeholder="Enter your text"
           onChange={handleText}
           onKeyDown={(e) => {

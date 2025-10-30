@@ -23,7 +23,7 @@ function Text({
             setTextareaTextValue={setTextareaTextValue}
             setText={setText}
           />
-          <div className="flex gap-4 flex-col">
+          <div className="flex gap-6 flex-col">
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
                 <p className="font-semibold text-base text-white">Title</p>
@@ -94,7 +94,7 @@ function Text({
                     onClick={() => {
                       setTextEditClick(true);
                       setTextEditData(
-                        "font-bold text-xl bg-black text-white uppercase"
+                        "font-bold text-xl bg-black text-white uppercase",
                       );
                     }}
                   >
@@ -107,7 +107,7 @@ function Text({
                     onClick={() => {
                       setTextEditClick(true);
                       setTextEditData(
-                        "font-bold text-xl bg-green-600 uppercase"
+                        "font-bold text-xl bg-green-600 uppercase",
                       );
                     }}
                   >
@@ -120,7 +120,7 @@ function Text({
                     onClick={() => {
                       setTextEditClick(true);
                       setTextEditData(
-                        "font-bold text-xl bg-pink-600 px-1 text-white uppercase"
+                        "font-bold text-xl bg-pink-600 px-1 text-white uppercase",
                       );
                     }}
                   >
@@ -133,7 +133,7 @@ function Text({
                     onClick={() => {
                       setTextEditClick(true);
                       setTextEditData(
-                        "font-bold text-xl bg-blue-600 text-white uppercase"
+                        "font-bold text-xl bg-blue-600 text-white uppercase",
                       );
                     }}
                   >
@@ -158,7 +158,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-purple-600 text-white uppercase"
+                          "font-bold text-xl bg-purple-600 text-white uppercase",
                         );
                       }}
                     >
@@ -171,7 +171,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-orange-600 uppercase"
+                          "font-bold text-xl bg-orange-600 uppercase",
                         );
                       }}
                     >
@@ -184,7 +184,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-amber-600 px-1 text-white uppercase"
+                          "font-bold text-xl bg-amber-600 px-1 text-white uppercase",
                         );
                       }}
                     >
@@ -197,7 +197,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-sky-600 text-white uppercase"
+                          "font-bold text-xl bg-sky-600 text-white uppercase",
                         );
                       }}
                     >
@@ -210,7 +210,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-lime-600 text-white uppercase"
+                          "font-bold text-xl bg-lime-600 text-white uppercase",
                         );
                       }}
                     >
@@ -223,7 +223,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-violet-600 text-white uppercase"
+                          "font-bold text-xl bg-violet-600 text-white uppercase",
                         );
                       }}
                     >
@@ -236,7 +236,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-emerald-600 text-white uppercase"
+                          "font-bold text-xl bg-emerald-600 text-white uppercase",
                         );
                       }}
                     >
@@ -249,7 +249,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-neutral-600 text-white uppercase"
+                          "font-bold text-xl bg-neutral-600 text-white uppercase",
                         );
                       }}
                     >
@@ -262,7 +262,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-slate-600 text-white uppercase"
+                          "font-bold text-xl bg-slate-600 text-white uppercase",
                         );
                       }}
                     >
@@ -275,7 +275,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-cyan-600 text-white uppercase"
+                          "font-bold text-xl bg-cyan-600 text-white uppercase",
                         );
                       }}
                     >
@@ -288,7 +288,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-indigo-600 text-white uppercase"
+                          "font-bold text-xl bg-indigo-600 text-white uppercase",
                         );
                       }}
                     >
@@ -301,7 +301,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-stone-600 text-white uppercase"
+                          "font-bold text-xl bg-stone-600 text-white uppercase",
                         );
                       }}
                     >
@@ -314,7 +314,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-yellow-600 text-white uppercase"
+                          "font-bold text-xl bg-yellow-600 text-white uppercase",
                         );
                       }}
                     >
@@ -338,7 +338,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-zinc-600 text-white uppercase"
+                          "font-bold text-xl bg-zinc-600 text-white uppercase",
                         );
                       }}
                     >
@@ -351,7 +351,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-teal-600 text-white uppercase"
+                          "font-bold text-xl bg-teal-600 text-white uppercase",
                         );
                       }}
                     >
@@ -364,7 +364,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-fuchsia-600 text-white uppercase"
+                          "font-bold text-xl bg-fuchsia-600 text-white uppercase",
                         );
                       }}
                     >
@@ -377,7 +377,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-rose-600 text-white uppercase"
+                          "font-bold text-xl bg-rose-600 text-white uppercase",
                         );
                       }}
                     >
@@ -390,7 +390,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#00FFFF] uppercase"
+                          "font-bold text-xl bg-[#00FFFF] uppercase",
                         );
                       }}
                     >
@@ -403,7 +403,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#F5F5DC] uppercase"
+                          "font-bold text-xl bg-[#F5F5DC] uppercase",
                         );
                       }}
                     >
@@ -503,7 +503,7 @@ function Text({
                     onClick={() => {
                       setTextEditClick(true);
                       setTextEditData(
-                        "font-bold text-xl bg-red-600 text-white"
+                        "font-bold text-xl bg-red-600 text-white",
                       );
                     }}
                   >
@@ -516,7 +516,7 @@ function Text({
                     onClick={() => {
                       setTextEditClick(true);
                       setTextEditData(
-                        "font-bold text-xl bg-orange-600 text-white"
+                        "font-bold text-xl bg-orange-600 text-white",
                       );
                     }}
                   >
@@ -532,7 +532,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-cyan-600 text-white"
+                          "font-bold text-xl bg-cyan-600 text-white",
                         );
                       }}
                     >
@@ -545,7 +545,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#CD7F32] text-white"
+                          "font-bold text-xl bg-[#CD7F32] text-white",
                         );
                       }}
                     >
@@ -576,7 +576,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-purple-600 text-white"
+                          "font-bold text-xl bg-purple-600 text-white",
                         );
                       }}
                     >
@@ -607,7 +607,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#1560BD] text-white"
+                          "font-bold text-xl bg-[#1560BD] text-white",
                         );
                       }}
                     >
@@ -620,7 +620,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#614051] text-white"
+                          "font-bold text-xl bg-[#614051] text-white",
                         );
                       }}
                     >
@@ -633,7 +633,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#228B22] text-white"
+                          "font-bold text-xl bg-[#228B22] text-white",
                         );
                       }}
                     >
@@ -646,7 +646,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#00A86B] text-white"
+                          "font-bold text-xl bg-[#00A86B] text-white",
                         );
                       }}
                     >
@@ -659,7 +659,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#FF00FF] text-white"
+                          "font-bold text-xl bg-[#FF00FF] text-white",
                         );
                       }}
                     >
@@ -672,7 +672,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#800000] text-white"
+                          "font-bold text-xl bg-[#800000] text-white",
                         );
                       }}
                     >
@@ -694,7 +694,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#FF2400] text-white"
+                          "font-bold text-xl bg-[#FF2400] text-white",
                         );
                       }}
                     >
@@ -716,7 +716,7 @@ function Text({
                       onClick={() => {
                         setTextEditClick(true);
                         setTextEditData(
-                          "font-bold text-xl bg-[#722F37] text-white"
+                          "font-bold text-xl bg-[#722F37] text-white",
                         );
                       }}
                     >

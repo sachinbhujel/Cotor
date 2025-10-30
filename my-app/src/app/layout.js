@@ -26,47 +26,6 @@ export default function RootLayout({ children }) {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
-          rel="stylesheet"
-        />
-        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
