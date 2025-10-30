@@ -485,7 +485,6 @@ function FontFamily({
                   <p className="text-xs text-gray-300 fonr-semibold">Lato</p>
                 </div>
               </div>
-
               <div
                 className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                 onClick={() => {
@@ -582,7 +581,6 @@ function FontFamily({
                     </p>
                   </div>
                 </div>
-
                 <div
                   className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                   onClick={() => {
