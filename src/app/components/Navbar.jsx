@@ -13,8 +13,12 @@ function Navbar() {
         </h1>
       </div>
       <div className="flex items-center gap-4 sm:text-[1rem] 2xl:text-[3rem] text-sm text-white">
-        <p className="border-2 rounded-full px-5 py-1">Help</p>
-        <p className="border-2 rounded-full px-5 py-1">Faq</p>
+        <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
+          Help
+        </p>
+        <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
+          Faq
+        </p>
       </div>
     </div>
   );

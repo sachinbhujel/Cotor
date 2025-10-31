@@ -61,11 +61,21 @@
 @media (width<850px) {
   .hero-div {
     flex-direction: column;
+    gap: 40px;
   }
   .hero-text-div {
     width: 100%;
   }
   .hero-image-div {
     width: 100%;
+  }
+}
+
+@media (width<500px) {
+  .hero-image-div img {
+    height: 70vh;
+  }
+  .before-after-div {
+    font-size: 12px;
   }
 }
