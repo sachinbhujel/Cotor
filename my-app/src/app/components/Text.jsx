@@ -10,7 +10,6 @@ function Text({
   textButtonClick,
   setTextEditData,
   setTextEditClick,
-  textEditClick,
 }) {
   const [titleShowMore, setTitleShowMore] = useState(false);
   const [subTitleShowMore, setSubTitleShowMore] = useState(false);
@@ -83,6 +82,7 @@ function Text({
                     className="h-18 rounded-sm bg-[#3c3d3f] flex justify-center items-center cursor-pointer"
                     onClick={() => {
                       setTextEditClick(true);
+                      setText((...prev) => {});
                       setTextEditData("font-bold text-xl uppercase text-white");
                     }}
                   >

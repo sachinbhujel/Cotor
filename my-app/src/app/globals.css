@@ -57,3 +57,15 @@
   background-color: #000000;
   border-radius: 10px;
 }
+
+@media (width<850px) {
+  .hero-div {
+    flex-direction: column;
+  }
+  .hero-text-div {
+    width: 100%;
+  }
+  .hero-image-div {
+    width: 100%;
+  }
+}

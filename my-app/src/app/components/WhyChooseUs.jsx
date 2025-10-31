@@ -2,12 +2,12 @@ import React from "react";
 
 function WhyChooseUs() {
   return (
-    <div className="m-auto w-[90%] py-10 flex flex-col gap-18">
-      <h2 className="text-5xl text-center font-semibold">
+    <div className="m-auto w-[90%] py-8 flex flex-col gap-12">
+      <h2 className="2xl:text-[3.4rem] sm:text-[2rem] text-3xl text-center font-semibold">
         Why Choose Cotor to Edit Text in Image?
       </h2>
-      <div className="flex items-center gap-16 justify-center">
-        <div className="flex flex-col items-center gap-5">
+      <div className="flex items-center sm:flex-row flex-col gap-10 justify-center">
+        <div className="flex flex-col items-center gap-5 h-max bg-red-200 p-2">
           <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,13 +25,15 @@ function WhyChooseUs() {
             </svg>
           </div>
 
-          <p className="font-bold text-xl">Easy to Use</p>
-          <p className="text-center text-lg">
+          <p className="font-bold 2xl:text-[3rem] sm:text-[1.4rem] text-xl text-center">
+            Easy to Use
+          </p>
+          <p className="text-center 2xl:text-[2rem] sm:text-[1.1rem] text-lg">
             Edit, replace, remove, and add new text in images with ease. No
             technical skills are required.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col items-center gap-5 h-max bg-red-200 p-2">
           <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,13 +53,15 @@ function WhyChooseUs() {
             </svg>
           </div>
 
-          <p className="font-bold text-xl">Various Font Styles</p>
-          <p className="text-center text-lg">
+          <p className="font-bold 2xl:text-[3rem] sm:text-[1.4rem] text-xl text-center">
+            Various Font Styles
+          </p>
+          <p className="text-center 2xl:text-[2rem] sm:text-[1.1rem] text-lg">
             A vast library of free fonts and text styles to match your vision
             and enhance the impact of your text.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col items-center gap-5 h-max bg-red-200 p-2">
           <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +82,10 @@ function WhyChooseUs() {
             </svg>
           </div>
 
-          <p className="font-bold text-xl">Mobile Friendly</p>
-          <p className="text-center text-lg">
+          <p className="font-bold 2xl:text-[3rem] sm:text-[1.4rem] text-xl text-center">
+            Mobile Friendly
+          </p>
+          <p className="text-center 2xl:text-[2rem] sm:text-[1.1rem] text-lg">
             Works both on desktop and mobile devices. Enjoy the flexibility of
             editing image text anytime and anywhere.
           </p>

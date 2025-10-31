@@ -28,7 +28,6 @@ export default function Edit() {
 
   const [textareaTextValue, setTextareaTextValue] = useState("");
   const [text, setText] = useState([]);
-  console.log("text", text);
   const [textButtonClick, setTextButtonClick] = useState(true);
   const [fontSize, setFontSize] = useState(22);
   const [fontColor, setFontColor] = useState(null);
@@ -182,6 +181,7 @@ export default function Edit() {
     };
   }, [isDraggable, offset, setPosition, setIsDraggable]);
 
+  console.log(text);
   return (
     <div className="flex w-full ">
       <div className="flex w-130">
@@ -400,7 +400,6 @@ export default function Edit() {
               setText={setText}
               textButtonClick={textButtonClick}
               setTextEditData={setTextEditData}
-              textEditClick={textEditClick}
               setTextEditClick={setTextEditClick}
             />
           )}
@@ -495,10 +494,11 @@ export default function Edit() {
                     //   WebkitTextStroke: textShadowClick ? "2px black" : "none",
                     // }}
                     className={`p-2 max-w-[90%] ${
-                      textEditClick ? textEditData : ""
+                      textEditClick ? word.textData : ""
                     } text-center`}
                   >
-                    {word}
+                    {" "}
+                    {word.value}
                   </div>
                 </div>
               ))}

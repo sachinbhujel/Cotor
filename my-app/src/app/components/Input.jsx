@@ -7,7 +7,7 @@ function Input({ textareaTextValue, setTextareaTextValue, setText }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setText((prev) => [...prev, textareaTextValue]);
+    setText((prev) => [...prev, { value: textareaTextValue, textData: "" }]);
     setTextareaTextValue("");
   };
 

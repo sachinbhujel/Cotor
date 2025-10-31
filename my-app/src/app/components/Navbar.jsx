@@ -4,12 +4,17 @@ function Navbar() {
   return (
     <div className="flex items-center justify-between pt-2">
       <div className="flex items-center gap-1">
-        <img src="/logo.png" className="w-10 h-10" />
-        <h1 className="text-background font-semibold text-3xl">Cotor</h1>
+        <img
+          src="/logo.png"
+          className="sm:w-10 sm:h-10 2xl:w-17 2xl:h-17 h-8 w-8"
+        />
+        <h1 className="text-background font-semibold sm:text-[2rem] 2xl:text-[4rem] text-lg">
+          Cotor
+        </h1>
       </div>
-      <div className="flex items-center gap-4 text-xl text-white">
-        <p className="border-2 rounded-full px-5 py-1 text-text">Help</p>
-        <p className="border-2 rounded-full px-5 py-1 text-text">Faq</p>
+      <div className="flex items-center gap-4 sm:text-[1rem] 2xl:text-[3rem] text-sm text-white">
+        <p className="border-2 rounded-full px-5 py-1">Help</p>
+        <p className="border-2 rounded-full px-5 py-1">Faq</p>
       </div>
     </div>
   );
