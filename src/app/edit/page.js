@@ -183,11 +183,11 @@ export default function Edit() {
 
   console.log(text);
   return (
-    <div className="flex w-full ">
-      <div className="flex w-130">
-        <div className="flex w-[22%] h-[100dvh] flex-col gap-3 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar">
+    <div className="relative flex w-full sm:flex-row flex-col-reverse">
+      <div className="sm:static absolute bottom-0 z-1000 flex sm:flex-row flex-col-reverse sm:w-130 w-full">
+        <div className="flex sm:flex-col flex-row sm:w-[22%] w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar">
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               textDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowText}
@@ -211,7 +211,7 @@ export default function Edit() {
             <p className="text-xs text-center">Add Text</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowFontFamily}
@@ -237,7 +237,7 @@ export default function Edit() {
             <p className="text-xs text-center">Font-Family</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               textEffectsDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowTextEffects}
@@ -259,7 +259,7 @@ export default function Edit() {
             <p className="text-xs text-center">Effects</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               fontSizeDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowFontSize}
@@ -284,7 +284,7 @@ export default function Edit() {
             <p className="text-xs text-center">Font Size</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               elementsDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowElements}
@@ -317,7 +317,7 @@ export default function Edit() {
             <p className="text-xs text-center">Elements</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               textColorDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowTextColor}
@@ -343,7 +343,7 @@ export default function Edit() {
             <p className="text-xs text-center">Color</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               uploadsDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowUploads}
@@ -368,7 +368,7 @@ export default function Edit() {
             <p className="text-xs text-center">Uploads</p>
           </div>
           <div
-            className={`cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               moreDivShow ? "bg-[#27282c] text-white" : ""
             }`}
             onClick={handleShowMore}
@@ -392,7 +392,7 @@ export default function Edit() {
             <p className="text-xs text-center">More</p>
           </div>
         </div>
-        <div className="p-2 w-[78%] h-[100dvh] bg-[#2b2b2b] overflow-y-auto custom-scrollbar">
+        <div className="p-2 sm:w-[78%] sm:h-[100dvh] h-80 bg-[#2b2b2b] overflow-y-auto custom-scrollbar">
           {textDivShow && (
             <Text
               textareaTextValue={textareaTextValue}
