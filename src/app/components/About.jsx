@@ -23,7 +23,7 @@ function About() {
               hassle-free image text editing.
             </p>
             <Link href="/edit">
-              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg">
+              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                 Edit Text Now
               </p>
             </Link>
@@ -46,7 +46,7 @@ function About() {
               efficient.
             </p>
             <Link href="/edit">
-              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg">
+              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                 Edit Text Now
               </p>
             </Link>
@@ -75,7 +75,7 @@ function About() {
               latest information.
             </p>
             <Link href="/edit">
-              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg">
+              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                 Edit Text Now
               </p>
             </Link>
@@ -96,7 +96,7 @@ function About() {
               your birthday wishes with personalized text.
             </p>
             <Link href="/edit">
-              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg">
+              <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                 Edit Text Now
               </p>
             </Link>

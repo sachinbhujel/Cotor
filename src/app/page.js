@@ -13,8 +13,8 @@ export default function Home() {
       <div className="bg-[#007aff] p-2 pb-14 flex flex-col gap-10">
         <div className="flex flex-col gap-4 sm:px-6 px-4">
           <Navbar />
-          <div className="text-white w-max flex items-center">
-            <p className="2xl:text-[2rem] sm:text-[1rem] text-[14px]">Home</p>
+          <div className="text-white w-full flex items-center">
+            {/* <p className="2xl:text-[2rem] sm:text-[1rem] text-[14px]">Home</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -28,7 +28,7 @@ export default function Home() {
               className="lucide lucide-chevron-right-icon lucide-chevron-right"
             >
               <path d="m9 18 6-6-6-6" />
-            </svg>
+            </svg> */}
             <p className="2xl:text-[2rem] sm:text-[1rem] text-[14px]">
               Color Palatte
             </p>

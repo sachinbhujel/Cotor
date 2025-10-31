@@ -16,9 +16,9 @@ function Navbar() {
         <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
           Help
         </p>
-        <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
+        {/* <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
           Faq
-        </p>
+        </p> */}
       </div>
     </div>
   );

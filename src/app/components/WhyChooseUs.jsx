@@ -7,7 +7,7 @@ function WhyChooseUs() {
         Why Choose Cotor to Edit Text in Image?
       </h2>
       <div className="flex items-center sm:flex-row flex-col gap-10 justify-center">
-        <div className="flex flex-col items-center gap-5 h-max bg-red-200 p-2">
+        <div className="flex flex-col items-center gap-5 h-max bg-[#f5fafe] rounded-md border border-[#007aff] p-2 hover:scale-105 transition-transform duration-300 cursor-pointer hover:bg-[#007aff] hover:text-white">
           <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ function WhyChooseUs() {
             technical skills are required.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-5 h-max bg-red-200 p-2">
+        <div className="flex flex-col items-center gap-5 h-max bg-[#f5fafe] rounded-md p-2 border border-[#007aff] p-2 hover:scale-105 transition-transform duration-300 cursor-pointer hover:bg-[#007aff] hover:text-white">
           <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ function WhyChooseUs() {
             and enhance the impact of your text.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-5 h-max bg-red-200 p-2">
+        <div className="flex flex-col items-center gap-5 h-max bg-[#f5fafe] rounded-md p-2 border border-[#007aff] p-2 hover:scale-105 transition-transform duration-300 cursor-pointer hover:bg-[#007aff] hover:text-white">
           <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
