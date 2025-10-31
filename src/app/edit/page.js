@@ -25,6 +25,7 @@ export default function Edit() {
   const [position, setPosition] = useState([]);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [activeTextIndex, setActiveTextIndex] = useState(null);
+  const [subMenuShow, setSubMenuShow] = useState(true);
 
   const [textareaTextValue, setTextareaTextValue] = useState("");
   const [text, setText] = useState([]);
@@ -184,8 +185,16 @@ export default function Edit() {
   console.log(text);
   return (
     <div className="relative flex w-full sm:flex-row flex-col-reverse">
-      <div className="sm:static absolute bottom-0 z-1000 flex sm:flex-row flex-col-reverse sm:w-130 w-full">
-        <div className="flex sm:flex-col flex-row sm:w-[22%] w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar">
+      <div
+        className={`sm:static absolute bottom-0 z-1000 flex sm:flex-row flex-col-reverse ${
+          subMenuShow ? "sm:w-130" : "sm:w-max"
+        } w-full`}
+      >
+        <div
+          className={`flex sm:flex-col items-center flex-row ${
+            subMenuShow ? "sm:w-[22%]" : "sm:w-[100%]"
+          } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar`}
+        >
           <div
             className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
               textDivShow ? "bg-[#27282c] text-white" : ""
@@ -392,46 +401,71 @@ export default function Edit() {
             <p className="text-xs text-center">More</p>
           </div>
         </div>
-        <div className="p-2 sm:w-[78%] sm:h-[100dvh] h-80 bg-[#2b2b2b] overflow-y-auto custom-scrollbar">
-          {textDivShow && (
-            <Text
-              textareaTextValue={textareaTextValue}
-              setTextareaTextValue={setTextareaTextValue}
-              setText={setText}
-              textButtonClick={textButtonClick}
-              setTextEditData={setTextEditData}
-              setTextEditClick={setTextEditClick}
-            />
-          )}
-          {fontFamilyDivShow && (
-            <FontFamily
-              setTextFamilyData={setTextFamilyData}
-              textFamilyClick={textFamilyClick}
-              setTextFamilyClick={setTextFamilyClick}
-            />
-          )}
-          {textEffectsDivShow && <Effects />}
-          {fontSizeDivShow && (
-            <FontSize fontSize={fontSize} setFontSize={setFontSize} />
-          )}
-          {elementsDivShow && <Elements />}
-          {textColorDivShow && (
-            <Color
-              setFontColor={setFontColor}
-              boldClick={boldClick}
-              setBoldClick={setBoldClick}
-              italicClick={italicClick}
-              setItalicClick={setItalicClick}
-              underlineClick={underlineClick}
-              setUnderlineClick={setUnderlineClick}
-              spaceClick={spaceClick}
-              setSpaceClick={setSpaceClick}
-              textShadowClick={textShadowClick}
-              setTextShadowClick={setTextShadowClick}
-            />
-          )}
-          {uploadsDivShow && <Uploads />}
-          {moreDivShow && <More />}
+        {subMenuShow && (
+          <div
+            className={`p-2 ${
+              subMenuShow ? "sm:w-[78%] " : "sm:w-0"
+            } sm:h-[100dvh] h-80 bg-[#2b2b2b] overflow-y-auto custom-scrollbar`}
+          >
+            {textDivShow && (
+              <Text
+                textareaTextValue={textareaTextValue}
+                setTextareaTextValue={setTextareaTextValue}
+                setText={setText}
+                textButtonClick={textButtonClick}
+                setTextEditData={setTextEditData}
+                setTextEditClick={setTextEditClick}
+              />
+            )}
+            {fontFamilyDivShow && (
+              <FontFamily
+                setTextFamilyData={setTextFamilyData}
+                textFamilyClick={textFamilyClick}
+                setTextFamilyClick={setTextFamilyClick}
+              />
+            )}
+            {textEffectsDivShow && <Effects />}
+            {fontSizeDivShow && (
+              <FontSize fontSize={fontSize} setFontSize={setFontSize} />
+            )}
+            {elementsDivShow && <Elements />}
+            {textColorDivShow && (
+              <Color
+                setFontColor={setFontColor}
+                boldClick={boldClick}
+                setBoldClick={setBoldClick}
+                italicClick={italicClick}
+                setItalicClick={setItalicClick}
+                underlineClick={underlineClick}
+                setUnderlineClick={setUnderlineClick}
+                spaceClick={spaceClick}
+                setSpaceClick={setSpaceClick}
+                textShadowClick={textShadowClick}
+                setTextShadowClick={setTextShadowClick}
+              />
+            )}
+            {uploadsDivShow && <Uploads />}
+            {moreDivShow && <More />}
+          </div>
+        )}
+        <div
+          className="bg-[#2b2b2b] flex justify-center items-center text-white cursor-pointer"
+          onClick={() => setSubMenuShow(!subMenuShow)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-right-icon lucide-chevron-right"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </div>
       </div>
       <div className="relative bg-[#ebebeb] w-[100%] h-[100dvh] flex justify-center items-center">
