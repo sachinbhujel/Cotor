@@ -527,7 +527,7 @@ export default function Edit() {
                   <path d="M17 22v-5.5" />
                   <circle cx="9" cy="9" r="2" />
                 </svg>
-                <h2 className="text-xl text-[#414751] font-bold text-center">
+                <h2 className="sm:text-[1.5rem] 2xl:text-[2.4rem] text-xl text-[#414751] font-bold text-center">
                   Upload your own images
                 </h2>
                 {/* <p className="opacity-75">Supports JPG, PNG etc</p> */}
@@ -540,7 +540,7 @@ export default function Edit() {
                 className="hidden"
               />
 
-              <div className="text-base text-white px-6 py-2 rounded-full flex items-center gap-4 bg-[linear-gradient(90deg,rgba(2,0,36,1)_0%,rgba(9,9,121,1)_35%,rgba(0,212,255,1)_100%)]">
+              <div className="sm:text-[1rem] text-base text-white px-6 py-2 rounded-full flex items-center gap-4 bg-[linear-gradient(90deg,rgba(2,0,36,1)_0%,rgba(9,9,121,1)_35%,rgba(0,212,255,1)_100%)]">
                 <span>Upload image</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
