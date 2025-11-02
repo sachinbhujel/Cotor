@@ -118,22 +118,18 @@ export const serifMoreData = [
     },
     {
         id: 7,
-        name: "Slabo 27px",
-    },
-    {
-        id: 8,
         name: "Arvo",
     },
     {
-        id: 9,
+        id: 8,
         name: "Tinos",
     },
     {
-        id: 10,
+        id: 9,
         name: "Spectral",
     },
     {
-        id: 11,
+        id: 10,
         name: "Bitter",
     },
 ];

@@ -106,6 +106,86 @@ export default function RootLayout({ children }) {
                     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
                     rel="stylesheet"
                 />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
+                    rel="stylesheet"
+                />
             </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased textarea-scrollbar`}
