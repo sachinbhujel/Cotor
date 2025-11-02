@@ -1,7 +1,7 @@
 import React from "react";
 
 function Uploads() {
-  return <div></div>;
+    return <div></div>;
 }
 
 export default Uploads;
