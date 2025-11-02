@@ -9,7 +9,7 @@ function Input({ textareaTextValue, setTextareaTextValue, setText }) {
         e.preventDefault();
         setText((prev) => [
             ...prev,
-            { value: textareaTextValue, textData: "" },
+            { value: textareaTextValue, textData: "", fontFamilyData: "" },
         ]);
         setTextareaTextValue("");
     };

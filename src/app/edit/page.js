@@ -448,6 +448,8 @@ export default function Edit() {
                         )}
                         {fontFamilyDivShow && (
                             <FontFamily
+                                text={text}
+                                setText={setText}
                                 setTextFamilyData={setTextFamilyData}
                                 textFamilyClick={textFamilyClick}
                                 setTextFamilyClick={setTextFamilyClick}
@@ -594,7 +596,7 @@ export default function Edit() {
                                         }
                                         style={{
                                             fontFamily: textFamilyClick
-                                                ? textFamilyData
+                                                ? word.fontFamilyData
                                                 : "",
                                             position: "absolute",
                                             cursor:
