@@ -182,23 +182,19 @@ export default function Edit() {
     };
   }, [isDraggable, offset, setPosition, setIsDraggable]);
 
-  console.log(text);
   return (
     <div className="relative flex w-full sm:flex-row flex-col-reverse">
       <div
-        className={`sm:static absolute bottom-0 z-1000 flex sm:flex-row flex-col-reverse ${
-          subMenuShow ? "sm:w-130" : "sm:w-max"
-        } w-full`}
+        className={`sm:static absolute bottom-0 z-1000 flex sm:flex-row flex-col-reverse ${subMenuShow ? "sm:w-130" : "sm:w-max"
+          } w-full`}
       >
         <div
-          className={`flex sm:flex-col items-center flex-row ${
-            subMenuShow ? "sm:w-[22%]" : "sm:w-[100%]"
-          } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar`}
+          className={`flex sm:flex-col items-center flex-row ${subMenuShow ? "sm:w-[22%]" : "sm:w-[100%]"
+            } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar`}
         >
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              textDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowText}
           >
             <svg
@@ -220,9 +216,8 @@ export default function Edit() {
             <p className="text-xs text-center">Add Text</p>
           </div>
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowFontFamily}
           >
             <svg
@@ -246,9 +241,8 @@ export default function Edit() {
             <p className="text-xs text-center">Font-Family</p>
           </div>
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              textEffectsDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textEffectsDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowTextEffects}
           >
             <svg
@@ -268,9 +262,8 @@ export default function Edit() {
             <p className="text-xs text-center">Effects</p>
           </div>
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              fontSizeDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${fontSizeDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowFontSize}
           >
             <svg
@@ -293,9 +286,8 @@ export default function Edit() {
             <p className="text-xs text-center">Font Size</p>
           </div>
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              elementsDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${elementsDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowElements}
           >
             <svg
@@ -326,9 +318,8 @@ export default function Edit() {
             <p className="text-xs text-center">Elements</p>
           </div>
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              textColorDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${textColorDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowTextColor}
           >
             <svg
@@ -352,9 +343,8 @@ export default function Edit() {
             <p className="text-xs text-center">Color</p>
           </div>
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              uploadsDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${uploadsDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowUploads}
           >
             <svg
@@ -377,9 +367,8 @@ export default function Edit() {
             <p className="text-xs text-center">Uploads</p>
           </div>
           <div
-            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
-              moreDivShow ? "bg-[#27282c] text-white" : ""
-            }`}
+            className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${moreDivShow ? "bg-[#27282c] text-white" : ""
+              }`}
             onClick={handleShowMore}
           >
             <svg
@@ -403,9 +392,8 @@ export default function Edit() {
         </div>
         {subMenuShow && (
           <div
-            className={`p-2 ${
-              subMenuShow ? "sm:w-[78%] " : "sm:w-0"
-            } sm:h-[100dvh] h-80 bg-[#2b2b2b] overflow-y-auto custom-scrollbar`}
+            className={`p-2 ${subMenuShow ? "sm:w-[78%] " : "sm:w-0"
+              } sm:h-[100dvh] h-80 bg-[#2b2b2b] overflow-y-auto custom-scrollbar`}
           >
             {textDivShow && (
               <Text
@@ -450,22 +438,66 @@ export default function Edit() {
         )}
         <div
           className="bg-[#2b2b2b] flex justify-center items-center text-white cursor-pointer"
-          onClick={() => setSubMenuShow(!subMenuShow)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-chevron-right-icon lucide-chevron-right"
-          >
-            <path d="m9 18 6-6-6-6" />
-          </svg>
+          <div className="bg-[#4a4a4a] sm:py-4 sm:px-0 px-4">
+            {subMenuShow ? (
+              <>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-chevron-down-icon lucide-chevron-down sm:hidden" onClick={() => setSubMenuShow(false)}>
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-chevron-left-icon lucide-chevron-left hidden sm:flex"
+                  onClick={() => setSubMenuShow(false)}>
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </>
+            ) : (
+              <>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-chevron-right-icon lucide-chevron-right hidden sm:flex"
+                  onClick={() => setSubMenuShow(true)}
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-chevron-up-icon lucide-chevron-up sm:hidden"
+                  onClick={() => setSubMenuShow(true)}>
+                  <path d="m18 15-6-6-6 6" />
+                </svg>
+              </>
+            )}
+          </div>
         </div>
       </div>
       <div className="relative bg-[#ebebeb] w-[100%] h-[100dvh] flex justify-center items-center">
@@ -527,9 +559,8 @@ export default function Edit() {
                     //   color: textShadowClick ? "transparent" : "black",
                     //   WebkitTextStroke: textShadowClick ? "2px black" : "none",
                     // }}
-                    className={`p-2 max-w-[90%] ${
-                      textEditClick ? word.textData : ""
-                    } text-center`}
+                    className={`p-2 max-w-[90%] ${textEditClick ? word.textData : ""
+                      } text-center`}
                   >
                     {" "}
                     {word.value}
