@@ -133,3 +133,119 @@ export const serifMoreData = [
         name: "Bitter",
     },
 ];
+
+export const decorativeData = [
+    {
+        id: 1,
+        name: "Lobster",
+    },
+    {
+        id: 2,
+        name: "Pacifico",
+    },
+    {
+        id: 3,
+        name: "Fredoka One",
+    },
+    {
+        id: 4,
+        name: "Bangers",
+    },
+    {
+        id: 5,
+        name: "Great Vibes",
+    },
+];
+
+export const decorativeMoreData = [
+    {
+        id: 1,
+        name: "Dancing Script",
+    },  
+    {
+        id: 2,
+        name: "Monoton",
+    },
+    {
+        id: 3,
+        name: "Black Han Sans",
+    },
+    {        id: 4,
+        name: "Alfa Slab One",
+    },
+    {
+        id: 5,
+        name: "Indie Flower",
+    },
+    {
+        id: 6,
+        name: "Satisfy",
+    },
+    {
+        id: 7,
+        name: "Chewy",
+    },
+    {
+        id: 8,
+        name: "Abril Fatface",
+    },
+    {
+        id: 9,
+        name: "Playball",
+    },
+    {
+        id: 10,
+        name: "Sniglet",
+    },
+    { id: 11,
+        name: "Euphoria Script",
+    },
+];
+
+export const scriptData = [
+    {
+        id: 1,
+        name: "Amatic SC",
+    },
+    {
+        id: 2,
+        name: "Sacramento",
+    },
+    {     id: 3,
+        name: "Courgette",
+    },
+    {
+        id: 4,
+        name: "Kaushan Script",
+    },
+    {
+        id: 5,
+        name: "Patrick Hand",
+    },
+];
+
+export const scriptMoreData = [
+    {
+        id: 1,
+        name: "Caveat",
+    },
+    {
+        id: 2,
+        name: "Rochester",
+    },
+    {
+        id: 3,
+        name: "Allura",
+    },
+    {
+        id: 4,
+        name: "Tangerine",
+    },
+    {
+        id: 5,
+        name: "Rock Salt",
+    },
+    {
+        id: 6,
+        name: "Parisienne",
+    },];

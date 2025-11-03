@@ -195,7 +195,7 @@ export default function Edit() {
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
             <div
                 className={`sm:static absolute bottom-0 z-1000 flex sm:flex-row flex-col-reverse ${
-                    subMenuShow ? "sm:w-130" : "sm:w-max"
+                    subMenuShow ? "sm:w-140" : "sm:w-max"
                 } w-full`}
             >
                 <div
