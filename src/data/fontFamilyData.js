@@ -145,7 +145,7 @@ export const decorativeData = [
     },
     {
         id: 3,
-        name: "Fredoka One",
+        name: "Are You Serious",
     },
     {
         id: 4,
@@ -161,7 +161,7 @@ export const decorativeMoreData = [
     {
         id: 1,
         name: "Dancing Script",
-    },  
+    },
     {
         id: 2,
         name: "Monoton",
@@ -170,9 +170,7 @@ export const decorativeMoreData = [
         id: 3,
         name: "Black Han Sans",
     },
-    {        id: 4,
-        name: "Alfa Slab One",
-    },
+    { id: 4, name: "Alfa Slab One" },
     {
         id: 5,
         name: "Indie Flower",
@@ -197,9 +195,7 @@ export const decorativeMoreData = [
         id: 10,
         name: "Sniglet",
     },
-    { id: 11,
-        name: "Euphoria Script",
-    },
+    { id: 11, name: "Euphoria Script" },
 ];
 
 export const scriptData = [
@@ -211,9 +207,7 @@ export const scriptData = [
         id: 2,
         name: "Sacramento",
     },
-    {     id: 3,
-        name: "Courgette",
-    },
+    { id: 3, name: "Courgette" },
     {
         id: 4,
         name: "Kaushan Script",
@@ -248,4 +242,56 @@ export const scriptMoreData = [
     {
         id: 6,
         name: "Parisienne",
-    },];
+    },
+];
+
+export const monospaceData = [
+    {
+        id: 1,
+        name: "Fira Mono",
+    },
+    {
+        id: 2,
+        name: "Roboto Mono",
+    },
+    {
+        id: 3,
+        name: "Inconsolata",
+    },
+    {
+        id: 4,
+        name: "Courier Prime",
+    },
+    {
+        id: 5,
+        name: "JetBrains Mono",
+    },
+];
+
+export const monospaceMoreData = [
+    {
+        id: 1,
+        name: "IBM Plex Mono",
+    },
+    {
+        id: 2,
+        name: "Space Mono",
+    },
+    {
+        id: 3,
+        name: "Overpass Mono",
+    },
+    {
+        id: 4,
+        name: "Ubuntu Mono",
+    },
+    {
+        id: 5,
+        name: "Anonymous Pro",
+    },
+    { id: 6, name: "VT323" },
+    { id: 7, name: "Major Mono Display" },
+    { id: 8, name: "Red Hat Mono" },
+    { id: 9, name: "PT Mono" },
+    { id: 10, name: "Cousine" },
+];

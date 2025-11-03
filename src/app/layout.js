@@ -186,6 +186,186 @@ export default function RootLayout({ children }) {
                     href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
                     rel="stylesheet"
                 />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Are+You+Serious&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Rochester&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+                    rel="stylesheet"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                />
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+                    rel="stylesheet"
+                ></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+                    rel="stylesheet"
+                ></link>
+
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                />
             </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased textarea-scrollbar`}
