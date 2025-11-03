@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import Input from "./Input";
 import { titleData } from "@/data/textData";
 import { titleMoreData } from "@/data/textData";
+import { subTitleData } from "@/data/textData";
+import { subTitleMoreData } from "@/data/textData";
+import { paraData } from "@/data/textData";
+import { paraMoreData } from "@/data/textData";
 
 function Text({
     textareaTextValue,
@@ -224,453 +228,71 @@ function Text({
                                             <circle cx="12" cy="12" r="10" />
                                         </svg>
                                     </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl text-white",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl text-white">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-black text-white",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-black text-white">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-yellow-300",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-yellow-300">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-red-600 text-white",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-red-600 text-white">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-orange-600 text-white",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-orange-600 text-white">
-                                            Text
-                                        </h1>
-                                    </div>
+                                    {subTitleData.map((value, index) => {
+                                        return (
+                                            <div
+                                                key={index}
+                                                className="h-18 rounded-sm bg-[#3c3d3f] flex justify-center items-center cursor-pointer"
+                                                onClick={() => {
+                                                    setTextEditClick(true);
+                                                    const newTextData = [
+                                                        ...text,
+                                                    ];
+                                                    newTextData[
+                                                        text.length - 1
+                                                    ] = {
+                                                        textData: `${value.data}`,
+                                                        value: newTextData[
+                                                            text.length - 1
+                                                        ].value,
+                                                    };
+                                                    setText(newTextData);
+                                                }}
+                                            >
+                                                <h1 className={`${value.data}`}>
+                                                    Text
+                                                </h1>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                                 {subTitleShowMore && (
                                     <div className="grid grid-cols-3 gap-2">
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-cyan-600 text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-cyan-600 text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#CD7F32] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#CD7F32] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#FFE4C4]",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#FFE4C4]">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#FFD59A]",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#FFD59A]">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-purple-600 text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-purple-600 text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#7FFF00]",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#7FFF00]">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#FF7F50]",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#FF7F50]">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#1560BD] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#1560BD] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#614051] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#614051] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#228B22] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#228B22] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#00A86B] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#00A86B] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#FF00FF] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#FF00FF] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#800000] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#800000] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#FFE5B4]",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#FFE5B4]">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#FF2400] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#FF2400] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#C0C0C0]",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#C0C0C0]">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#722F37] text-white",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#722F37] text-white">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#9FE2BF]",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#9FE2BF]">
-                                                Text
-                                            </h1>
-                                        </div>
+                                        {subTitleMoreData.map(
+                                            (value, index) => {
+                                                return (
+                                                    <div
+                                                        key={index}
+                                                        className="h-18 rounded-sm bg-[#3c3d3f] flex justify-center items-center cursor-pointer"
+                                                        onClick={() => {
+                                                            setTextEditClick(
+                                                                true
+                                                            );
+                                                            const newTextData =
+                                                                [...text];
+                                                            newTextData[
+                                                                text.length - 1
+                                                            ] = {
+                                                                textData: `${value.data}`,
+                                                                value: newTextData[
+                                                                    text.length -
+                                                                        1
+                                                                ].value,
+                                                            };
+                                                            setText(
+                                                                newTextData
+                                                            );
+                                                        }}
+                                                    >
+                                                        <h1
+                                                            className={`${value.data}`}
+                                                        >
+                                                            Text
+                                                        </h1>
+                                                    </div>
+                                                );
+                                            }
+                                        )}
                                     </div>
                                 )}
                             </div>
@@ -743,503 +365,65 @@ function Text({
                                             <circle cx="12" cy="12" r="10" />
                                         </svg>
                                     </div>
-                                    <div
-                                        className="h-18 rounded-sm bg-[#3c3d3f] flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl lowercase text-white",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl lowercase text-white">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-black text-white lowercase",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-black text-white lowercase">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-[#f5a047] lowercase",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-[#f5a047] lowercase">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-[#ef7eab] px-1 text-white lowercase",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-[#ef7eab] px-1 text-white lowercase">
-                                            Text
-                                        </h1>
-                                    </div>
-                                    <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                        onClick={() => {
-                                            setTextEditClick(true);
-                                            const newTextData = [...text];
-                                            newTextData[text.length - 1] = {
-                                                textData:
-                                                    "font-bold text-xl bg-[#54aee1] text-white lowercase",
-                                                value: newTextData[
-                                                    text.length - 1
-                                                ].value,
-                                            };
-                                            setText(newTextData);
-                                        }}
-                                    >
-                                        <h1 className="font-bold text-xl bg-[#54aee1] text-white lowercase">
-                                            Text
-                                        </h1>
-                                    </div>
+                                    {paraData.map((value, index) => {
+                                        return (
+                                            <div
+                                                key={index}
+                                                className="h-18 rounded-sm bg-[#3c3d3f] flex justify-center items-center cursor-pointer"
+                                                onClick={() => {
+                                                    setTextEditClick(true);
+                                                    const newTextData = [
+                                                        ...text,
+                                                    ];
+                                                    newTextData[
+                                                        text.length - 1
+                                                    ] = {
+                                                        textData: `${value.data}`,
+                                                        value: newTextData[
+                                                            text.length - 1
+                                                        ].value,
+                                                    };
+                                                    setText(newTextData);
+                                                }}
+                                            >
+                                                <h1 className={`${value.data}`}>
+                                                    Text
+                                                </h1>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                                 {paraShowMore && (
                                     <div className="grid grid-cols-3 gap-2">
-                                        <div
-                                            className="h-18 rounded-sm bg-[#3c3d3f] flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#e07623] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#e07623] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-orange-600 lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-orange-600 lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#b05785] px-1 text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#b05785] px-1 text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#db8d70] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#db8d70] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-lime-600 text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-lime-600 text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#cd8674] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#cd8674] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#465cbc] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#465cbc] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-neutral-600 text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-neutral-600 text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-slate-600 text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-slate-600 text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#59ee56] lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#59ee56] lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#e9253d] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#e9253d] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#bb6dd7] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#bb6dd7] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#cc8271] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#cc8271] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#964bbe] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#964bbe] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#9690b6] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#9690b6] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#7167b1] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#7167b1] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#6bbcc7] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#6bbcc7] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#8d8173] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#8d8173] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#45cf5e] lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#45cf5e] lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
-                                        <div
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
-                                            onClick={() => {
-                                                setTextEditClick(true);
-                                                const newTextData = [...text];
-                                                newTextData[text.length - 1] = {
-                                                    textData:
-                                                        "font-bold text-xl bg-[#2f27ce] text-white lowercase",
-                                                    value: newTextData[
-                                                        text.length - 1
-                                                    ].value,
-                                                };
-                                                setText(newTextData);
-                                            }}
-                                        >
-                                            <h1 className="font-bold text-xl bg-[#2f27ce] text-white lowercase">
-                                                Text
-                                            </h1>
-                                        </div>
+                                        {paraMoreData.map((value, index) => {
+                                            return (
+                                                <div
+                                                    key={index}
+                                                    className="h-18 rounded-sm bg-[#3c3d3f] flex justify-center items-center cursor-pointer"
+                                                    onClick={() => {
+                                                        setTextEditClick(true);
+                                                        const newTextData = [
+                                                            ...text,
+                                                        ];
+                                                        newTextData[
+                                                            text.length - 1
+                                                        ] = {
+                                                            textData: `${value.data}`,
+                                                            value: newTextData[
+                                                                text.length - 1
+                                                            ].value,
+                                                        };
+                                                        setText(newTextData);
+                                                    }}
+                                                >
+                                                    <h1
+                                                        className={`${value.data}`}
+                                                    >
+                                                        Text
+                                                    </h1>
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 )}
                             </div>

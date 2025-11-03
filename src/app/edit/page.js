@@ -42,6 +42,7 @@ export default function Edit() {
     const [textEditClick, setTextEditClick] = useState(false);
     const [textFamilyData, setTextFamilyData] = useState("");
     const [textFamilyClick, setTextFamilyClick] = useState(false);
+    const [textColorClick, setTextColorClick] = useState(false);
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
@@ -465,6 +466,9 @@ export default function Edit() {
                         {elementsDivShow && <Elements />}
                         {textColorDivShow && (
                             <Color
+                                text={text}
+                                setText={setText}
+                                setTextColorClick={setTextColorClick}
                                 setFontColor={setFontColor}
                                 boldClick={boldClick}
                                 setBoldClick={setBoldClick}
@@ -606,21 +610,36 @@ export default function Edit() {
                                                     : "grab",
                                             left: `${position[index]?.x}px`,
                                             top: `${position[index]?.y}px`,
+                                            color: textColorClick
+                                                ? word.colorData
+                                                : "",
                                         }}
                                         // style={{
                                         //   fontSize: `${fontSize}px`,
                                         //   color: `${fontColor}`,
-                                        //   fontWeight: boldClick ? "bold" : "normal",
-                                        //   fontFamily: italicClick ? "cursive" : "",
                                         //   textDecoration: underlineClick ? "underline" : "none",
                                         //   letterSpacing: spaceClick ? "8px" : "0px",
                                         //   fontWeight: textShadowClick ? "900" : "normal",
                                         //   color: textShadowClick ? "transparent" : "black",
-                                        //   WebkitTextStroke: textShadowClick ? "2px black" : "none",
+                                        //
                                         // }}
                                         className={`p-2 max-w-[90%] ${
                                             textEditClick ? word.textData : ""
-                                        } text-center`}
+                                        } text-center ${
+                                            boldClick ? word.boldData : ""
+                                        } ${
+                                            italicClick ? word.italicData : ""
+                                        } ${
+                                            underlineClick
+                                                ? word.underlineData
+                                                : ""
+                                        } 
+                                        ${spaceClick ? word.spaceData : ""} 
+                                        ${
+                                            textShadowClick
+                                                ? word.shadowData
+                                                : ""
+                                        }`}
                                     >
                                         {" "}
                                         {word.value}

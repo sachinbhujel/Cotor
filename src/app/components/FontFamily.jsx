@@ -72,17 +72,14 @@ function FontFamily({
                             <div
                                 className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                 onClick={() => {
-                                    const newFontFamilyData = [...text];
-                                    newFontFamilyData[text.length - 1] = {
-                                        textData:
-                                            newFontFamilyData[text.length - 1]
-                                                .textData,
-                                        value: newFontFamilyData[
-                                            text.length - 1
-                                        ]?.value,
-                                        fontFamilyData: "",
-                                    };
-                                    setText(newFontFamilyData);
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontFamilyData: "",
+                                        };
+                                        return newTextData;
+                                    });
                                 }}
                             >
                                 <svg
@@ -108,19 +105,17 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            const newFontFamilyData = [...text];
-                                            newFontFamilyData[text.length - 1] =
-                                                {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
+
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
-                                            setText(newFontFamilyData);
+                                                return newTextData;
+                                            });
                                         }}
                                     >
                                         <div className="flex flex-col items-center gap-0.5">
@@ -149,22 +144,20 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                const newFontFamilyData = [
-                                                    ...text,
-                                                ];
-                                                newFontFamilyData[
-                                                    text.length - 1
-                                                ] = {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
-                                                    fontFamilyData: `${font.name}`,
-                                                };
-                                                setText(newFontFamilyData);
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                    return newTextData;
+                                                });
                                             }}
                                         >
                                             <div className="flex flex-col items-center gap-0.5">
@@ -225,17 +218,14 @@ function FontFamily({
                                 className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                 onClick={() => {
                                     setTextFamilyClick(true);
-                                    const newFontFamilyData = [...text];
-                                    newFontFamilyData[text.length - 1] = {
-                                        textData:
-                                            newFontFamilyData[text.length - 1]
-                                                .textData,
-                                        value: newFontFamilyData[
-                                            text.length - 1
-                                        ]?.value,
-                                        fontFamilyData: "",
-                                    };
-                                    setText(newFontFamilyData);
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontFamilyData: "",
+                                        };
+                                        return newTextData;
+                                    });
                                 }}
                             >
                                 <svg
@@ -261,19 +251,16 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            const newFontFamilyData = [...text];
-                                            newFontFamilyData[text.length - 1] =
-                                                {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
-                                            setText(newFontFamilyData);
+                                                return newTextData;
+                                            });
                                         }}
                                     >
                                         <div className="flex flex-col items-center gap-0.5">
@@ -302,22 +289,20 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                const newFontFamilyData = [
-                                                    ...text,
-                                                ];
-                                                newFontFamilyData[
-                                                    text.length - 1
-                                                ] = {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
-                                                    fontFamilyData: `${font.name}`,
-                                                };
-                                                setText(newFontFamilyData);
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                    return newTextData;
+                                                });
                                             }}
                                         >
                                             <div className="flex flex-col items-center gap-0.5">
@@ -378,17 +363,14 @@ function FontFamily({
                                 className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                 onClick={() => {
                                     setTextFamilyClick(true);
-                                    const newFontFamilyData = [...text];
-                                    newFontFamilyData[text.length - 1] = {
-                                        textData:
-                                            newFontFamilyData[text.length - 1]
-                                                .textData,
-                                        value: newFontFamilyData[
-                                            text.length - 1
-                                        ]?.value,
-                                        fontFamilyData: "",
-                                    };
-                                    setText(newFontFamilyData);
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontFamilyData: "",
+                                        };
+                                        return newTextData;
+                                    });
                                 }}
                             >
                                 <svg
@@ -414,19 +396,16 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            const newFontFamilyData = [...text];
-                                            newFontFamilyData[text.length - 1] =
-                                                {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
-                                            setText(newFontFamilyData);
+                                                return newTextData;
+                                            });
                                         }}
                                     >
                                         <div className="flex flex-col items-center gap-0.5">
@@ -455,22 +434,20 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                const newFontFamilyData = [
-                                                    ...text,
-                                                ];
-                                                newFontFamilyData[
-                                                    text.length - 1
-                                                ] = {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
-                                                    fontFamilyData: `${font.name}`,
-                                                };
-                                                setText(newFontFamilyData);
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                    return newTextData;
+                                                });
                                             }}
                                         >
                                             <div className="flex flex-col items-center gap-0.5">
@@ -531,17 +508,14 @@ function FontFamily({
                                 className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                 onClick={() => {
                                     setTextFamilyClick(true);
-                                    const newFontFamilyData = [...text];
-                                    newFontFamilyData[text.length - 1] = {
-                                        textData:
-                                            newFontFamilyData[text.length - 1]
-                                                .textData,
-                                        value: newFontFamilyData[
-                                            text.length - 1
-                                        ]?.value,
-                                        fontFamilyData: "",
-                                    };
-                                    setText(newFontFamilyData);
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontFamilyData: "",
+                                        };
+                                        return newTextData;
+                                    });
                                 }}
                             >
                                 <svg
@@ -567,19 +541,16 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            const newFontFamilyData = [...text];
-                                            newFontFamilyData[text.length - 1] =
-                                                {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
-                                            setText(newFontFamilyData);
+                                                return newTextData;
+                                            });
                                         }}
                                     >
                                         <div className="flex flex-col items-center gap-0.5">
@@ -608,22 +579,20 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                const newFontFamilyData = [
-                                                    ...text,
-                                                ];
-                                                newFontFamilyData[
-                                                    text.length - 1
-                                                ] = {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
-                                                    fontFamilyData: `${font.name}`,
-                                                };
-                                                setText(newFontFamilyData);
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                    return newTextData;
+                                                });
                                             }}
                                         >
                                             <div className="flex flex-col items-center gap-0.5">
@@ -684,17 +653,14 @@ function FontFamily({
                                 className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                 onClick={() => {
                                     setTextFamilyClick(true);
-                                    const newFontFamilyData = [...text];
-                                    newFontFamilyData[text.length - 1] = {
-                                        textData:
-                                            newFontFamilyData[text.length - 1]
-                                                .textData,
-                                        value: newFontFamilyData[
-                                            text.length - 1
-                                        ]?.value,
-                                        fontFamilyData: "",
-                                    };
-                                    setText(newFontFamilyData);
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontFamilyData: "",
+                                        };
+                                        return newTextData;
+                                    });
                                 }}
                             >
                                 <svg
@@ -720,19 +686,16 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            const newFontFamilyData = [...text];
-                                            newFontFamilyData[text.length - 1] =
-                                                {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
-                                            setText(newFontFamilyData);
+                                                return newTextData;
+                                            });
                                         }}
                                     >
                                         <div className="flex flex-col items-center gap-0.5">
@@ -761,22 +724,20 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                const newFontFamilyData = [
-                                                    ...text,
-                                                ];
-                                                newFontFamilyData[
-                                                    text.length - 1
-                                                ] = {
-                                                    textData:
-                                                        newFontFamilyData[
-                                                            text.length - 1
-                                                        ].textData,
-                                                    value: newFontFamilyData[
-                                                        text.length - 1
-                                                    ]?.value,
-                                                    fontFamilyData: `${font.name}`,
-                                                };
-                                                setText(newFontFamilyData);
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                    return newTextData;
+                                                });
                                             }}
                                         >
                                             <div className="flex flex-col items-center gap-0.5">
@@ -803,8 +764,7 @@ function FontFamily({
 
             {/* Advertisement Div */}
             <div className="relative">
-                <div className="rounded-sm bg-red-400 h-60">
-                </div>
+                <div className="rounded-sm bg-red-400 h-60"></div>
                 <div className="absolute bottom-0 w-full flex bg-[linear-gradient(90deg,rgba(42,123,155,1)_0%,rgba(87,199,133,1)_50%,rgba(237,221,83,1)_100%)] p-2 items-center justify-between">
                     <p className="font-semibold text-base text-white">
                         Visit Site

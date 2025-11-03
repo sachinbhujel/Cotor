@@ -1,6 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { colorNames } from "@/data/colorData";
 
 function Color({
+    text,
+    setText,
     setFontColor,
     boldClick,
     setBoldClick,
@@ -12,9 +17,33 @@ function Color({
     setSpaceClick,
     textShadowClick,
     setTextShadowClick,
+    setTextColorClick,
 }) {
-    const handleFontColor = (e) => {
-        setFontColor(e.target.value);
+    const [colorsMore, setColorsMore] = useState(false);
+    const [toolsMore, setToolsMore] = useState(false);
+
+    const handleFontColor = (color) => {
+        setTextColorClick(true);
+        setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                colorData: `${color}`,
+            };
+            return newTextData;
+        });
+    };
+
+    const handleFontColorPicker = (e) => {
+        setTextColorClick(true);
+        setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                colorData: `${e.target.value}`,
+            };
+            return newTextData;
+        });
     };
 
     const handleColorPicker = () => {
@@ -22,23 +51,64 @@ function Color({
     };
 
     const handleTextBold = () => {
-        setBoldClick(!boldClick);
+        setBoldClick(true);
+        setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                boldData: "font-bold",
+            };
+            return newTextData;
+        });
     };
 
     const handleTextItalic = () => {
-        setItalicClick(!italicClick);
+        setItalicClick(true);
+        setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                italicData: "italic",
+            };
+            return newTextData;
+        });
     };
 
     const handleTextUnderline = () => {
-        setUnderlineClick(!underlineClick);
+        setUnderlineClick(true);
+        setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                underlineData: "underline",
+            };
+            return newTextData;
+        });
     };
 
     const handleTextSpace = () => {
-        setSpaceClick(!spaceClick);
+        setSpaceClick(true);
+        setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                spaceData: "tracking-widest",
+            };
+            return newTextData;
+        });
     };
 
     const handleTextShadow = () => {
-        setTextShadowClick(!textShadowClick);
+        setTextShadowClick(true);
+        setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                shadowData:
+                    "text-3xl font-bold [-webkit-text-stroke:2px_black] [-webkit-text-fill-color:transparent]",
+            };
+            return newTextData;
+        });
     };
 
     return (
@@ -72,7 +142,12 @@ function Color({
                         <p className="font-semibold text-base text-white">
                             Suggested Colors
                         </p>
-                        <div className="flex items-center text-[#838383]">
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                colorsMore ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setColorsMore(!colorsMore)}
+                        >
                             <p className="text-sm font-semibold">More</p>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -90,46 +165,21 @@ function Color({
                             </svg>
                         </div>
                     </div>
-                    <div className="relative flex flex-wrap items-center gap-2">
-                        <div
-                            className="w-6 bg-[#ff0000] h-6 rounded-full"
-                            onClick={() => setFontColor("#ff0000")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#2f27ce] h-6 rounded-full"
-                            onClick={() => setFontColor("#2f27ce")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#d42f77] h-6 rounded-full"
-                            onClick={() => setFontColor("#d42f77")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#60aeff] h-6 rounded-full"
-                            onClick={() => setFontColor("#60aeff")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#ffe500] h-6 rounded-full"
-                            onClick={() => setFontColor("#ffe500")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#ff7f00] h-6 rounded-full"
-                            onClick={() => setFontColor("#ff7f00")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#90ff00] h-6 rounded-full"
-                            onClick={() => setFontColor("#90ff00")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#4c00ff] h-6 rounded-full"
-                            onClick={() => setFontColor("#4c00ff")}
-                        ></div>
-                        <div
-                            className="w-6 bg-[#00fbff] h-6 rounded-full"
-                            onClick={() => setFontColor("#00fbff")}
-                        ></div>
+                    <div className="flex flex-wrap items-center gap-2">
+                        {colorNames.map((name, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className={`w-6 bg-[${name.color}] h-6 rounded-full cursor-pointer`}
+                                    onClick={() =>
+                                        handleFontColor(`${name.color}`)
+                                    }
+                                ></div>
+                            );
+                        })}
                         <div className="bg-black text-white rounded-full p-0.5">
                             <div
-                                className="w-5 h-5 flex justify-center items-center"
+                                className="w-5 h-5 flex justify-center items-center cursor-pointer"
                                 onClick={handleColorPicker}
                             >
                                 <svg
@@ -156,7 +206,7 @@ function Color({
                             type="color"
                             id="color-input"
                             className="w-full"
-                            onChange={handleFontColor}
+                            onChange={handleFontColorPicker}
                         />
                     </div>
                 </div>
@@ -165,7 +215,12 @@ function Color({
                         <p className="font-semibold text-base text-white">
                             Styles & alignments
                         </p>
-                        <div className="flex items-center text-[#838383]">
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                toolsMore ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setToolsMore(!toolsMore)}
+                        >
                             <p className="text-sm font-semibold">More</p>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -183,169 +238,229 @@ function Color({
                             </svg>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2 flex-wrap">
-                        <div
-                            className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer"
-                            onClick={handleTextBold}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="font-bold lucide lucide-bold-icon lucide-bold"
+
+                    <div
+                        className={`flex flex-col gap-2 ${
+                            toolsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
+                    >
+                        <div className="grid grid-cols-3 gap-2 text-white">
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                onClick={() => {
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            colorData: "",
+                                            boldData: "",
+                                            italicData: "",
+                                            underlineData: "",
+                                            spaceData: "",
+                                            shadowData: "",
+                                        };
+                                        return newTextData;
+                                    });
+                                }}
                             >
-                                <path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8" />
-                            </svg>
-                            <p className="text-xs">Bold</p>
-                        </div>
-                        <div
-                            className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer"
-                            onClick={handleTextItalic}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-italic-icon lucide-italic"
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                >
+                                    <path d="M4.929 4.929 19.07 19.071" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                            </div>
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                onClick={handleTextBold}
                             >
-                                <line x1="19" x2="10" y1="4" y2="4" />
-                                <line x1="14" x2="5" y1="20" y2="20" />
-                                <line x1="15" x2="9" y1="4" y2="20" />
-                            </svg>
-                            <p className="text-xs">Italic</p>
-                        </div>
-                        <div
-                            className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer"
-                            onClick={handleTextUnderline}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-underline-icon lucide-underline"
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="font-bold lucide lucide-bold-icon lucide-bold"
+                                >
+                                    <path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8" />
+                                </svg>
+                                <p className="text-xs text-gray-300 text-center">
+                                    Bold
+                                </p>
+                            </div>
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                onClick={handleTextItalic}
                             >
-                                <path d="M6 4v6a6 6 0 0 0 12 0V4" />
-                                <line x1="4" x2="20" y1="20" y2="20" />
-                            </svg>
-                            <p className="text-xs">Underline</p>
-                        </div>
-                        <div
-                            className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer"
-                            onClick={handleTextSpace}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-space-icon lucide-space"
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-italic-icon lucide-italic"
+                                >
+                                    <line x1="19" x2="10" y1="4" y2="4" />
+                                    <line x1="14" x2="5" y1="20" y2="20" />
+                                    <line x1="15" x2="9" y1="4" y2="20" />
+                                </svg>
+                                <p className="text-xs text-gray-300 text-center">
+                                    Italic
+                                </p>
+                            </div>
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                onClick={handleTextUnderline}
                             >
-                                <path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" />
-                            </svg>
-                            <p className="text-xs">Space</p>
-                        </div>
-                        <div
-                            className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer"
-                            onClick={handleTextShadow}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-type-outline-icon lucide-type-outline"
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-underline-icon lucide-underline"
+                                >
+                                    <path d="M6 4v6a6 6 0 0 0 12 0V4" />
+                                    <line x1="4" x2="20" y1="20" y2="20" />
+                                </svg>
+                                <p className="text-xs text-gray-300 text-center">
+                                    Underline
+                                </p>
+                            </div>
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                onClick={handleTextSpace}
                             >
-                                <path d="M14 16.5a.5.5 0 0 0 .5.5h.5a2 2 0 0 1 0 4H9a2 2 0 0 1 0-4h.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V8a2 2 0 0 1-4 0V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-4 0v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5Z" />
-                            </svg>
-                            <p className="text-xs">Outline</p>
-                        </div>
-                    </div>
-                    <div className="border flex items-center gap-2 flex-wrap">
-                        <div className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-text-align-start-icon lucide-text-align-start"
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-space-icon lucide-space"
+                                >
+                                    <path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" />
+                                </svg>
+                                <p className="text-xs text-gray-300 text-center">
+                                    Space
+                                </p>
+                            </div>
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                onClick={handleTextShadow}
                             >
-                                <path d="M21 5H3" />
-                                <path d="M15 12H3" />
-                                <path d="M17 19H3" />
-                            </svg>
-                            <p className="text-xs">Start</p>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-type-outline-icon lucide-type-outline"
+                                >
+                                    <path d="M14 16.5a.5.5 0 0 0 .5.5h.5a2 2 0 0 1 0 4H9a2 2 0 0 1 0-4h.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V8a2 2 0 0 1-4 0V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-4 0v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5Z" />
+                                </svg>
+                                <p className="text-xs text-gray-300 text-center">
+                                    Outline
+                                </p>
+                            </div>
                         </div>
-                        <div className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-text-align-center-icon lucide-text-align-center"
-                            >
-                                <path d="M21 5H3" />
-                                <path d="M17 12H7" />
-                                <path d="M19 19H5" />
-                            </svg>
-                            <p className="text-xs">Center</p>
-                        </div>
-                        <div className="w-[30%] h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col justify-center items-center p-2 cursor-pointer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-text-align-end-icon lucide-text-align-end"
-                            >
-                                <path d="M21 5H3" />
-                                <path d="M21 12H9" />
-                                <path d="M21 19H7" />
-                            </svg>
-                            <p className="text-xs">End</p>
-                        </div>
+
+                        {toolsMore && (
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                <div className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="lucide lucide-text-align-start-icon lucide-text-align-start"
+                                    >
+                                        <path d="M21 5H3" />
+                                        <path d="M15 12H3" />
+                                        <path d="M17 19H3" />
+                                    </svg>
+                                    <p className="text-xs text-gray-300 text-center">
+                                        Start
+                                    </p>
+                                </div>
+                                <div className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="lucide lucide-text-align-center-icon lucide-text-align-center"
+                                    >
+                                        <path d="M21 5H3" />
+                                        <path d="M17 12H7" />
+                                        <path d="M19 19H5" />
+                                    </svg>
+                                    <p className="text-xs text-gray-300 text-center">
+                                        Center
+                                    </p>
+                                </div>
+                                <div className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="lucide lucide-text-align-end-icon lucide-text-align-end"
+                                    >
+                                        <path d="M21 5H3" />
+                                        <path d="M21 12H9" />
+                                        <path d="M21 19H7" />
+                                    </svg>
+                                    <p className="text-xs text-gray-300 text-center">
+                                        End
+                                    </p>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
