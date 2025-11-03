@@ -2,80 +2,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
 @layer base {
-  :root {
-    --text: #050315;
-    --background: #fbfbfe;
-    --primary: #2f27ce;
-    --secondary: #dedcff;
-    --accent: #433bff;
-  }
-  .dark {
-    --text: #ebe9fc;
-    --background: #010104;
-    --primary: #3a31d8;
-    --secondary: #020024;
-    --accent: #0600c2;
-  }
+    :root {
+        --text: #050315;
+        --background: #fbfbfe;
+        --primary: #2f27ce;
+        --secondary: #dedcff;
+        --accent: #433bff;
+    }
+    .dark {
+        --text: #ebe9fc;
+        --background: #010104;
+        --primary: #3a31d8;
+        --secondary: #020024;
+        --accent: #0600c2;
+    }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--text);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--text);
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-accent: var(--accent);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-  height: 2px;
+    width: 4px;
+    height: 2px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
-  border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.tools-scrollbar::-webkit-scrollbar {
+    width: 1px;
+    height: 2px;
+}
+
+.tools-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .scrollbar::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
+    width: 2px;
+    height: 2px;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
-  border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .textarea-scrollbar::-webkit-scrollbar {
-  width: 4px;
-  height: 10px;
+    width: 4px;
+    height: 10px;
 }
 
 .textarea-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border-radius: 10px;
+    background-color: #000000;
+    border-radius: 10px;
 }
 
 @media (width<850px) {
-  .hero-div {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .hero-text-div {
-    width: 100%;
-  }
-  .hero-image-div {
-    width: 100%;
-  }
+    .hero-div {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .hero-text-div {
+        width: 100%;
+    }
+    .hero-image-div {
+        width: 100%;
+    }
 }
 
 @media (width<500px) {
-  .hero-image-div img {
-    height: 70vh;
-  }
-  .before-after-div {
-    font-size: 12px;
-  }
+    .hero-image-div img {
+        height: 70vh;
+    }
+    .before-after-div {
+        font-size: 12px;
+    }
 }

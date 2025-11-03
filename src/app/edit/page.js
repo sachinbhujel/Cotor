@@ -434,7 +434,7 @@ export default function Edit() {
                     <div
                         className={`p-2 ${
                             subMenuShow ? "sm:w-[78%] " : "sm:w-0"
-                        } sm:h-[100dvh] h-80 bg-[#2b2b2b] overflow-y-auto custom-scrollbar`}
+                        } sm:h-[100dvh] h-80 bg-[#2b2b2b] overflow-y-auto tools-scrollbar`}
                     >
                         {textDivShow && (
                             <Text
