@@ -120,3 +120,85 @@ export const patrickHandSizeMoreData = [
         size: "text-3xl",
     },
 ];
+
+export const firaMonoSizeData = [
+    {
+        id: 1,
+        fontFamily: "Fira Mono",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Fira Mono",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Fira Mono",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Fira Mono",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Fira Mono",
+        size: "text-xl",
+    },
+];
+
+export const firaMonoSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Fira Mono",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Fira Mono",
+        size: "text-3xl",
+    },
+];
+
+export const courierPrimeSizeData = [
+    {
+        id: 1,
+        fontFamily: "Courier Prime",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Courier Prime",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Courier Prime",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Courier Prime",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Courier Prime",
+        size: "text-xl",
+    },
+];
+
+export const courierPrimeSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Courier Prime",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Courier Prime",
+        size: "text-3xl",
+    },
+];

@@ -104,7 +104,7 @@ function Color({
             newTextData[prev.length - 1] = {
                 ...newTextData[prev.length - 1],
                 shadowData:
-                    "text-3xl font-bold -[-webkittext-stroke:2px_black] [-webkit-text-fill-color:transparent]",
+                    "text-3xl text-white [text-shadow:_-1px_-1px_0_black,_1px_-1px_0_black,_-1px_1px_0_black,_1px_1px_0_black]",
             };
             return newTextData;
         });
