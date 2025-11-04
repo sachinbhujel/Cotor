@@ -6,7 +6,6 @@ import { colorNames } from "@/data/colorData";
 function Color({
     text,
     setText,
-    setFontColor,
     boldClick,
     setBoldClick,
     italicClick,
@@ -105,7 +104,7 @@ function Color({
             newTextData[prev.length - 1] = {
                 ...newTextData[prev.length - 1],
                 shadowData:
-                    "text-3xl font-bold [-webkit-text-stroke:2px_black] [-webkit-text-fill-color:transparent]",
+                    "text-3xl font-bold -[-webkittext-stroke:2px_black] [-webkit-text-fill-color:transparent]",
             };
             return newTextData;
         });

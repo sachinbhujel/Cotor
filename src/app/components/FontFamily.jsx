@@ -12,13 +12,7 @@ import { scriptMoreData } from "@/data/fontFamilyData";
 import { monospaceData } from "@/data/fontFamilyData";
 import { monospaceMoreData } from "@/data/fontFamilyData";
 
-function FontFamily({
-    setText,
-    text,
-    setTextFamilyData,
-    textFamilyClick,
-    setTextFamilyClick,
-}) {
+function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
     const [sansSerifMore, setSansSerifMore] = useState(false);
     const [serifMore, setSerifMore] = useState(false);
     const [decorativeMore, setDecorativeMore] = useState(false);
@@ -30,7 +24,7 @@ function FontFamily({
             <div>
                 <input
                     type="text"
-                    placeholder="Search font"
+                    placeholder="Search font name"
                     className="border bg-white rounded-sm outline-none w-full p-2"
                 />
             </div>

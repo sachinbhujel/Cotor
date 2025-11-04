@@ -15,7 +15,6 @@ function Text({
     text,
     setText,
     textButtonClick,
-    setTextEditData,
     setTextEditClick,
 }) {
     const [titleShowMore, setTitleShowMore] = useState(false);
@@ -77,7 +76,7 @@ function Text({
                                                 textData: "",
                                                 value: newTextData[
                                                     text.length - 1
-                                                ].value,
+                                                ]?.value,
                                             };
                                             setText(newTextData);
                                         }}
@@ -114,7 +113,7 @@ function Text({
                                                         textData: `${value.data}`,
                                                         value: newTextData[
                                                             text.length - 1
-                                                        ].value,
+                                                        ]?.value,
                                                     };
                                                     setText(newTextData);
                                                 }}
@@ -144,7 +143,7 @@ function Text({
                                                             textData: `${value.data}`,
                                                             value: newTextData[
                                                                 text.length - 1
-                                                            ].value,
+                                                            ]?.value,
                                                         };
                                                         setText(newTextData);
                                                     }}
@@ -207,7 +206,7 @@ function Text({
                                                 textData: "",
                                                 value: newTextData[
                                                     text.length - 1
-                                                ].value,
+                                                ]?.value,
                                             };
                                             setText(newTextData);
                                         }}
@@ -244,7 +243,7 @@ function Text({
                                                         textData: `${value.data}`,
                                                         value: newTextData[
                                                             text.length - 1
-                                                        ].value,
+                                                        ]?.value,
                                                     };
                                                     setText(newTextData);
                                                 }}
@@ -277,7 +276,7 @@ function Text({
                                                                 value: newTextData[
                                                                     text.length -
                                                                         1
-                                                                ].value,
+                                                                ]?.value,
                                                             };
                                                             setText(
                                                                 newTextData
@@ -344,7 +343,7 @@ function Text({
                                                 textData: "",
                                                 value: newTextData[
                                                     text.length - 1
-                                                ].value,
+                                                ]?.value,
                                             };
                                             setText(newTextData);
                                         }}
@@ -381,7 +380,7 @@ function Text({
                                                         textData: `${value.data}`,
                                                         value: newTextData[
                                                             text.length - 1
-                                                        ].value,
+                                                        ]?.value,
                                                     };
                                                     setText(newTextData);
                                                 }}
@@ -411,7 +410,7 @@ function Text({
                                                             textData: `${value.data}`,
                                                             value: newTextData[
                                                                 text.length - 1
-                                                            ].value,
+                                                            ]?.value,
                                                         };
                                                         setText(newTextData);
                                                     }}

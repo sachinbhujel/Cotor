@@ -31,17 +31,16 @@ export default function Edit() {
     const [text, setText] = useState([]);
     const [textButtonClick, setTextButtonClick] = useState(true);
     const [fontSize, setFontSize] = useState(22);
-    const [fontColor, setFontColor] = useState(null);
     const [boldClick, setBoldClick] = useState(false);
     const [italicClick, setItalicClick] = useState(false);
     const [underlineClick, setUnderlineClick] = useState(false);
     const [spaceClick, setSpaceClick] = useState(false);
     const [textShadowClick, setTextShadowClick] = useState(false);
 
-    const [textEditData, setTextEditData] = useState("");
     const [textEditClick, setTextEditClick] = useState(false);
-    const [textFamilyData, setTextFamilyData] = useState("");
     const [textFamilyClick, setTextFamilyClick] = useState(false);
+    const [textEffectClick, setTextEffectClick] = useState(false);
+
     const [textColorClick, setTextColorClick] = useState(false);
 
     const handleImageUpload = (e) => {
@@ -443,7 +442,6 @@ export default function Edit() {
                                 text={text}
                                 setText={setText}
                                 textButtonClick={textButtonClick}
-                                setTextEditData={setTextEditData}
                                 setTextEditClick={setTextEditClick}
                             />
                         )}
@@ -451,12 +449,17 @@ export default function Edit() {
                             <FontFamily
                                 text={text}
                                 setText={setText}
-                                setTextFamilyData={setTextFamilyData}
                                 textFamilyClick={textFamilyClick}
                                 setTextFamilyClick={setTextFamilyClick}
                             />
                         )}
-                        {textEffectsDivShow && <Effects />}
+                        {textEffectsDivShow && (
+                            <Effects
+                                text={text}
+                                setText={setText}
+                                setTextEffectClick={setTextEffectClick}
+                            />
+                        )}
                         {fontSizeDivShow && (
                             <FontSize
                                 fontSize={fontSize}
@@ -469,7 +472,6 @@ export default function Edit() {
                                 text={text}
                                 setText={setText}
                                 setTextColorClick={setTextColorClick}
-                                setFontColor={setFontColor}
                                 boldClick={boldClick}
                                 setBoldClick={setBoldClick}
                                 italicClick={italicClick}
@@ -616,12 +618,6 @@ export default function Edit() {
                                         }}
                                         // style={{
                                         //   fontSize: `${fontSize}px`,
-                                        //   color: `${fontColor}`,
-                                        //   textDecoration: underlineClick ? "underline" : "none",
-                                        //   letterSpacing: spaceClick ? "8px" : "0px",
-                                        //   fontWeight: textShadowClick ? "900" : "normal",
-                                        //   color: textShadowClick ? "transparent" : "black",
-                                        //
                                         // }}
                                         className={`p-2 max-w-[90%] ${
                                             textEditClick ? word.textData : ""
@@ -638,6 +634,10 @@ export default function Edit() {
                                         ${
                                             textShadowClick
                                                 ? word.shadowData
+                                                : ""
+                                        } ${
+                                            textEffectClick
+                                                ? word.effectData
                                                 : ""
                                         }`}
                                     >
