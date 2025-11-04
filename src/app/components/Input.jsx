@@ -14,6 +14,8 @@ function Input({ textareaTextValue, setTextareaTextValue, setText }) {
                 textData: "",
                 fontFamilyData: "",
                 effectData: "",
+                fontSizeData: "",
+                fontSizeFamilyData: "",
                 boldData: "",
                 italicData: "",
                 underlineData: "",

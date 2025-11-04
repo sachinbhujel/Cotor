@@ -366,6 +366,10 @@ export default function RootLayout({ children }) {
                     href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap"
                     rel="stylesheet"
                 />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+                    rel="stylesheet"
+                ></link>
             </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased textarea-scrollbar`}

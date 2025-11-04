@@ -40,6 +40,7 @@ export default function Edit() {
     const [textEditClick, setTextEditClick] = useState(false);
     const [textFamilyClick, setTextFamilyClick] = useState(false);
     const [textEffectClick, setTextEffectClick] = useState(false);
+    const [fontSizeFamilyClick, setFontSizeFamilyClick] = useState(false);
 
     const [textColorClick, setTextColorClick] = useState(false);
 
@@ -462,8 +463,12 @@ export default function Edit() {
                         )}
                         {fontSizeDivShow && (
                             <FontSize
+                                text={text}
+                                setText={setText}
                                 fontSize={fontSize}
                                 setFontSize={setFontSize}
+                                setTextFamilyClick={setTextFamilyClick}
+                                setFontSizeFamilyClick={setFontSizeFamilyClick}
                             />
                         )}
                         {elementsDivShow && <Elements />}
@@ -603,6 +608,8 @@ export default function Edit() {
                                         style={{
                                             fontFamily: textFamilyClick
                                                 ? word.fontFamilyData
+                                                : fontSizeFamilyClick
+                                                ? word.fontSizeFamilyData
                                                 : "",
                                             position: "absolute",
                                             cursor:
@@ -616,9 +623,6 @@ export default function Edit() {
                                                 ? word.colorData
                                                 : "",
                                         }}
-                                        // style={{
-                                        //   fontSize: `${fontSize}px`,
-                                        // }}
                                         className={`p-2 max-w-[90%] ${
                                             textEditClick ? word.textData : ""
                                         } text-center ${
@@ -639,7 +643,7 @@ export default function Edit() {
                                             textEffectClick
                                                 ? word.effectData
                                                 : ""
-                                        }`}
+                                        } ${word.fontSizeData}`}
                                     >
                                         {" "}
                                         {word.value}
