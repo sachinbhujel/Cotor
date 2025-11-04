@@ -83,9 +83,18 @@
 
 @media (width<500px) {
     .hero-image-div img {
-        height: 70vh;
+        height: 60vh;
     }
     .before-after-div {
         font-size: 12px;
+    }
+}
+
+@media (width<409px) {
+    .hero-image-div {
+        flex-direction: column;
+    }
+    .image-div {
+        width: 100%;
     }
 }

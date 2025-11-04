@@ -14,12 +14,12 @@ function About() {
           </h2>
           <div className="flex flex-col gap-6">
             <p className="sm:text-[1.3rem] 2xl:text-[3rem] text-lg text-[#5a5f69] leading-[2]">
-              Looking to modify text in an image? With Fotor, you can edit text
+              Looking to modify text in an image? With Cotor, you can edit text
               in images online within seconds. Just upload your image, remove
               the existing text utilizing the AI-powered object remover tool,
               and easily replace it with your desired text. Powered by
-              cutting-edge AI technology, Fotor guarantees accurate and precise
-              text removal, leaving no traces. Try Fotor out and enjoy quick and
+              cutting-edge AI technology, Cotor guarantees accurate and precise
+              text removal, leaving no traces. Try Cotor out and enjoy quick and
               hassle-free image text editing.
             </p>
             <Link href="/edit">
@@ -37,11 +37,11 @@ function About() {
           </h2>
           <div className="flex flex-col gap-6">
             <p className="sm:text-[1.3rem] 2xl:text-[3rem] text-[#5a5f69] leading-[2] text-lg">
-              Want to edit text in image while keeping the same font? Fotor’s
+              Want to edit text in image while keeping the same font? Cotor’s
               got you covered. With over 1,000 fonts in our font generator to
               choose from, you can effortlessly find the perfect match for your
               original image. You can also quickly adjust text sizes, colors,
-              and positions to achieve the perfect look. With Fotor, editing and
+              and positions to achieve the perfect look. With Cotor, editing and
               changing text in images has never been so effortless and
               efficient.
             </p>
