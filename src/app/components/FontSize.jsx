@@ -127,7 +127,7 @@ function FontSize({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center"
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
@@ -165,7 +165,7 @@ function FontSize({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center"
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
@@ -273,7 +273,7 @@ function FontSize({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center"
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
@@ -311,7 +311,7 @@ function FontSize({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center"
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
@@ -417,7 +417,7 @@ function FontSize({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center"
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
@@ -455,7 +455,7 @@ function FontSize({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center"
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
