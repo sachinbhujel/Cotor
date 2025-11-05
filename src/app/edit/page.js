@@ -36,6 +36,7 @@ export default function Edit() {
     const [underlineClick, setUnderlineClick] = useState(false);
     const [spaceClick, setSpaceClick] = useState(false);
     const [textShadowClick, setTextShadowClick] = useState(false);
+    const [elements, setElements] = useState([]);
 
     const [textEditClick, setTextEditClick] = useState(false);
     const [textFamilyClick, setTextFamilyClick] = useState(false);
@@ -191,6 +192,7 @@ export default function Edit() {
     ]);
 
     console.log("text", text);
+    console.log("elements", elements);
 
     return (
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
@@ -471,7 +473,9 @@ export default function Edit() {
                                 setFontSizeFamilyClick={setFontSizeFamilyClick}
                             />
                         )}
-                        {elementsDivShow && <Elements />}
+                        {elementsDivShow && (
+                            <Elements setElements={setElements} />
+                        )}
                         {textColorDivShow && (
                             <Color
                                 text={text}
