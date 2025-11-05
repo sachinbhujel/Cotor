@@ -165,12 +165,32 @@ export default function Edit() {
         });
     };
 
+    const handleTouchStart = (e, index) => {
+        const touch = e.touches[0];
+        setActiveTextIndex(index);
+        setIsDraggable(true);
+        setOffset({
+            x: touch.clientX - (position[index]?.x || 0),
+            y: touch.clientY - (position[index]?.y || 0),
+        });
+    };
+
     const handleElementsMouseDown = (e, index) => {
         setActiveElementsIndex(index);
         setIsElementsDraggable(true);
         setElementsOffset({
             x: e.clientX - (elementsPosition[index]?.x || 0),
             y: e.clientY - (elementsPosition[index]?.y || 0),
+        });
+    };
+
+    const handleElementsTouchStart = (e, index) => {
+        const touch = e.touches[0];
+        setActiveElementsIndex(index);
+        setIsElementsDraggable(true);
+        setElementsOffset({
+            x: touch.clientX - (elementsPosition[index]?.x || 0),
+            y: touch.clientY - (elementsPosition[index]?.y || 0),
         });
     };
 
@@ -186,7 +206,24 @@ export default function Edit() {
             }
         };
 
+        const handleTouchMove = (e) => {
+            const touch = e.touches[0];
+            if (isDraggable && activeTextIndex !== null) {
+                const newPositions = [...position];
+                newPositions[activeTextIndex] = {
+                    x: touch.clientX - offset.x,
+                    y: touch.clientY - offset.y,
+                };
+                setPosition(newPositions);
+            }
+        };
+
         const handleMouseUp = () => {
+            setIsDraggable(false);
+            setActiveTextIndex(null);
+        };
+
+        const handleTouchEnd = () => {
             setIsDraggable(false);
             setActiveTextIndex(null);
         };
@@ -202,7 +239,24 @@ export default function Edit() {
             }
         };
 
+        const handleElementsTouchMove = (e) => {
+            const touch = e.touches[0];
+            if (isElementsDraggable && activeElementsIndex !== null) {
+                const newElementsPositions = [...elementsPosition];
+                newElementsPositions[activeElementsIndex] = {
+                    x: touch.clientX - elementsOffset.x,
+                    y: touch.clientY - elementsOffset.y,
+                };
+                setElementsPosition(newElementsPositions);
+            }
+        };
+
         const handleElementsMouseUp = () => {
+            setIsElementsDraggable(false);
+            setActiveElementsIndex(null);
+        };
+
+        const handleElementsTouchEnd = () => {
             setIsElementsDraggable(false);
             setActiveElementsIndex(null);
         };
@@ -212,11 +266,21 @@ export default function Edit() {
         window.addEventListener("mousemove", handleElementsMouseMove);
         window.addEventListener("mouseup", handleElementsMouseUp);
 
+        window.addEventListener("touchmove", handleTouchMove);
+        window.addEventListener("touchend", handleTouchEnd);
+        window.addEventListener("touchmove", handleElementsTouchMove);
+        window.addEventListener("touchend", handleElementsTouchEnd);
+
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
             window.removeEventListener("mouseup", handleMouseUp);
             window.removeEventListener("mousemove", handleElementsMouseMove);
             window.removeEventListener("mouseup", handleElementsMouseUp);
+
+            window.removeEventListener("touchmove", handleTouchMove);
+            window.removeEventListener("touchmove", handleElementsTouchMove);
+            window.removeEventListener("touchmove", handleElementsTouchMove);
+            window.removeEventListener("touchend", handleElementsTouchEnd);
         };
     }, [
         isDraggable,
@@ -648,6 +712,9 @@ export default function Edit() {
                                         onMouseDown={(e) =>
                                             handleMouseDown(e, index)
                                         }
+                                        onTouchStart={(e) =>
+                                            handleTouchStart(e, index)
+                                        }
                                         style={{
                                             fontFamily: textFamilyClick
                                                 ? word.fontFamilyData
@@ -698,6 +765,9 @@ export default function Edit() {
                                 <div
                                     onMouseDown={(e) =>
                                         handleElementsMouseDown(e, index)
+                                    }
+                                    onTouchStart={(e) =>
+                                        handleElementsTouchStart(e, index)
                                     }
                                     className="absolute flex justify-center items-center bg-red-200"
                                     key={index}
