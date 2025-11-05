@@ -160,7 +160,7 @@ export default function Edit() {
         setActiveTextIndex(index);
         setIsDraggable(true);
         setOffset({
-            x: e.clientX - (position[index]?.x || 0),
+            x: e.clientX - (position[index]?.x || 100),
             y: e.clientY - (position[index]?.y || 0),
         });
     };
@@ -170,7 +170,7 @@ export default function Edit() {
         setActiveTextIndex(index);
         setIsDraggable(true);
         setOffset({
-            x: touch.clientX - (position[index]?.x || 0),
+            x: touch.clientX - (position[index]?.x || 100),
             y: touch.clientY - (position[index]?.y || 0),
         });
     };
@@ -179,8 +179,10 @@ export default function Edit() {
         setActiveElementsIndex(index);
         setIsElementsDraggable(true);
         setElementsOffset({
-            x: e.clientX - (elementsPosition[index]?.x || 0),
-            y: e.clientY - (elementsPosition[index]?.y || 0),
+            x: e.clientX - (elementsPosition[index]?.x || 100),
+            y:
+                e.clientY -
+                (elementsPosition[index]?.y || window.innerHeight / 10),
         });
     };
 
@@ -189,7 +191,7 @@ export default function Edit() {
         setActiveElementsIndex(index);
         setIsElementsDraggable(true);
         setElementsOffset({
-            x: touch.clientX - (elementsPosition[index]?.x || 0),
+            x: touch.clientX - (elementsPosition[index]?.x || 100),
             y: touch.clientY - (elementsPosition[index]?.y || 0),
         });
     };
@@ -769,7 +771,7 @@ export default function Edit() {
                                     onTouchStart={(e) =>
                                         handleElementsTouchStart(e, index)
                                     }
-                                    className="absolute flex justify-center items-center bg-red-200"
+                                    className="absolute flex justify-center items-center"
                                     key={index}
                                     style={{
                                         position: "absolute",
