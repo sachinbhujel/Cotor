@@ -366,3 +366,167 @@ export const arvoSizeMoreData = [
         size: "text-3xl",
     },
 ];
+
+export const dancingScriptSizeData = [
+    {
+        id: 1,
+        fontFamily: "Dancing Script",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Dancing Script",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Dancing Script",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Dancing Script",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Dancing Script",
+        size: "text-xl",
+    },
+];
+
+export const dancingScriptSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Dancing Script",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Dancing Script",
+        size: "text-3xl",
+    },
+];
+
+export const rockSaltSizeData = [
+    {
+        id: 1,
+        fontFamily: "Rock Salt",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Rock Salt",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Rock Salt",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Rock Salt",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Rock Salt",
+        size: "text-xl",
+    },
+];
+
+export const rockSaltSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Rock Salt",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Rock Salt",
+        size: "text-3xl",
+    },
+];
+
+export const bitterSizeData = [
+    {
+        id: 1,
+        fontFamily: "Bitter",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Bitter",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Bitter",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Bitter",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Bitter",
+        size: "text-xl",
+    },
+];
+
+export const bitterSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Bitter",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Bitter",
+        size: "text-3xl",
+    },
+];
+
+export const oxygenSizeData = [
+    {
+        id: 1,
+        fontFamily: "Oxygen",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Oxygen",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Oxygen",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Oxygen",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Oxygen",
+        size: "text-xl",
+    },
+];
+
+export const oxygenSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Oxygen",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Oxygen",
+        size: "text-3xl",
+    },
+];
