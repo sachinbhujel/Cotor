@@ -699,7 +699,7 @@ export default function Edit() {
                                     onMouseDown={(e) =>
                                         handleElementsMouseDown(e, index)
                                     }
-                                    className="absolute flex justify-center items-center w-[100%]"
+                                    className="absolute flex justify-center items-center bg-red-200"
                                     key={index}
                                     style={{
                                         position: "absolute",
