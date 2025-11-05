@@ -27,6 +27,11 @@ export default function Edit() {
     const [activeTextIndex, setActiveTextIndex] = useState(null);
     const [subMenuShow, setSubMenuShow] = useState(true);
 
+    const [isElementsDraggable, setIsElementsDraggable] = useState(false);
+    const [elementsPosition, setElementsPosition] = useState([]);
+    const [elementsOffset, setElementsOffset] = useState({ x: 0, y: 0 });
+    const [activeElementsIndex, setActiveElementsIndex] = useState(null);
+
     const [textareaTextValue, setTextareaTextValue] = useState("");
     const [text, setText] = useState([]);
     const [textButtonClick, setTextButtonClick] = useState(true);
@@ -52,6 +57,8 @@ export default function Edit() {
             localStorage.setItem("upload-image", URL.createObjectURL(file));
         }
     };
+
+    console.log(elementsPosition);
 
     const handleZoomIn = () => {
         setZoom((prev) => Math.min(prev + 0.1, 3));
@@ -158,6 +165,15 @@ export default function Edit() {
         });
     };
 
+    const handleElementsMouseDown = (e, index) => {
+        setActiveElementsIndex(index);
+        setIsElementsDraggable(true);
+        setElementsOffset({
+            x: e.clientX - (elementsPosition[index]?.x || 0),
+            y: e.clientY - (elementsPosition[index]?.y || 0),
+        });
+    };
+
     useEffect(() => {
         const handleMouseMove = (e) => {
             if (isDraggable && activeTextIndex !== null) {
@@ -175,12 +191,32 @@ export default function Edit() {
             setActiveTextIndex(null);
         };
 
+        const handleElementsMouseMove = (e) => {
+            if (isElementsDraggable && activeElementsIndex !== null) {
+                const newElementsPositions = [...elementsPosition];
+                newElementsPositions[activeElementsIndex] = {
+                    x: e.clientX - elementsOffset.x,
+                    y: e.clientY - elementsOffset.y,
+                };
+                setElementsPosition(newElementsPositions);
+            }
+        };
+
+        const handleElementsMouseUp = () => {
+            setIsElementsDraggable(false);
+            setActiveElementsIndex(null);
+        };
+
         window.addEventListener("mousemove", handleMouseMove);
         window.addEventListener("mouseup", handleMouseUp);
+        window.addEventListener("mousemove", handleElementsMouseMove);
+        window.addEventListener("mouseup", handleElementsMouseUp);
 
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
             window.removeEventListener("mouseup", handleMouseUp);
+            window.removeEventListener("mousemove", handleElementsMouseMove);
+            window.removeEventListener("mouseup", handleElementsMouseUp);
         };
     }, [
         isDraggable,
@@ -189,10 +225,13 @@ export default function Edit() {
         setIsDraggable,
         activeTextIndex,
         position,
+        elementsPosition,
+        activeElementsIndex,
+        setIsElementsDraggable,
+        setElementsPosition,
+        elementsOffset,
+        isElementsDraggable,
     ]);
-
-    console.log("text", text);
-    console.log("elements", elements);
 
     return (
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
@@ -651,6 +690,30 @@ export default function Edit() {
                                     >
                                         {" "}
                                         {word.value}
+                                    </div>
+                                </div>
+                            ))}
+                        {elements.length > 0 &&
+                            elements.map((element, index) => (
+                                <div
+                                    onMouseDown={(e) =>
+                                        handleElementsMouseDown(e, index)
+                                    }
+                                    className="absolute flex justify-center items-center w-[100%]"
+                                    key={index}
+                                    style={{
+                                        position: "absolute",
+                                        cursor:
+                                            isElementsDraggable &&
+                                            activeElementsIndex === index
+                                                ? "grabbing"
+                                                : "grab",
+                                        left: `${elementsPosition[index]?.x}px`,
+                                        top: `${elementsPosition[index]?.y}px`,
+                                    }}
+                                >
+                                    <div className="h-18 flex justify-center items-center">
+                                        {element}
                                     </div>
                                 </div>
                             ))}

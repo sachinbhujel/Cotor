@@ -155,6 +155,12 @@ function Elements({ setElements }) {
                                         <div
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center"
+                                            onClick={(e) =>
+                                                setElements((prev) => [
+                                                    ...prev,
+                                                    shape.icon,
+                                                ])
+                                            }
                                         >
                                             {shape.icon}
                                         </div>
@@ -168,6 +174,12 @@ function Elements({ setElements }) {
                                             <div
                                                 key={index}
                                                 className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center"
+                                                onClick={(e) =>
+                                                    setElements((prev) => [
+                                                        ...prev,
+                                                        shape.icon,
+                                                    ])
+                                                }
                                             >
                                                 {shape.icon}
                                             </div>
@@ -245,6 +257,12 @@ function Elements({ setElements }) {
                                         <div
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center"
+                                            onClick={(e) =>
+                                                setElements((prev) => [
+                                                    ...prev,
+                                                    shape.icon,
+                                                ])
+                                            }
                                         >
                                             {shape.icon}
                                         </div>
@@ -258,6 +276,12 @@ function Elements({ setElements }) {
                                             <div
                                                 key={index}
                                                 className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center"
+                                                onClick={(e) =>
+                                                    setElements((prev) => [
+                                                        ...prev,
+                                                        shape.icon,
+                                                    ])
+                                                }
                                             >
                                                 {shape.icon}
                                             </div>
