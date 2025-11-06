@@ -1,5 +1,6 @@
 "use client";
 
+import * as htmlToImage from "html-to-image";
 import Color from "../components/Color";
 import Effects from "../components/Effects";
 import Elements from "../components/Elements";
@@ -57,8 +58,6 @@ export default function Edit() {
             localStorage.setItem("upload-image", URL.createObjectURL(file));
         }
     };
-
-    console.log(elementsPosition);
 
     const handleZoomIn = () => {
         setZoom((prev) => Math.min(prev + 0.1, 3));
@@ -297,10 +296,20 @@ export default function Edit() {
         isElementsDraggable,
     ]);
 
+    const handleDownload = () => {
+        const node = document.getElementById("export-image");
+        htmlToImage.toPng(node).then((dataUrl) => {
+            var link = document.createElement("a");
+            link.download = "cotor-edit.png";
+            link.href = dataUrl;
+            link.click();
+        });
+    };
+
     return (
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
             <div
-                className={`sm:static absolute bottom-0 z-1000 flex sm:flex-row flex-col-reverse ${
+                className={`sm:static absolute bottom-0 z-[1000] flex sm:flex-row flex-col-reverse ${
                     subMenuShow ? "sm:w-140" : "sm:w-max"
                 } w-full`}
             >
@@ -672,161 +681,37 @@ export default function Edit() {
                     </div>
                 </div>
             </div>
-            <div className="relative bg-[#ebebeb] w-[100%] h-[100dvh] flex justify-center items-center">
+            <div className="relative w-[100%]">
                 {image && (
-                    <div className="absolute bg-[#161619] top-0 left-0 z-100 flex items-center gap-4 mb-4">
-                        <button
-                            onClick={handleZoomOut}
-                            className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
-                        >
-                            -
-                        </button>
-                        <span className="text-sm text-white font-semibold">
-                            {(zoom * 100).toFixed(0)}%
-                        </span>
-                        <button
-                            onClick={handleZoomIn}
-                            className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
-                        >
-                            +
-                        </button>
-                    </div>
-                )}
-                {image ? (
-                    <div className="relative h-[90%] w-[95%] overflow-hidden rounded-md bg-white flex items-center justify-center">
-                        <img
-                            src={image}
-                            alt="Uploaded"
-                            className="transition-transform w-[95%] h-[90vh] duration-300 ease-in-out object-contain"
-                            style={{
-                                transform: `scale(${zoom})`,
-                            }}
-                        />
-                        {text.length > 0 &&
-                            text.map((word, index) => (
-                                <div
-                                    className="absolute flex justify-center items-center w-[100%]"
-                                    key={index}
-                                >
-                                    <div
-                                        onMouseDown={(e) =>
-                                            handleMouseDown(e, index)
-                                        }
-                                        onTouchStart={(e) =>
-                                            handleTouchStart(e, index)
-                                        }
-                                        style={{
-                                            fontFamily: textFamilyClick
-                                                ? word.fontFamilyData
-                                                : fontSizeFamilyClick
-                                                ? word.fontSizeFamilyData
-                                                : "",
-                                            position: "absolute",
-                                            cursor:
-                                                isDraggable &&
-                                                activeTextIndex === index
-                                                    ? "grabbing"
-                                                    : "grab",
-                                            left: `${position[index]?.x}px`,
-                                            top: `${position[index]?.y}px`,
-                                            color: textColorClick
-                                                ? word.colorData
-                                                : "",
-                                        }}
-                                        className={`p-2 max-w-[90%] ${
-                                            textEditClick ? word.textData : ""
-                                        } text-center ${
-                                            boldClick ? word.boldData : ""
-                                        } ${
-                                            italicClick ? word.italicData : ""
-                                        } ${
-                                            underlineClick
-                                                ? word.underlineData
-                                                : ""
-                                        } 
-                                        ${spaceClick ? word.spaceData : ""} 
-                                        ${
-                                            textShadowClick
-                                                ? word.shadowData
-                                                : ""
-                                        } ${
-                                            textEffectClick
-                                                ? word.effectData
-                                                : ""
-                                        } ${word.fontSizeData}`}
-                                    >
-                                        {" "}
-                                        {word.value}
-                                    </div>
-                                </div>
-                            ))}
-                        {elements.length > 0 &&
-                            elements.map((element, index) => (
-                                <div
-                                    onMouseDown={(e) =>
-                                        handleElementsMouseDown(e, index)
-                                    }
-                                    onTouchStart={(e) =>
-                                        handleElementsTouchStart(e, index)
-                                    }
-                                    className="absolute flex justify-center items-center"
-                                    key={index}
-                                    style={{
-                                        position: "absolute",
-                                        cursor:
-                                            isElementsDraggable &&
-                                            activeElementsIndex === index
-                                                ? "grabbing"
-                                                : "grab",
-                                        left: `${elementsPosition[index]?.x}px`,
-                                        top: `${elementsPosition[index]?.y}px`,
-                                    }}
-                                >
-                                    <div className="h-18 flex justify-center items-center">
-                                        {element}
-                                    </div>
-                                </div>
-                            ))}
-                    </div>
-                ) : (
-                    <div className="relative w-full flex flex-col justify-center items-center h-[100dvh]">
-                        <label
-                            className="w-[95%] h-[95%] border-2 bg-white rounded-md border-dashed p-4
-             flex items-center justify-center flex-col gap-3 cursor-pointer"
-                        >
-                            <div className="flex flex-col justify-center items-center gap-1">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="36"
-                                    height="36"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="text-[#232323] lucide lucide-image-up-icon lucide-image-up"
-                                >
-                                    <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
-                                    <path d="m14 19.5 3-3 3 3" />
-                                    <path d="M17 22v-5.5" />
-                                    <circle cx="9" cy="9" r="2" />
-                                </svg>
-                                <h2 className="sm:text-[1.5rem] 2xl:text-[2.4rem] text-xl text-[#414751] font-bold text-center">
-                                    Upload your own images
-                                </h2>
-                                {/* <p className="opacity-75">Supports JPG, PNG etc</p> */}
+                    <div
+                        className="absolute top-0 left-0 z-[100] flex items-center justify-between w-full p-1 
+     bg-white/30 backdrop-blur-lg border border-white/20 shadow-md"
+                    >
+                        <div className="bg-[#161619] flex items-center gap-4">
+                            <button
+                                onClick={handleZoomOut}
+                                className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
+                            >
+                                -
+                            </button>
+                            <span className="text-sm text-white font-semibold">
+                                {(zoom * 100).toFixed(0)}%
+                            </span>
+                            <button
+                                onClick={handleZoomIn}
+                                className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
+                            >
+                                +
+                            </button>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <div
+                                className="cursor-pointer bg-[#2c7dfa] hover:bg-[#0052d0] text-white font-medium px-4 py-2 w-max rounded-md sm:text-[0.9rem] 2xl:text-[2rem] text-lg"
+                                onClick={handleDownload}
+                            >
+                                <button className="cursor-pointer">Save</button>
                             </div>
-
-                            <input
-                                type="file"
-                                accept="image/*"
-                                onChange={handleImageUpload}
-                                className="hidden"
-                            />
-
-                            <div className="sm:text-[1rem] text-base text-white px-6 py-2 rounded-full flex items-center gap-4 bg-[linear-gradient(90deg,rgba(2,0,36,1)_0%,rgba(9,9,121,1)_35%,rgba(0,212,255,1)_100%)]">
-                                <span>Upload image</span>
+                            <div className="bg-black rounded-sm text-white p-[8.5px] hover:bg-white hover:text-black border hover:border-black cursor-pointer">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
@@ -834,39 +719,219 @@ export default function Edit() {
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="lucide lucide-chevron-down-icon lucide-chevron-down"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-copy-icon lucide-copy"
                                 >
-                                    <path d="m6 9 6 6 6-6" />
+                                    <rect
+                                        width="14"
+                                        height="14"
+                                        x="8"
+                                        y="8"
+                                        rx="2"
+                                        ry="2"
+                                    />
+                                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
                                 </svg>
-                            </div>
-                        </label>
-                        <div className="absolute top-1/2 mt-18 flex flex-col justify-center items-center gap-2 w-max">
-                            <p className="text-xs">
-                                No photo? Try one of ours.
-                            </p>
-                            <div className="w-full flex justify-center items-center gap-2">
-                                <img
-                                    src="demo-image-1.jpg"
-                                    className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
-                                    onClick={() => setImage("demo-image-1.jpg")}
-                                />
-                                <img
-                                    src="demo-image-2.jpg"
-                                    className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
-                                    onClick={() => setImage("demo-image-2.jpg")}
-                                />
-                                <img
-                                    src="demo-image-1.jpg"
-                                    className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
-                                    onClick={() => setImage("demo-image-1.jpg")}
-                                />
                             </div>
                         </div>
                     </div>
                 )}
+                <div className="bg-[#ebebeb] w-[100%] h-[100dvh] flex justify-center items-center">
+                    {image ? (
+                        <div
+                            className="relative h-[90%] w-[95%] overflow-hidden rounded-md bg-white flex items-center justify-center"
+                            id="export-image"
+                        >
+                            <img
+                                src={image}
+                                alt="Uploaded"
+                                className="transition-transform w-[95%] h-[90vh] duration-300 ease-in-out object-contain"
+                                style={{
+                                    transform: `scale(${zoom})`,
+                                }}
+                            />
+                            {text.length > 0 &&
+                                text.map((word, index) => (
+                                    <div
+                                        className="absolute flex justify-center items-center w-[100%]"
+                                        key={index}
+                                    >
+                                        <div
+                                            onMouseDown={(e) =>
+                                                handleMouseDown(e, index)
+                                            }
+                                            onTouchStart={(e) =>
+                                                handleTouchStart(e, index)
+                                            }
+                                            style={{
+                                                fontFamily: textFamilyClick
+                                                    ? word.fontFamilyData
+                                                    : fontSizeFamilyClick
+                                                    ? word.fontSizeFamilyData
+                                                    : "",
+                                                position: "absolute",
+                                                cursor:
+                                                    isDraggable &&
+                                                    activeTextIndex === index
+                                                        ? "grabbing"
+                                                        : "grab",
+                                                left: `${position[index]?.x}px`,
+                                                top: `${position[index]?.y}px`,
+                                                color: textColorClick
+                                                    ? word.colorData
+                                                    : "",
+                                            }}
+                                            className={`p-2 max-w-[90%] ${
+                                                textEditClick
+                                                    ? word.textData
+                                                    : ""
+                                            } text-center ${
+                                                boldClick ? word.boldData : ""
+                                            } ${
+                                                italicClick
+                                                    ? word.italicData
+                                                    : ""
+                                            } ${
+                                                underlineClick
+                                                    ? word.underlineData
+                                                    : ""
+                                            } 
+                                        ${spaceClick ? word.spaceData : ""} 
+                                        ${
+                                            textShadowClick
+                                                ? word.shadowData
+                                                : ""
+                                        } ${
+                                                textEffectClick
+                                                    ? word.effectData
+                                                    : ""
+                                            } ${word.fontSizeData}`}
+                                        >
+                                            {" "}
+                                            {word.value}
+                                        </div>
+                                    </div>
+                                ))}
+                            {elements.length > 0 &&
+                                elements.map((element, index) => (
+                                    <div
+                                        onMouseDown={(e) =>
+                                            handleElementsMouseDown(e, index)
+                                        }
+                                        onTouchStart={(e) =>
+                                            handleElementsTouchStart(e, index)
+                                        }
+                                        className="absolute flex justify-center items-center"
+                                        key={index}
+                                        style={{
+                                            position: "absolute",
+                                            cursor:
+                                                isElementsDraggable &&
+                                                activeElementsIndex === index
+                                                    ? "grabbing"
+                                                    : "grab",
+                                            left: `${elementsPosition[index]?.x}px`,
+                                            top: `${elementsPosition[index]?.y}px`,
+                                        }}
+                                    >
+                                        <div className="h-18 flex justify-center items-center">
+                                            {element}
+                                        </div>
+                                    </div>
+                                ))}
+                        </div>
+                    ) : (
+                        <div
+                            className="w-[95%] h-[95%] border-2 bg-white rounded-md border-dashed p-4
+             flex items-center justify-center flex-col gap-3 cursor-pointer overflow-auto upload"
+                        >
+                            <div className="relative flex flex-col justify-center items-center h-[100dvh]">
+                                <label className="flex flex-col justify-center items-center gap-2">
+                                    <div className="flex flex-col justify-center items-center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="36"
+                                            height="36"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="text-[#232323] lucide lucide-image-up-icon lucide-image-up"
+                                        >
+                                            <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
+                                            <path d="m14 19.5 3-3 3 3" />
+                                            <path d="M17 22v-5.5" />
+                                            <circle cx="9" cy="9" r="2" />
+                                        </svg>
+                                        <h2 className="sm:text-[1.5rem] 2xl:text-[2.4rem] text-xl text-[#414751] font-bold text-center">
+                                            Upload your own images
+                                        </h2>
+                                        <p className="opacity-75">
+                                            Supports JPG, PNG etc
+                                        </p>
+                                    </div>
+
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={handleImageUpload}
+                                        className="hidden"
+                                    />
+
+                                    <div className="sm:text-[1rem] text-base w-max text-white px-6 py-2 rounded-full flex items-center gap-4 bg-[linear-gradient(90deg,rgba(2,0,36,1)_0%,rgba(9,9,121,1)_35%,rgba(0,212,255,1)_100%)]">
+                                        <span>Upload image</span>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="lucide lucide-chevron-down-icon lucide-chevron-down"
+                                        >
+                                            <path d="m6 9 6 6 6-6" />
+                                        </svg>
+                                    </div>
+                                </label>
+                                <div className="absolute top-1/2 sm:mt-20 2xl:mt-23 mt-21 flex flex-col justify-center items-center gap-2 w-max">
+                                    <p className="text-xs">
+                                        No photo? Try one of ours.
+                                    </p>
+                                    <div className="w-full flex justify-center items-center gap-2">
+                                        <img
+                                            src="demo-image-1.jpg"
+                                            className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
+                                            onClick={() =>
+                                                setImage("demo-image-1.jpg")
+                                            }
+                                        />
+                                        <img
+                                            src="demo-image-2.jpg"
+                                            className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
+                                            onClick={() =>
+                                                setImage("demo-image-2.jpg")
+                                            }
+                                        />
+                                        <img
+                                            src="demo-image-1.jpg"
+                                            className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
+                                            onClick={() =>
+                                                setImage("demo-image-1.jpg")
+                                            }
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

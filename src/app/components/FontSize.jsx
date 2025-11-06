@@ -153,6 +153,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -162,7 +163,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -191,6 +191,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -204,7 +205,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -299,6 +299,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -308,7 +309,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -337,6 +337,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -350,7 +351,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -443,6 +443,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -452,7 +453,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -481,6 +481,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -494,7 +495,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -587,6 +587,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -596,7 +597,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -625,6 +625,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -638,7 +639,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -733,6 +733,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -742,7 +743,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -771,6 +771,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -784,7 +785,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -877,6 +877,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -886,7 +887,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -915,6 +915,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -928,7 +929,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -1021,6 +1021,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -1030,7 +1031,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -1059,6 +1059,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -1072,7 +1073,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -1165,6 +1165,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -1174,7 +1175,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -1203,6 +1203,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -1216,7 +1217,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -1309,6 +1309,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -1318,7 +1319,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -1347,6 +1347,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -1360,7 +1361,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -1455,6 +1455,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -1464,7 +1465,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -1494,6 +1494,7 @@ function FontSize({
                                                 key={index}
                                                 className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                                 onClick={() => {
+                                                    setTextFamilyClick(false);
                                                     setFontSizeFamilyClick(
                                                         true
                                                     );
@@ -1509,7 +1510,6 @@ function FontSize({
                                                             ],
                                                             fontSizeData: `${font.size}`,
                                                             fontSizeFamilyData: `${font.fontFamily}`,
-                                                            fontFamilyData: "",
                                                         };
                                                         return newTextData;
                                                     });
@@ -1603,6 +1603,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -1612,7 +1613,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -1641,6 +1641,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -1654,7 +1655,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -1747,6 +1747,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -1756,7 +1757,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -1785,6 +1785,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -1798,7 +1799,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });
@@ -1891,6 +1891,7 @@ function FontSize({
                                         key={index}
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
+                                            setTextFamilyClick(false);
                                             setFontSizeFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -1900,7 +1901,6 @@ function FontSize({
                                                     ],
                                                     fontSizeData: `${font.size}`,
                                                     fontSizeFamilyData: `${font.fontFamily}`,
-                                                    fontFamilyData: "",
                                                 };
                                                 return newTextData;
                                             });
@@ -1929,6 +1929,7 @@ function FontSize({
                                             key={index}
                                             className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                             onClick={() => {
+                                                setTextFamilyClick(false);
                                                 setFontSizeFamilyClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [
@@ -1942,7 +1943,6 @@ function FontSize({
                                                         ],
                                                         fontSizeData: `${font.size}`,
                                                         fontSizeFamilyData: `${font.fontFamily}`,
-                                                        fontFamilyData: "",
                                                     };
                                                     return newTextData;
                                                 });

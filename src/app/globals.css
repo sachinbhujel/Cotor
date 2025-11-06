@@ -68,6 +68,16 @@
     border-radius: 10px;
 }
 
+.upload::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+.upload::-webkit-scrollbar-thumb {
+    background-color: #157dec;
+    border-radius: 10px;
+}
+
 @media (width<850px) {
     .hero-div {
         flex-direction: column;
