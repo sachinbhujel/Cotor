@@ -14,21 +14,6 @@ export default function Home() {
                 <div className="flex flex-col gap-4 sm:px-6 px-4">
                     <Navbar />
                     <div className="text-white w-full flex items-center">
-                        {/* <p className="2xl:text-[2rem] sm:text-[1rem] text-[14px]">Home</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-chevron-right-icon lucide-chevron-right"
-            >
-              <path d="m9 18 6-6-6-6" />
-            </svg> */}
                         <p className="2xl:text-[2rem] sm:text-[1rem] text-[14px]">
                             Color Palatte
                         </p>
@@ -76,7 +61,7 @@ export default function Home() {
                     <div className="hero-image-div sm:w-[50%] flex items-center gap-2">
                         <div className="image-div relative w-[50%]">
                             <img
-                                src="https://i.imgur.com/lSqHYkf.jpeg"
+                                src={"/before-hero-image.jpg"}
                                 className="h-100 object-cover rounded-md 2xl:w-[100%] 2xl:h-[50%]"
                             />
                             <p className="before-after-div sm:text-[1rem] 2xl:text-[2.2rem] absolute top-3 left-3 bg-black rounded-full w-max text-white px-4 py-1">

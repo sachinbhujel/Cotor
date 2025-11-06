@@ -180,9 +180,7 @@ export default function Edit() {
         setIsElementsDraggable(true);
         setElementsOffset({
             x: e.clientX - (elementsPosition[index]?.x || 100),
-            y:
-                e.clientY -
-                (elementsPosition[index]?.y || window.innerHeight / 10),
+            y: e.clientY - (elementsPosition[index]?.y || 0),
         });
     };
 
