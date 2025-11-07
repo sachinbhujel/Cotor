@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 export default function Home() {
     return (
         <div className="m-auto flex flex-col gap-6">
-            <div className="bg-[#007aff] p-2 pb-14 flex flex-col gap-10">
+            <div className="bg-[#007aff] p-20 pb-14 flex flex-col gap-10">
                 <div className="flex flex-col gap-4 sm:px-6 px-4">
                     <Navbar />
                     <div className="text-white w-full flex items-center">
