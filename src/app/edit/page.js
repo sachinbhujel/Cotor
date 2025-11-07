@@ -309,7 +309,7 @@ export default function Edit() {
     };
 
     return (
-        <div className="relative flex w-full sm:flex-row flex-col-reverse">
+        <div className="relative flex w-full sm:flex-row flex-col-reverse border-2 border-green-500">
             <div
                 className={`sm:static absolute bottom-0 z-[1000] flex sm:flex-row flex-col-reverse ${
                     subMenuShow ? "sm:w-140" : "sm:w-max"
@@ -318,7 +318,7 @@ export default function Edit() {
                 <div
                     className={`flex sm:flex-col items-center flex-row ${
                         subMenuShow ? "sm:w-[22%]" : "sm:w-[100%]"
-                    } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar`}
+                    } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 border-2 border-red-300 overflow-y-auto scrollbar`}
                 >
                     <div
                         className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
