@@ -12,7 +12,13 @@ import { scriptMoreData } from "@/data/fontFamilyData";
 import { monospaceData } from "@/data/fontFamilyData";
 import { monospaceMoreData } from "@/data/fontFamilyData";
 
-function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
+function FontFamily({
+    setText,
+    text,
+    textFamilyClick,
+    setTextFamilyClick,
+    setFontSizeFamilyClick,
+}) {
     const [sansSerifMore, setSansSerifMore] = useState(false);
     const [serifMore, setSerifMore] = useState(false);
     const [decorativeMore, setDecorativeMore] = useState(false);
@@ -99,7 +105,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-
+                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -138,6 +144,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
+                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -245,6 +252,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
+                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -283,6 +291,8 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
+
+                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -390,6 +400,8 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
+
+                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -428,6 +440,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
+                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -535,6 +548,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
+                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -573,6 +587,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
+                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -680,6 +695,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
+                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -718,6 +734,7 @@ function FontFamily({ setText, text, textFamilyClick, setTextFamilyClick }) {
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
+                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,

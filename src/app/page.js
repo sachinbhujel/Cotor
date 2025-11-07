@@ -52,7 +52,7 @@ export default function Home() {
                                 you can do so in just seconds. Try it out now!
                             </p>
                         </div>
-                        <Link href="/edit">
+                        <Link href="/edit" className="w-max">
                             <div className="bg-white font-medium px-4 py-2 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] hover:bg-[#007aff] hover:border-2 border-white hover:text-white">
                                 <p>Edit Text Now</p>
                             </div>
@@ -62,7 +62,7 @@ export default function Home() {
                         <div className="image-div relative w-[50%]">
                             <img
                                 src={"/before-hero-image.jpg"}
-                                className="h-100 object-cover rounded-md 2xl:w-[100%] 2xl:h-[50%]"
+                                className="h-100 w-full object-cover rounded-md 2xl:w-[100%] 2xl:h-[50%]"
                             />
                             <p className="before-after-div sm:text-[1rem] 2xl:text-[2.2rem] absolute top-3 left-3 bg-black rounded-full w-max text-white px-4 py-1">
                                 Before
@@ -70,8 +70,8 @@ export default function Home() {
                         </div>
                         <div className="image-div relative w-[50%]">
                             <img
-                                src="https://i.imgur.com/lSqHYkf.jpeg"
-                                className="h-100 object-cover rounded-md 2xl:w-[100%] 2xl:h-[50%]"
+                                src={"/after-hero-image.png"}
+                                className="h-100 w-full object-cover rounded-md 2xl:w-[100%] 2xl:h-[50%]"
                             />
                             <p className="before-after-div sm:text-[1rem] 2xl:text-[2.2rem] absolute top-3 right-3 bg-black rounded-full w-max text-white px-4 py-1">
                                 After

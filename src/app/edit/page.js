@@ -296,6 +296,8 @@ export default function Edit() {
         isElementsDraggable,
     ]);
 
+    console.log(text);
+
     const handleDownload = () => {
         const node = document.getElementById("export-image");
         htmlToImage.toPng(node).then((dataUrl) => {
@@ -564,6 +566,7 @@ export default function Edit() {
                             <FontFamily
                                 text={text}
                                 setText={setText}
+                                setFontSizeFamilyClick={setFontSizeFamilyClick}
                                 textFamilyClick={textFamilyClick}
                                 setTextFamilyClick={setTextFamilyClick}
                             />
@@ -766,11 +769,7 @@ export default function Edit() {
                                                 handleTouchStart(e, index)
                                             }
                                             style={{
-                                                fontFamily: textFamilyClick
-                                                    ? word.fontFamilyData
-                                                    : fontSizeFamilyClick
-                                                    ? word.fontSizeFamilyData
-                                                    : "",
+                                                fontFamily: word.fontFamilyData,
                                                 position: "absolute",
                                                 cursor:
                                                     isDraggable &&
@@ -845,7 +844,7 @@ export default function Edit() {
                     ) : (
                         <div className="w-[95%] h-[95%] border-2 bg-white rounded-md border-dashed cursor-pointer overflow-auto upload">
                             <div className="relative flex flex-col justify-center items-center h-[100dvh]">
-                                <label className="w-[100%] h-[100%] bg-red-200 cursor-pointer flex flex-col justify-center items-center gap-2">
+                                <label className="w-[100%] h-[100%] cursor-pointer flex flex-col justify-center items-center gap-2">
                                     <div className="flex flex-col justify-center items-center">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
