@@ -745,10 +745,16 @@ export default function Edit() {
                         </div>
                     </div>
                 )}
-                <div className={`${themeToggleClick ? "bg-black" : "bg-[#ebebeb]"} w-[100%] h-[100dvh] flex justify-center items-center`}>
+                <div
+                    className={`${
+                        themeToggleClick ? "bg-black" : "bg-[#ebebeb]"
+                    } w-[100%] h-[100dvh] flex justify-center items-center`}
+                >
                     {image ? (
                         <div
-                            className="relative h-[90%] w-[95%] overflow-hidden rounded-md bg-white flex items-center justify-center"
+                            className={`${
+                                themeToggleClick ? "bg-[#1c1c1f]" : "bg-white"
+                            } relative h-[90%] w-[95%] overflow-hidden rounded-md flex items-center justify-center`}
                             id="export-image"
                         >
                             <img
@@ -846,7 +852,13 @@ export default function Edit() {
                                 ))}
                         </div>
                     ) : (
-                        <div className="w-[95%] h-[95%] border-2 bg-white rounded-md border-dashed cursor-pointer overflow-auto upload">
+                        <div
+                            className={`${
+                                themeToggleClick
+                                    ? "bg-[#232323] border-white"
+                                    : "bg-white"
+                            } w-[95%] h-[95%] border-2 rounded-md border-dashed cursor-pointer overflow-auto upload`}
+                        >
                             <div className="relative flex flex-col justify-center items-center h-full">
                                 <label className="w-[100%] h-[100%] cursor-pointer flex flex-col justify-center items-center gap-2">
                                     <div className="flex flex-col justify-center items-center">
@@ -860,17 +872,33 @@ export default function Edit() {
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            className="text-[#232323] lucide lucide-image-up-icon lucide-image-up"
+                                            className={`${
+                                                themeToggleClick
+                                                    ? "text-white"
+                                                    : "text-[#232323]"
+                                            } lucide lucide-image-up-icon lucide-image-up`}
                                         >
                                             <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
                                             <path d="m14 19.5 3-3 3 3" />
                                             <path d="M17 22v-5.5" />
                                             <circle cx="9" cy="9" r="2" />
                                         </svg>
-                                        <h2 className="sm:text-[1.5rem] 2xl:text-[2.4rem] text-xl text-[#414751] font-bold text-center">
+                                        <h2
+                                            className={`sm:text-[1.5rem] 2xl:text-[2.4rem] text-xl ${
+                                                themeToggleClick
+                                                    ? "text-white"
+                                                    : "text-[#414751]"
+                                            } font-bold text-center`}
+                                        >
                                             Upload your own images
                                         </h2>
-                                        <p className="opacity-75">
+                                        <p
+                                            className={`${
+                                                themeToggleClick
+                                                    ? "text-[#d0d0d0]"
+                                                    : ""
+                                            } opacity-75`}
+                                        >
                                             Supports JPG, PNG etc
                                         </p>
                                     </div>
@@ -902,7 +930,11 @@ export default function Edit() {
                                     </div>
                                 </label>
                                 <div className="absolute top-1/2 sm:mt-20 2xl:mt-23 mt-21 flex flex-col justify-center items-center gap-2 w-max">
-                                    <p className="text-xs">
+                                    <p
+                                        className={`${
+                                            themeToggleClick ? "text-white" : ""
+                                        } text-xs`}
+                                    >
                                         No photo? Try one of ours.
                                     </p>
                                     <div className="w-full flex justify-center items-center gap-2">

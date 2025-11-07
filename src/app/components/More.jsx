@@ -86,6 +86,29 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                     </>
                 )}
             </div>
+            <div className="relative">
+                <div className="rounded-sm bg-red-400 h-60"></div>
+                <div className="absolute bottom-0 w-full flex bg-[linear-gradient(90deg,rgba(153,146,209,1)_0%,rgba(9,9,121,1)_35%,rgba(171,44,160,1)_68%,rgba(0,212,255,1)_100%)] p-2 items-center justify-between">
+                    <p className="font-semibold text-base text-white">
+                        Visit Site
+                    </p>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-white lucide lucide-move-right-icon lucide-move-right"
+                    >
+                        <path d="M18 8L22 12L18 16" />
+                        <path d="M2 12H22" />
+                    </svg>
+                </div>
+            </div>
         </div>
     );
 }
