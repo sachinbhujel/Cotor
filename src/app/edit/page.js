@@ -48,6 +48,7 @@ export default function Edit() {
     const [textFamilyClick, setTextFamilyClick] = useState(false);
     const [textEffectClick, setTextEffectClick] = useState(false);
     const [fontSizeFamilyClick, setFontSizeFamilyClick] = useState(false);
+    const [themeToggleClick, setThemeToggleClick] = useState(false);
 
     const [textColorClick, setTextColorClick] = useState(false);
 
@@ -319,7 +320,7 @@ export default function Edit() {
                     } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar`}
                 >
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             textDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowText}
@@ -343,7 +344,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Add Text</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowFontFamily}
@@ -369,7 +370,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Font-Family</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             textEffectsDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowTextEffects}
@@ -391,7 +392,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Effects</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             fontSizeDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowFontSize}
@@ -416,7 +417,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Font Size</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             elementsDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowElements}
@@ -449,7 +450,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Elements</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             textColorDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowTextColor}
@@ -495,7 +496,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Color</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             uploadsDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowUploads}
@@ -520,7 +521,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Uploads</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${
                             moreDivShow ? "bg-[#27282c] text-white" : ""
                         }`}
                         onClick={handleShowMore}
@@ -606,8 +607,13 @@ export default function Edit() {
                                 setTextShadowClick={setTextShadowClick}
                             />
                         )}
-                        {uploadsDivShow && <Uploads setImage={setImage}/>}
-                        {moreDivShow && <More />}
+                        {uploadsDivShow && <Uploads setImage={setImage} />}
+                        {moreDivShow && (
+                            <More
+                                themeToggleClick={themeToggleClick}
+                                setThemeToggleClick={setThemeToggleClick}
+                            />
+                        )}
                     </div>
                 )}
                 <div className="bg-[#2b2b2b] flex justify-center items-center text-white cursor-pointer">
@@ -739,7 +745,7 @@ export default function Edit() {
                         </div>
                     </div>
                 )}
-                <div className="bg-[#ebebeb] w-[100%] h-[100dvh] flex justify-center items-center">
+                <div className={`${themeToggleClick ? "bg-black" : "bg-[#ebebeb]"} w-[100%] h-[100dvh] flex justify-center items-center`}>
                     {image ? (
                         <div
                             className="relative h-[90%] w-[95%] overflow-hidden rounded-md bg-white flex items-center justify-center"

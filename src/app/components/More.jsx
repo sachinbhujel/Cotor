@@ -1,7 +1,93 @@
 import React from "react";
 
-function More() {
-  return <div>More</div>;
+function More({ themeToggleClick, setThemeToggleClick }) {
+    const handleTheme = () => {
+        setThemeToggleClick(!themeToggleClick);
+    };
+    return (
+        <div className="flex flex-col gap-6 py-1 h-full">
+            <div className="bg-[#3c3d3f] p-2 py-3 text-white flex items-center gap-2 rounded-sm cursor-pointer hover:bg-[#161619] hover:text-white">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"
+                >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <path d="M12 17h.01" />
+                </svg>
+                <p>Ask for Cotor</p>
+            </div>
+            <div className="bg-[#3c3d3f] p-2 py-3 text-white flex items-center gap-2 rounded-sm cursor-pointer hover:bg-[#161619] hover:text-white">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-square-pen-icon lucide-square-pen"
+                >
+                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                    <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                </svg>
+                <p>Feedback</p>
+            </div>
+            <div className="bg-[#3c3d3f] p-2 py-3 text-white flex items-center gap-2 rounded-sm cursor-pointer hover:bg-[#161619] hover:text-white">
+                {themeToggleClick ? (
+                    <>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-toggle-right-icon lucide-toggle-right"
+                            onClick={handleTheme}
+                        >
+                            <circle cx="15" cy="12" r="3" />
+                            <rect width="20" height="14" x="2" y="5" rx="7" />
+                        </svg>
+                        <p>Lighter</p>
+                    </>
+                ) : (
+                    <>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-toggle-left-icon lucide-toggle-left"
+                            onClick={handleTheme}
+                        >
+                            <circle cx="9" cy="12" r="3" />
+                            <rect width="20" height="14" x="2" y="5" rx="7" />
+                        </svg>
+                        <p>Darker</p>
+                    </>
+                )}
+            </div>
+        </div>
+    );
 }
 
 export default More;
