@@ -55,7 +55,7 @@ export default function Edit() {
         const file = e.target.files[0];
         if (file) {
             setImage(URL.createObjectURL(file));
-            localStorage.setItem("upload-image", URL.createObjectURL(file));
+            // localStorage.setItem("upload-image", URL.createObjectURL(file));
         }
     };
 
@@ -296,8 +296,6 @@ export default function Edit() {
         isElementsDraggable,
     ]);
 
-    console.log(text);
-
     const handleDownload = () => {
         const node = document.getElementById("export-image");
         htmlToImage.toPng(node).then((dataUrl) => {
@@ -309,7 +307,7 @@ export default function Edit() {
     };
 
     return (
-        <div className="relative flex w-full sm:flex-row flex-col-reverse border-2 border-green-500">
+        <div className="relative flex w-full sm:flex-row flex-col-reverse">
             <div
                 className={`sm:static absolute bottom-0 z-[1000] flex sm:flex-row flex-col-reverse ${
                     subMenuShow ? "sm:w-140" : "sm:w-max"
@@ -318,7 +316,7 @@ export default function Edit() {
                 <div
                     className={`flex sm:flex-col items-center flex-row ${
                         subMenuShow ? "sm:w-[22%]" : "sm:w-[100%]"
-                    } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 border-2 border-red-300 overflow-y-auto scrollbar`}
+                    } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar`}
                 >
                     <div
                         className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center ${
@@ -722,10 +720,10 @@ export default function Edit() {
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-copy-icon lucide-copy"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-copy-icon lucide-copy"
                                 >
                                     <rect
                                         width="14"
@@ -843,7 +841,7 @@ export default function Edit() {
                         </div>
                     ) : (
                         <div className="w-[95%] h-[95%] border-2 bg-white rounded-md border-dashed cursor-pointer overflow-auto upload">
-                            <div className="relative flex flex-col justify-center items-center h-[100dvh]">
+                            <div className="relative flex flex-col justify-center items-center h-full">
                                 <label className="w-[100%] h-[100%] cursor-pointer flex flex-col justify-center items-center gap-2">
                                     <div className="flex flex-col justify-center items-center">
                                         <svg
@@ -887,10 +885,10 @@ export default function Edit() {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="lucide lucide-move-right-icon lucide-move-right"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="lucide lucide-move-right-icon lucide-move-right"
                                         >
                                             <path d="M18 8L22 12L18 16" />
                                             <path d="M2 12H22" />

@@ -530,3 +530,85 @@ export const oxygenSizeMoreData = [
         size: "text-3xl",
     },
 ];
+
+export const ralewaySizeData = [
+    {
+        id: 1,
+        fontFamily: "Raleway",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Raleway",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Raleway",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Raleway",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Raleway",
+        size: "text-xl",
+    },
+];
+
+export const ralewaySizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Raleway",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Raleway",
+        size: "text-3xl",
+    },
+];
+
+export const ubuntuSizeData = [
+    {
+        id: 1,
+        fontFamily: "Ubuntu",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Ubuntu",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Ubuntu",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Ubuntu",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Ubuntu",
+        size: "text-xl",
+    },
+];
+
+export const ubuntuSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Ubuntu",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Ubuntu",
+        size: "text-3xl",
+    },
+];

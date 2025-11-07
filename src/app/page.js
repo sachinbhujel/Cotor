@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -59,21 +60,33 @@ export default function Home() {
                         </Link>
                     </div>
                     <div className="hero-image-div sm:w-[50%] flex items-center gap-2">
-                        <div className="image-div relative w-[50%]">
-                            <img
+                        <div className="image-div relative w-[50%] h-100 w-full 2xl:h-250">
+                            <Image
                                 src={"/before-hero-image.jpg"}
-                                className="h-100 w-full object-cover rounded-md 2xl:w-[100%] 2xl:h-[50%]"
+                                alt="Demo before image"
+                                fill
+                                className="object-cover rounded-md"
                             />
-                            <p className="before-after-div sm:text-[1rem] 2xl:text-[2.2rem] absolute top-3 left-3 bg-black rounded-full w-max text-white px-4 py-1">
+                            <p
+                                className="before-after-div absolute top-3 left-3 sm:text-[1rem] 2xl:text-[2.2rem] 
+     text-white px-4 py-1 w-max rounded-full 
+     bg-white/20 backdrop-blur-lg border border-white/20 shadow-md"
+                            >
                                 Before
                             </p>
                         </div>
-                        <div className="image-div relative w-[50%]">
-                            <img
+                        <div className="image-div relative w-[50%] h-100 w-full 2xl:h-250">
+                            <Image
                                 src={"/after-hero-image.png"}
-                                className="h-100 w-full object-cover rounded-md 2xl:w-[100%] 2xl:h-[50%]"
+                                alt="Demo after image"
+                                fill
+                                className="object-cover rounded-md"
                             />
-                            <p className="before-after-div sm:text-[1rem] 2xl:text-[2.2rem] absolute top-3 right-3 bg-black rounded-full w-max text-white px-4 py-1">
+                            <p
+                                className="before-after-div absolute top-3 right-3 sm:text-[1rem] 2xl:text-[2.2rem] 
+     text-white px-4 py-1 w-max rounded-full 
+     bg-white/20 backdrop-blur-lg border border-white/20 shadow-md"
+                            >
                                 After
                             </p>
                         </div>
