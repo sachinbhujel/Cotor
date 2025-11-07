@@ -606,7 +606,7 @@ export default function Edit() {
                                 setTextShadowClick={setTextShadowClick}
                             />
                         )}
-                        {uploadsDivShow && <Uploads />}
+                        {uploadsDivShow && <Uploads setImage={setImage}/>}
                         {moreDivShow && <More />}
                     </div>
                 )}
