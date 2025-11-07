@@ -709,7 +709,7 @@ export default function Edit() {
                         </div>
                         <div className="flex items-center gap-2">
                             <div
-                                className="cursor-pointer bg-[#2c7dfa] hover:bg-[#0052d0] text-white font-medium px-4 py-2 w-max rounded-md sm:text-[0.9rem] 2xl:text-[2rem] text-lg"
+                                className="cursor-pointer bg-[#2c7dfa] hover:bg-[#0052d0] text-white font-medium px-4 py-2 w-max rounded-md text-[0.9rem]"
                                 onClick={handleDownload}
                             >
                                 <button className="cursor-pointer">Save</button>
