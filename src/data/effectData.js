@@ -440,7 +440,7 @@ export const outlineAndNeonEffectMoreData = [
         id: 11,
         data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#0ea5e9] [text-shadow:_0_0_8px_#0ea5e9]",
     },
-      {
+    {
         id: 12,
         data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#f59e0b] [text-shadow:_0_0_8px_#f59e0b]",
     },
@@ -514,65 +514,64 @@ export const outlineAndStrokeEffectMoreData = [
         id: 11,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#8b5cf6]",
     },
-      {
+    {
         id: 12,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#fb7185]",
     },
-      {
+    {
         id: 13,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#ff9472]",
     },
-      {
+    {
         id: 14,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#c78cf5]",
     },
-        {
+    {
         id: 15,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#2f27ce]",
     },
-      {
+    {
         id: 16,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#dedcff]",
     },
-     {
+    {
         id: 17,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#baf57e]",
     },
-     {
+    {
         id: 18,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#6931d6]",
     },
-     {
+    {
         id: 19,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#e6d183]",
     },
-     {
+    {
         id: 20,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#e3637c]",
     },
-     {
+    {
         id: 21,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#bccb6c]",
     },
-     {
+    {
         id: 22,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#eba27b]",
     },
-     {
+    {
         id: 23,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#84efb3]",
     },
-     {
+    {
         id: 24,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#83bab0]",
     },
-     {
+    {
         id: 25,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#8e6d9d]",
     },
-     {
+    {
         id: 26,
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#d3408e]",
     },
-
 ];
