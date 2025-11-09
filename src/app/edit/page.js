@@ -51,6 +51,7 @@ export default function Edit() {
     const [themeToggleClick, setThemeToggleClick] = useState(false);
 
     const [textColorClick, setTextColorClick] = useState(false);
+    const [elementsColorClick, setElementsColorClick] = useState(false);
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
@@ -612,7 +613,9 @@ export default function Edit() {
                             <Color
                                 text={text}
                                 setText={setText}
+                                setElements={setElements}
                                 setTextColorClick={setTextColorClick}
+                                setElementsColorClick={setElementsColorClick}
                                 boldClick={boldClick}
                                 setBoldClick={setBoldClick}
                                 italicClick={italicClick}
@@ -864,9 +867,14 @@ export default function Edit() {
                                                     : "grab",
                                             left: `${elementsPosition[index]?.x}px`,
                                             top: `${elementsPosition[index]?.y}px`,
+                                            color: elementsColorClick
+                                                ? element.colorData
+                                                : "white",
                                         }}
                                     >
-                                        <div className="h-18 flex justify-center items-center">
+                                        <div
+                                            className={`h-18 flex justify-center items-center`}
+                                        >
                                             {element}
                                         </div>
                                     </div>

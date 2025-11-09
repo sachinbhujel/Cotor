@@ -6,6 +6,7 @@ import { colorNames } from "@/data/colorData";
 function Color({
     text,
     setText,
+    setElements,
     boldClick,
     setBoldClick,
     italicClick,
@@ -17,13 +18,23 @@ function Color({
     textShadowClick,
     setTextShadowClick,
     setTextColorClick,
+    setElementsColorClick,
 }) {
     const [colorsMore, setColorsMore] = useState(false);
     const [toolsMore, setToolsMore] = useState(false);
 
     const handleFontColor = (color) => {
+        setElementsColorClick(true);
         setTextColorClick(true);
         setText((prev) => {
+            const newTextData = [...prev];
+            newTextData[prev.length - 1] = {
+                ...newTextData[prev.length - 1],
+                colorData: `${color}`,
+            };
+            return newTextData;
+        });
+        setElements((prev) => {
             const newTextData = [...prev];
             newTextData[prev.length - 1] = {
                 ...newTextData[prev.length - 1],

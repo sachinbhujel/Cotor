@@ -31,7 +31,7 @@ function Elements({ setElements }) {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         onClick={handleIdeaDiv}
-                        className="text-[#9098a7] lucide lucide-circle-question-mark-icon lucide-circle-question-mark"
+                        className="cursor-pointer text-[#9098a7] lucide lucide-circle-question-mark-icon lucide-circle-question-mark"
                     >
                         <circle cx="12" cy="12" r="10" />
                         <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
@@ -300,7 +300,7 @@ function Elements({ setElements }) {
                         <p className="font-bold">How it works</p>
                         <div className="flex flex-col gap-1 text-sm font-200 tracking-wide leading-normal">
                             <p>
-                                30000+ stickers and elements for you to unleash
+                                30+ stickers and elements for you to unleash
                                 creativity;
                             </p>
                             <p>You can search keywords to find a proper one;</p>
