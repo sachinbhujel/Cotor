@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Navbar() {
@@ -13,9 +14,11 @@ function Navbar() {
                 </h1>
             </div>
             <div className="flex items-center gap-4 sm:text-[1rem] 2xl:text-[3rem] text-sm text-white">
-                <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
-                    Help
-                </p>
+                <Link href="/help">
+                    <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
+                        Help
+                    </p>
+                </Link>
                 {/* <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
           Faq
         </p> */}
