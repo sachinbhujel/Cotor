@@ -56,7 +56,25 @@ export default function Edit() {
         const file = e.target.files[0];
         if (file) {
             setImage(URL.createObjectURL(file));
-            // localStorage.setItem("upload-image", URL.createObjectURL(file));
+            localStorage.setItem("upload-image", URL.createObjectURL(file));
+        }
+    };
+
+    const handleCopyImage = async () => {
+        const storedImage =
+            "blob:https://refactored-winner-qgxv6jr5wp52g57-3000.app.github.dev/8903d758-9a53-421d-b732-d1073380df50";
+        if (storedImage) {
+            try {
+                const response = await fetch(storedImage);
+                const blob = await response.blob();
+                const clipboardItem = new ClipboardItem({
+                    [blob.type]: blob,
+                });
+                await navigator.clipboard.write([clipboardItem]);
+                console.log("Image copied to clipboard successfully!");
+            } catch (error) {
+                console.error("Failed to copy image:", error);
+            }
         }
     };
 
@@ -718,7 +736,10 @@ export default function Edit() {
                             >
                                 <button className="cursor-pointer">Save</button>
                             </div>
-                            <div className="bg-black rounded-sm text-white p-[8.5px] hover:bg-white hover:text-black border hover:border-black cursor-pointer">
+                            <div
+                                className="bg-black rounded-sm text-white p-[8.5px] hover:bg-white hover:text-black border hover:border-black cursor-pointer"
+                                onClick={handleCopyImage}
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"

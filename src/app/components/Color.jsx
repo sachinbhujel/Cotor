@@ -113,27 +113,33 @@ function Color({
     return (
         <div className="flex flex-col gap-6">
             <div className="relative">
-                <div className="rounded-sm bg-red-400 h-50"></div>
-                <div className="absolute bottom-0 w-full flex bg-[linear-gradient(90deg,rgba(131,58,180,1)_0%,rgba(253,29,29,1)_50%,rgba(252,176,69,1)_100%)] p-2 items-center justify-between">
-                    <p className="font-semibold text-base text-white">
-                        Visit Site
-                    </p>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-white lucide lucide-move-right-icon lucide-move-right"
+                <div className="rounded-sm bg-white h-50"></div>
+                <a href="mailto:sachinbhujel.np@gmail.com">
+                    <div
+                        className="absolute bottom-0 w-full flex bg-[linear-gradient(90deg,rgba(131,58,180,1)_0%,rgba(253,29,29,1)_50%,rgba(252,176,69,1)_100%)] 
+                    hover:bg-[linear-gradient(90deg,rgba(252,176,69,1)_0%,rgba(253,29,29,1)_50%,rgba(131,58,180,1)_100%)]
+                     p-2 items-center justify-between"
                     >
-                        <path d="M18 8L22 12L18 16" />
-                        <path d="M2 12H22" />
-                    </svg>
-                </div>
+                        <p className="font-semibold text-base text-white">
+                            Promote Site
+                        </p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="text-white lucide lucide-move-right-icon lucide-move-right"
+                        >
+                            <path d="M18 8L22 12L18 16" />
+                            <path d="M2 12H22" />
+                        </svg>
+                    </div>
+                </a>
             </div>
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-2">

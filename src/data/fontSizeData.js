@@ -612,3 +612,44 @@ export const ubuntuSizeMoreData = [
         size: "text-3xl",
     },
 ];
+
+export const momoSizeData = [
+    {
+        id: 1,
+        fontFamily: "Momo Signature",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Momo Signature",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Momo Signature",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Momo Signature",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Momo Signature",
+        size: "text-xl",
+    },
+];
+
+export const momoSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Momo Signature",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Momo Signature",
+        size: "text-3xl",
+    },
+];
