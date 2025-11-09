@@ -301,3 +301,278 @@ export const neonEffectMoreData = [
         data: "font-bold text-xl text-rose-300 [text-shadow:_0_0_10px_#fb7185,_0_0_20px_#f43f5e]",
     },
 ];
+
+export const outlineEffectData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_white]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_black]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#3b82f6]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#ec4899]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#22c55e]",
+    },
+];
+
+export const outlineEffectMoreData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#eab308]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#ef4444]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#8b5cf6]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#9ca3af]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#3b82f6]",
+    },
+    {
+        id: 6,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#38bdf8]",
+    },
+    {
+        id: 7,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#f97316]",
+    },
+    {
+        id: 8,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#06b6d4]",
+    },
+    {
+        id: 9,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#facc15]",
+    },
+    {
+        id: 10,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#d946ef]",
+    },
+    {
+        id: 11,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#22d3ee]",
+    },
+];
+
+export const outlineAndNeonEffectData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:0.5px_white]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:0.5px_black]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#3b82f6] [text-shadow:_0_0_8px_#3b82f6]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#ec4899] [text-shadow:_0_0_8px_#ec4899]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#22c55e] [text-shadow:_0_0_8px_#22c55e]",
+    },
+];
+
+export const outlineAndNeonEffectMoreData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#facc15] [text-shadow:_0_0_8px_#facc15]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#06b6d4] [text-shadow:_0_0_8px_#06b6d4]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#a855f7] [text-shadow:_0_0_8px_#a855f7]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#f97316] [text-shadow:_0_0_8px_#f97316]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#ef4444] [text-shadow:_0_0_8px_#ef4444]",
+    },
+    {
+        id: 6,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#d946ef] [text-shadow:_0_0_8px_#d946ef]",
+    },
+    {
+        id: 7,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#84cc16] [text-shadow:_0_0_8px_#84cc16]",
+    },
+    {
+        id: 8,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#14b8a6] [text-shadow:_0_0_8px_#14b8a6]",
+    },
+    {
+        id: 9,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#4f46e5] [text-shadow:_0_0_8px_#4f46e5]",
+    },
+    {
+        id: 10,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#f43f5e] [text-shadow:_0_0_8px_#f43f5e]",
+    },
+    {
+        id: 11,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#0ea5e9] [text-shadow:_0_0_8px_#0ea5e9]",
+    },
+      {
+        id: 12,
+        data: "font-bold text-xl text-transparent [-webkit-text-stroke:1px_#f59e0b] [text-shadow:_0_0_8px_#f59e0b]",
+    },
+];
+
+export const outlineAndStrokeEffectData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#ec4899]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#3b82f6]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#22c55e]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#facc15]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#06b6d4]",
+    },
+];
+
+export const outlineAndStrokeEffectMoreData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#a855f7]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#f97316]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#ef4444]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#d946ef]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#84cc16]",
+    },
+    {
+        id: 6,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#14b8a6]",
+    },
+    {
+        id: 7,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#4f46e5]",
+    },
+    {
+        id: 8,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#3ee2c1]",
+    },
+    {
+        id: 9,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#0ea5e9]",
+    },
+    {
+        id: 10,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#f59e0b]",
+    },
+    {
+        id: 11,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#8b5cf6]",
+    },
+      {
+        id: 12,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#fb7185]",
+    },
+      {
+        id: 13,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#ff9472]",
+    },
+      {
+        id: 14,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#c78cf5]",
+    },
+        {
+        id: 15,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#2f27ce]",
+    },
+      {
+        id: 16,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#dedcff]",
+    },
+     {
+        id: 17,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#baf57e]",
+    },
+     {
+        id: 18,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#6931d6]",
+    },
+     {
+        id: 19,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#e6d183]",
+    },
+     {
+        id: 20,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#e3637c]",
+    },
+     {
+        id: 21,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#bccb6c]",
+    },
+     {
+        id: 22,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#eba27b]",
+    },
+     {
+        id: 23,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#84efb3]",
+    },
+     {
+        id: 24,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#83bab0]",
+    },
+     {
+        id: 25,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#8e6d9d]",
+    },
+     {
+        id: 26,
+        data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#d3408e]",
+    },
+
+];

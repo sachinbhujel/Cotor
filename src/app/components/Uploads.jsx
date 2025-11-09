@@ -12,7 +12,7 @@ function Uploads({ setImage }) {
         <div>
             <div class="flex items-center justify-center w-full h-[95dvh]">
                 <label
-                    for="dropzone-file"
+                    htmlFor="dropzone-file"
                     class="flex flex-col items-center justify-center w-full h-full cursor-pointer"
                 >
                     <div class="flex flex-col items-center justify-center pt-5 pb-6">

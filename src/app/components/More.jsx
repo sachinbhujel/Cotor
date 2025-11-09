@@ -152,13 +152,13 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                     {/* <img src={"hey-weather-site.png"} className="" /> */}
                     <div className="flex flex-col gap-2 p-2">
                         <p
-                            className="text-center flex items-center font-bold text-3xl text-[#4b2e05]
+                            className="underline text-center flex items-center font-bold text-3xl text-[#4b2e05]
 
 "
                         >
                             HeyWeather
                         </p>
-                        <p className="text-base">
+                        <p className="text-sm">
                             HeyWeather is a minimal and modern weather app.
                         </p>
                         <p className="flex items-center gap-1.5">
