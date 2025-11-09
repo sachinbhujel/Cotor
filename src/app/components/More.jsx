@@ -148,11 +148,30 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                 </div>
             </div>
             <div className="relative">
-                <div className="rounded-sm h-50">
-                    <img
-                        src={"hey-weather-site.png"}
-                        className="h-full object-cover"
-                    />
+                <div className="rounded-sm h-50 bg-white">
+                    {/* <img src={"hey-weather-site.png"} className="" /> */}
+                    <div className="flex flex-col gap-2 p-2">
+                        <p
+                            className="text-center flex items-center font-bold text-3xl text-[#4b2e05]
+
+"
+                        >
+                            HeyWeather
+                        </p>
+                        <p className="text-base">
+                            HeyWeather is a minimal and modern weather app.
+                        </p>
+                        <p className="flex items-center gap-1.5">
+                            <p> Founder : </p>
+                            <a
+                                href="https://github/sachinbhujel"
+                                target="_blank"
+                                className="font-semibold text-[#4b2e05] underline"
+                            >
+                                Sachin Bhujel
+                            </a>
+                        </p>
+                    </div>
                 </div>
                 <a href="https://heyweather.vercel.app" target="_blank">
                     <div
