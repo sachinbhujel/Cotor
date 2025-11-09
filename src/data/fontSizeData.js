@@ -653,3 +653,126 @@ export const momoSizeMoreData = [
         size: "text-3xl",
     },
 ];
+
+export const indieFlowerSizeData = [
+    {
+        id: 1,
+        fontFamily: "Indie Flower",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Indie Flower",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Indie Flower",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Indie Flower",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Indie Flower",
+        size: "text-xl",
+    }, 
+]
+
+export const indieFlowerSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Indie Flower",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Indie Flower",
+        size: "text-3xl",
+    },
+];
+
+export const openSansSizeData = [
+    {
+        id: 1,
+        fontFamily: "Open Sans",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Open Sans",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Open Sans",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Open Sans",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Open Sans",
+        size: "text-xl",
+    },
+];
+
+export const openSansSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Open Sans",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Open Sans",
+        size: "text-3xl",
+    },
+];
+
+export const cabinSizeData = [
+    {
+        id: 1,
+        fontFamily: "Cabin",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Cabin",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Cabin",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Cabin",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Cabin",
+        size: "text-xl",
+    },
+];
+
+export const cabinSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Cabin",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Cabin",
+        size: "text-3xl",
+    },
+];
