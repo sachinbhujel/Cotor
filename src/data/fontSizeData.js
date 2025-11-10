@@ -679,7 +679,7 @@ export const indieFlowerSizeData = [
         id: 5,
         fontFamily: "Indie Flower",
         size: "text-xl",
-    }, 
+    },
 ]
 
 export const indieFlowerSizeMoreData = [
@@ -773,6 +773,88 @@ export const cabinSizeMoreData = [
     {
         id: 2,
         fontFamily: "Cabin",
+        size: "text-3xl",
+    },
+];
+
+export const josefinSizeData = [
+    {
+        id: 1,
+        fontFamily: "Josefin Sans",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Josefin Sans",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Josefin Sans",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Josefin Sans",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Josefin Sans",
+        size: "text-xl",
+    },
+];
+
+export const josefinSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Josefin Sans",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Josefin Sans",
+        size: "text-3xl",
+    },
+];
+
+export const stackSansSizeData = [
+    {
+        id: 1,
+        fontFamily: "Stack Sans Notch",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Stack Sans Notch",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Stack Sans Notch",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Stack Sans Notch",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Stack Sans Notch",
+        size: "text-xl",
+    },
+];
+
+export const stackSansSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Stack Sans Notch",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Stack Sans Notch",
         size: "text-3xl",
     },
 ];
