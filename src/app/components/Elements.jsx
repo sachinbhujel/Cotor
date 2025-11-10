@@ -5,11 +5,14 @@ import { shapesData } from "@/data/elementData";
 import { shapesMoreData } from "@/data/elementData";
 import { foodData } from "@/data/elementData";
 import { foodMoreData } from "@/data/elementData";
+import { vehicleData } from "@/data/elementData";
+import { vehicleMoreData } from "@/data/elementData";
 
 function Elements({ setElements }) {
     const [ideaDivShow, setIdeaDivShow] = useState(false);
     const [shapesMore, setShapesMore] = useState(false);
     const [foodMore, setFoodMore] = useState(false);
+    const [vehicleMore, setVehicleMore] = useState(false);
 
     const handleIdeaDiv = () => {
         setIdeaDivShow(!ideaDivShow);
@@ -291,11 +294,113 @@ function Elements({ setElements }) {
                             )}
                         </div>
                     </div>
+                    <div className="flex flex-col gap-2">
+                        <div className="flex items-center justify-between">
+                            <p className="font-semibold text-base text-white">
+                                Vehicle
+                            </p>
+                            <div
+                                className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                    vehicleMore ? "text-[#bbbbbb]" : ""
+                                }`}
+                                onClick={() => setVehicleMore(!vehicleMore)}
+                            >
+                                <p className="text-sm font-semibold">More</p>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                                >
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            className={`flex flex-col gap-2 ${
+                                vehicleMore ? "h-60" : ""
+                            } overflow-y-auto scrollbar`}
+                        >
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                <div
+                                    className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    onClick={() => {
+                                        setText((prev) => {
+                                            const newTextData = [...prev];
+                                            newTextData[prev.length - 1] = {
+                                                ...newTextData[prev.length - 1],
+                                                fontFamilyData: "",
+                                            };
+                                            return newTextData;
+                                        });
+                                    }}
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                    >
+                                        <path d="M4.929 4.929 19.07 19.071" />
+                                        <circle cx="12" cy="12" r="10" />
+                                    </svg>
+                                </div>
+                                {vehicleData.map((shape, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center"
+                                            onClick={(e) =>
+                                                setElements((prev) => [
+                                                    ...prev,
+                                                    shape.icon,
+                                                ])
+                                            }
+                                        >
+                                            {shape.icon}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            {vehicleMore && (
+                                <div className="grid grid-cols-3 gap-2 text-white">
+                                    {vehicleMoreData.map((shape, index) => {
+                                        return (
+                                            <div
+                                                key={index}
+                                                className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center"
+                                                onClick={(e) =>
+                                                    setElements((prev) => [
+                                                        ...prev,
+                                                        shape.icon,
+                                                    ])
+                                                }
+                                            >
+                                                {shape.icon}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
             {ideaDivShow && (
                 <div className="absolute top-8 bg-white p-4 border flex flex-col gap-4">
-                    <img src="about-div-3-image.png" />
+                    <img src="../idea-image-elements.png" />
                     <div className="flex flex-col gap-2">
                         <p className="font-bold">How it works</p>
                         <div className="flex flex-col gap-1 text-sm font-200 tracking-wide leading-normal">
