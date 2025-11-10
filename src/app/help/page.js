@@ -4,7 +4,7 @@ const Help = () => {
     return (
         <div className="font-sans bg-white text-gray-800 min-h-screen">
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-16 px-6 text-center">
+            <section className="bg-[#093b72] text-white py-16 px-6 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                     Help & Support
                 </h1>
@@ -20,7 +20,7 @@ const Help = () => {
             <div className="max-w-5xl mx-auto px-6 py-14 space-y-16">
                 {/* Getting Started */}
                 <section>
-                    <h2 className="text-3xl font-semibold text-blue-600 mb-6">
+                    <h2 className="text-3xl font-semibold text-[#093b72] mb-6">
                         Getting Started
                     </h2>
                     <div className="grid md:grid-cols-2 gap-8">
@@ -65,7 +65,7 @@ const Help = () => {
 
                 {/* Features */}
                 <section>
-                    <h2 className="text-3xl font-semibold text-blue-600 mb-6 text-center">
+                    <h2 className="text-3xl font-semibold text-[#093b72] mb-6 text-center">
                         Features You’ll Love
                     </h2>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -98,7 +98,7 @@ const Help = () => {
 
                 {/* Tips Section */}
                 <section>
-                    <h2 className="text-3xl font-semibold text-blue-600 mb-6">
+                    <h2 className="text-3xl font-semibold text-[#093b72] mb-6">
                         Tips & Tricks
                     </h2>
                     <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -118,7 +118,7 @@ const Help = () => {
 
                 {/* FAQ */}
                 <section>
-                    <h2 className="text-3xl font-semibold text-blue-600 mb-6 text-center">
+                    <h2 className="text-3xl font-semibold text-[#093b72] mb-6 text-center">
                         Frequently Asked Questions
                     </h2>
                     <div className="space-y-4 text-gray-700">
@@ -142,14 +142,14 @@ const Help = () => {
 
                 {/* Contact */}
                 <section className="bg-blue-50 border border-blue-100 p-8 rounded-2xl text-center shadow-sm">
-                    <h2 className="text-2xl font-semibold text-blue-700 mb-2">
+                    <h2 className="text-2xl font-semibold text-[#093b72] mb-2">
                         Need More Help?
                     </h2>
                     <p className="text-gray-700">
                         Reach us at{" "}
                         <a
                             href="mailto:support@cotor.app"
-                            className="text-blue-600 font-medium hover:underline"
+                            className="text-[#093b72] font-medium hover:underline"
                         >
                             sachinbhujel.np@gmail.com
                         </a>{" "}

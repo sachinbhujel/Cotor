@@ -575,3 +575,133 @@ export const outlineAndStrokeEffectMoreData = [
         data: "font-bold text-xl text-white [-webkit-text-stroke:1px_#d3408e]",
     },
 ];
+
+export const shadowEffectData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-white [text-shadow:_2px_2px_4px_rgba(0,0,0,0.5)]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-gray-800 [text-shadow:_1px_1px_2px_rgba(100,100,100,0.5)]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-white [text-shadow:_3px_3px_6px_rgba(0,0,0,0.8)]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-red-500 [text-shadow:_2px_2px_0_#b91c1c,_4px_4px_0_#7f1d1d]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-blue-500 [text-shadow:_2px_2px_0_#1e3a8a,_4px_4px_0_#172554]",
+    },
+];
+
+export const shadowEffectMoreData = [
+    {
+        id: 1,
+        data: "font-bold text-xl text-green-500 [text-shadow:_2px_2px_0_#166534,_4px_4px_0_#052e16]",
+    },
+    {
+        id: 2,
+        data: "font-bold text-xl text-pink-500 [text-shadow:_3px_3px_0_#be185d,_6px_6px_0_#831843]",
+    },
+    {
+        id: 3,
+        data: "font-bold text-xl text-gray-700 [text-shadow:_2px_2px_0_#000,_4px_4px_0_#444]",
+    },
+    {
+        id: 4,
+        data: "font-bold text-xl text-white [text-shadow:_0_0_8px_rgba(255,255,255,0.8)]",
+    },
+    {
+        id: 5,
+        data: "font-bold text-xl text-cyan-400 [text-shadow:_0_0_10px_#22d3ee,_0_0_20px_#06b6d4]",
+    },
+    {
+        id: 6,
+        data: "font-bold text-xl text-orange-500 [text-shadow:_3px_3px_0_#9a3412,_6px_6px_0_#7c2d12]",
+    },
+    {
+        id: 7,
+        data: "font-bold text-xl text-yellow-400 [text-shadow:_2px_2px_0_#a16207,_4px_4px_0_#713f12]",
+    },
+    {
+        id: 8,
+        data: "font-bold text-xl text-purple-500 [text-shadow:_2px_2px_0_#5b21b6,_4px_4px_0_#3b0764]",
+    },
+    {
+        id: 9,
+        data: "font-bold text-xl text-gray-300 [text-shadow:_2px_2px_6px_rgba(0,0,0,0.8)]",
+    },
+    {
+        id: 10,
+        data: "font-bold text-xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent [text-shadow:_2px_2px_4px_rgba(0,0,0,0.5)]",
+    },
+    {
+        id: 11,
+        data: "font-bold text-xl text-blue-500 [text-shadow:_3px_3px_0_#1e40af]",
+    },
+    {
+        id: 12,
+        data: "font-bold text-xl text-yellow-400 [text-shadow:_2px_2px_0_#b45309,_4px_4px_0_#78350f]",
+    },
+    {
+        id: 13,
+        data: "font-bold text-xl text-emerald-400 [text-shadow:_2px_2px_0_#065f46]",
+    },
+    {
+        id: 14,
+        data: "font-bold text-xl text-red-400 [text-shadow:_2px_2px_0_#991b1b]",
+    },
+    {
+        id: 15,
+        data: "font-bold text-xl text-lime-400 [text-shadow:_2px_2px_0_#365314]",
+    },
+    {
+        id: 16,
+        data: "font-bold text-xl text-indigo-400 [text-shadow:_3px_3px_0_#312e81]",
+    },
+    {
+        id: 17,
+        data: "font-bold text-xl text-teal-300 [text-shadow:_2px_2px_0_#134e4a]",
+    },
+    {
+        id: 18,
+        data: "font-bold text-xl text-orange-400 [text-shadow:_3px_3px_0_#7c2d12]",
+    },
+    {
+        id: 19,
+        data: "font-bold text-xl text-violet-400 [text-shadow:_2px_2px_0_#4c1d95]",
+    },
+    {
+        id: 20,
+        data: "font-bold text-xl text-slate-200 [text-shadow:_3px_3px_0_#1e293b]",
+    },
+    {
+        id: 21,
+        data: "font-bold text-xl text-green-400 [text-shadow:_2px_2px_0_#16a34a,_4px_4px_0_#14532d]",
+    },
+    {
+        id: 22,
+        data: "font-bold text-xl text-blue-400 [text-shadow:_2px_2px_0_#1e3a8a,_4px_4px_0_#172554]",
+    },
+    {
+        id: 23,
+        data: "font-bold text-xl text-orange-400 [text-shadow:_2px_2px_0_#c2410c,_4px_4px_0_#7c2d12]",
+    },
+    {
+        id: 24,
+        data: "font-bold text-xl text-purple-400 [text-shadow:_2px_2px_0_#6b21a8,_4px_4px_0_#4c1d95]",
+    },
+    {
+        id: 25,
+        data: "font-bold text-xl text-pink-400 [text-shadow:_2px_2px_0_#be185d,_4px_4px_0_#831843]",
+    },
+    {
+        id: 26,
+        data: "font-bold text-xl text-teal-400 [text-shadow:_2px_2px_0_#0f766e,_4px_4px_0_#134e4a]",
+    },
+];

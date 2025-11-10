@@ -7,7 +7,7 @@ function WhyChooseUs() {
                 Why Choose Cotor to Edit Text in Image?
             </h2>
             <div className="flex items-center sm:flex-row flex-col gap-10 justify-center">
-                <div className="flex flex-col items-center gap-5 h-max bg-[#ffffff] rounded-md border border-[#007aff] p-2 py-4 hover:scale-102 transition-transform duration-300 cursor-pointer hover:bg-[#007aff] hover:text-white">
+                <div className="flex flex-col items-center gap-5 h-max bg-[#ffffff] rounded-md border border-[#093b72] p-2 py-4 hover:scale-102 transition-transform duration-300 cursor-pointer hover:bg-[#093b72] hover:text-white">
                     <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ function WhyChooseUs() {
                         ease. No technical skills are required.
                     </p>
                 </div>
-                <div className="flex flex-col items-center gap-5 h-max bg-[#ffffff] rounded-md p-2 border border-[#007aff] p-2 py-4 hover:scale-102 transition-transform duration-300 cursor-pointer hover:bg-[#007aff] hover:text-white">
+                <div className="flex flex-col items-center gap-5 h-max bg-[#ffffff] rounded-md p-2 border border-[#093b72] p-2 py-4 hover:scale-102 transition-transform duration-300 cursor-pointer hover:bg-[#093b72] hover:text-white">
                     <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ function WhyChooseUs() {
                         your vision and enhance the impact of your text.
                     </p>
                 </div>
-                <div className="flex flex-col items-center gap-5 h-max bg-[#ffffff] rounded-md p-2 border border-[#007aff] p-2 py-4 hover:scale-102 transition-transform duration-300 cursor-pointer hover:bg-[#007aff] hover:text-white">
+                <div className="flex flex-col items-center gap-5 h-max bg-[#ffffff] rounded-md p-2 border border-[#093b72 p-2 py-4 hover:scale-102 transition-transform duration-300 cursor-pointer hover:bg-[#093b72] hover:text-white">
                     <div className="w-16 h-16 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
