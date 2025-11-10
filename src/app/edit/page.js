@@ -67,27 +67,29 @@ export default function Edit() {
         }
     };
 
-    const handleShareImage = () => {
-        // if (!uuid) {
-        //     console.log("No image uploaded yet!");
-        //     return;
-        // }
-        // if (navigator.share) {
-        //     navigator
-        //         .share({
-        //             title: "Cotor Saved",
-        //             url: websiteUrl,
-        //         })
-        //         .then(() => console.log("Shared successfully"))
-        //         .catch((error) => console.error("Error sharing:", error));
-        // } else {
-        //     console.log("Share not supported");
-        // }
-    };
+    const handleDemoImage = (imageURL) => {
+        set(uniqueId.current, [{ image: imageURL }]);
+        console.log("hihihih");
+        redirect(`/edit/${uniqueId.current}`);
+    }
 
-    // useEffect(() => {
-    //     console.log("Uuid changed", uuid);
-    // }, [uuid]);
+    const handleShareImage = () => {
+        if (!uuid) {
+            console.log("No image uploaded yet!");
+            return;
+        }
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: "Cotor Saved",
+                    url: websiteUrl,
+                })
+                .then(() => console.log("Shared successfully"))
+                .catch((error) => console.error("Error sharing:", error));
+        } else {
+            console.log("Share not supported");
+        }
+    };
 
     const handleZoomIn = () => {
         setZoom((prev) => Math.min(prev + 0.1, 3));
@@ -951,45 +953,21 @@ export default function Edit() {
                                             src="demo-image-1.jpg"
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
                                             onClick={() => {
-                                                setImage("demo-image-1.jpg");
-                                                // const uniqueId =
-                                                //     crypto.randomUUID();
-                                                // setUuid(uniqueId);
-                                                // set(uniqueId, [
-                                                //     {
-                                                //         image: "demo-image-1.jpg",
-                                                //     },
-                                                // ]);
+                                                handleDemoImage("../demo-image-1.jpg");
                                             }}
                                         />
                                         <img
                                             src="demo-image-2.jpg"
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
                                             onClick={() => {
-                                                setImage("demo-image-2.jpg");
-                                                // const uniqueId =
-                                                //     crypto.randomUUID();
-                                                // setUuid(uniqueId);
-                                                // set(uniqueId, [
-                                                //     {
-                                                //         image: "demo-image-2.jpg",
-                                                //     },
-                                                // ]);
+                                                handleDemoImage("../demo-image-2.jpg");
                                             }}
                                         />
                                         <img
                                             src="demo-image-1.jpg"
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
                                             onClick={() => {
-                                                setImage("demo-image-1.jpg");
-                                                // const uniqueId =
-                                                //     crypto.randomUUID();
-                                                // setUuid(uniqueId);
-                                                // set(uniqueId, [
-                                                //     {
-                                                //         image: "demo-image-3.jpg",
-                                                //     },
-                                                // ]);
+                                                handleDemoImage("../demo-image-1.jpg");
                                             }}
                                         />
                                     </div>

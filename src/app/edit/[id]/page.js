@@ -960,49 +960,16 @@ export default function Edit() {
                                     </p>
                                     <div className="w-full flex justify-center items-center gap-2">
                                         <img
-                                            src="demo-image-1.jpg"
+                                            src="../demo-image-1.jpg"
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
-                                            onClick={() => {
-                                                setImage("demo-image-1.jpg");
-                                                const uniqueId =
-                                                    crypto.randomUUID();
-                                                setUuid(uniqueId);
-                                                set(uniqueId, [
-                                                    {
-                                                        image: "demo-image-1.jpg",
-                                                    },
-                                                ]);
-                                            }}
                                         />
                                         <img
-                                            src="demo-image-2.jpg"
+                                            src="../demo-image-2.jpg"
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
-                                            onClick={() => {
-                                                setImage("demo-image-2.jpg");
-                                                const uniqueId =
-                                                    crypto.randomUUID();
-                                                setUuid(uniqueId);
-                                                set(uniqueId, [
-                                                    {
-                                                        image: "demo-image-2.jpg",
-                                                    },
-                                                ]);
-                                            }}
                                         />
                                         <img
-                                            src="demo-image-1.jpg"
+                                            src="../demo-image-1.jpg"
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
-                                            onClick={() => {
-                                                setImage("demo-image-1.jpg");
-                                                const uniqueId =
-                                                    crypto.randomUUID();
-                                                setUuid(uniqueId);
-                                                set(uniqueId, [
-                                                    {
-                                                        image: "demo-image-3.jpg",
-                                                    },
-                                                ]);
-                                            }}
                                         />
                                     </div>
                                 </div>
