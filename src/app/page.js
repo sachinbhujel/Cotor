@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 export default function Home() {
     return (
         <div className="m-auto flex flex-col gap-6">
-            <div className="bg-[#007aff] p-2 pb-14 flex flex-col gap-10">
+            <div className="bg-[#093b72] p-2 pb-14 flex flex-col gap-10">
                 <div className="flex flex-col gap-4 sm:px-6 px-4">
                     <Navbar />
                     <div className="text-white w-full flex items-center">
@@ -46,17 +46,14 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="hero-div w-[93%] m-auto flex sm:flex-row flex-col gap-20">
-                    <div className="hero-text-div sm:w-[50%] flex flex-col gap-6">
-                        <h1 className="sm:text-[3rem] text-4xl text-white font-bold">
+                    <div className="hero-text-div sm:w-[50%] flex flex-col gap-5">
+                        <h1 className="sm:text-[2.8rem] text-4xl text-white font-bold">
                             Edit Text in Image
                         </h1>
-                        <div className="text-white leading-[2] sm:text-[1.3rem] text-lg">
+                        <div className="text-white sm:text-[1.15rem] text-lg">
                             <p>
                                 Change and edit text in images online quickly
-                                and effortlessly with Cotor.
-                            </p>
-                            <p>
-                                Whether you want to make minor text changes or
+                                and effortlessly with Cotor. Whether you want to make minor text changes or
                                 completely rewrite photos with your own words,
                                 you can do so in just seconds. Try it out now!
                             </p>

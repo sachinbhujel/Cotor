@@ -12,12 +12,12 @@ function About() {
                         className="h-full w-full object-cover"
                     />
                 </div>
-                <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] text-3xl">
-                        Fast and Easy to Edit Image Text Online
+                <div className="sm:w-[50%] flex flex-col gap-5">
+                    <h2 className="sm:text-[2.5rem] text-3xl font-semibold">
+                        Fast and Easy
                     </h2>
-                    <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] text-lg text-[#5a5f69] leading-[2]">
+                    <div className="flex flex-col gap-5">
+                        <p className="sm:text-[1.15rem] text-lg text-[#5a5f69]">
                             Looking to modify text in an image? With Cotor, you
                             can edit text in images online within seconds. Just
                             upload your image, remove the existing text
@@ -37,12 +37,12 @@ function About() {
                 </div>
             </div>
             <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse sm:gap-20 gap-10">
-                <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] text-3xl">
+                <div className="sm:w-[50%] flex flex-col gap-5">
+                    <h2 className="sm:text-[2.5rem] text-3xl font-semibold">
                         Edit Text in Image With Same Font
                     </h2>
-                    <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] text-[#5a5f69] leading-[2] text-lg">
+                    <div className="flex flex-col gap-5">
+                        <p className="sm:text-[1.15rem] text-[#5a5f69] text-lg">
                             Want to edit text in image while keeping the same
                             font? Cotor’s got you covered. With over 1,000 fonts
                             in our font generator to choose from, you can
@@ -75,12 +75,12 @@ function About() {
                         className="h-full w-full object-cover"
                     />
                 </div>
-                <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] text-3xl">
+                <div className="sm:w-[50%] flex flex-col gap-5">
+                    <h2 className="sm:text-[2.5rem] text-3xl font-semibold">
                         Update Marketing Visuals
                     </h2>
-                    <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] text-[#5a5f69] leading-[2] text-lg">
+                    <div className="flex flex-col gap-5">
+                        <p className="sm:text-[1.15rem] text-[#5a5f69] text-lg">
                             You don’t have to redesign your marketing materials
                             just for a simple text change. Now you can modify
                             the text in your brochures, flyers, and other
@@ -100,12 +100,12 @@ function About() {
                 </div>
             </div>
             <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse sm:gap-20 gap-10">
-                <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] text-3xl">
+                <div className="sm:w-[50%] flex flex-col gap-5">
+                    <h2 className="sm:text-[2.5rem] text-3xl font-semibold">
                         Add Your Own Personal Touch
                     </h2>
-                    <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] text-[#5a5f69] leading-[2] text-lg">
+                    <div className="flex flex-col gap-5">
+                        <p className="sm:text-[1.3rem] text-[#5a5f69] text-lg">
                             Make birthday wishes extra special. With just a few
                             clicks, you can easily add text with your own
                             heartfelt messages and personal notes, making the
