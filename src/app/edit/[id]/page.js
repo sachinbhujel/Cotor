@@ -2,18 +2,34 @@
 
 import * as htmlToImage from "html-to-image";
 import { set } from "idb-keyval";
-import Color from "../components/Color";
-import Effects from "../components/Effects";
-import Elements from "../components/Elements";
-import FontFamily from "../components/FontFamily";
-import FontSize from "../components/FontSize";
-import More from "../components/More";
-import Text from "../components/Text";
-import Uploads from "../components/Uploads";
-import React, { useEffect, useState, useRef } from "react";
-import { redirect } from "next/navigation";
+import Color from "../../components/Color";
+import Effects from "../../components/Effects";
+import Elements from "../../components/Elements";
+import FontFamily from "../../components/FontFamily";
+import FontSize from "../../components/FontSize";
+import More from "../../components/More";
+import Text from "../../components/Text";
+import Uploads from "../../components/Uploads";
+import { useParams } from "next/navigation";
+import { get } from "idb-keyval";
+import React, { useEffect, useState } from "react";
 
 export default function Edit() {
+    const [uuid, setUuid] = useState(null);
+    const params = useParams();
+
+    useEffect(() => {
+        if (params.id) {
+            setUuid(params.id);
+            get(params.id).then((allData) => {
+                console.log(allData)
+                setImage(allData[0].image);
+            })
+        }
+    }, [params.id])
+
+    const websiteUrl = `https://refactored-winner-qgxv6jr5wp52g57-3000.app.github.dev/edit/${uuid}`;
+
     const [textDivShow, setTextDivShow] = useState(true);
     const [fontFamilyDivShow, setFontFamilyDivShow] = useState(false);
     const [textEffectsDivShow, setTextEffectsDivShow] = useState(false);
@@ -55,39 +71,35 @@ export default function Edit() {
     const [textColorClick, setTextColorClick] = useState(false);
     const [elementsColorClick, setElementsColorClick] = useState(false);
 
-    const uniqueId = useRef(crypto.randomUUID());
-    console.log(uniqueId)
-
     const handleImageUpload = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            setImage(URL.createObjectURL(file));
-            set(uniqueId.current, [{ image: URL.createObjectURL(file) }]);
-            redirect(`/edit/${uniqueId.current}`);
-        }
+        // const file = e.target.files[0];
+        // if (file) {
+        //     setImage(URL.createObjectURL(file));
+        //     set(uniqueId, [{ image: URL.createObjectURL(file) }]);
+        // }
     };
 
     const handleShareImage = () => {
-        // if (!uuid) {
-        //     console.log("No image uploaded yet!");
-        //     return;
-        // }
-        // if (navigator.share) {
-        //     navigator
-        //         .share({
-        //             title: "Cotor Saved",
-        //             url: websiteUrl,
-        //         })
-        //         .then(() => console.log("Shared successfully"))
-        //         .catch((error) => console.error("Error sharing:", error));
-        // } else {
-        //     console.log("Share not supported");
-        // }
+        if (!uuid) {
+            console.log("No image uploaded yet!");
+            return;
+        }
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: "Cotor Saved",
+                    url: websiteUrl,
+                })
+                .then(() => console.log("Shared successfully"))
+                .catch((error) => console.error("Error sharing:", error));
+        } else {
+            console.log("Share not supported");
+        }
     };
 
-    // useEffect(() => {
-    //     console.log("Uuid changed", uuid);
-    // }, [uuid]);
+    useEffect(() => {
+        console.log("Uuid changed", uuid);
+    }, [uuid]);
 
     const handleZoomIn = () => {
         setZoom((prev) => Math.min(prev + 0.1, 3));
@@ -952,14 +964,14 @@ export default function Edit() {
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
                                             onClick={() => {
                                                 setImage("demo-image-1.jpg");
-                                                // const uniqueId =
-                                                //     crypto.randomUUID();
-                                                // setUuid(uniqueId);
-                                                // set(uniqueId, [
-                                                //     {
-                                                //         image: "demo-image-1.jpg",
-                                                //     },
-                                                // ]);
+                                                const uniqueId =
+                                                    crypto.randomUUID();
+                                                setUuid(uniqueId);
+                                                set(uniqueId, [
+                                                    {
+                                                        image: "demo-image-1.jpg",
+                                                    },
+                                                ]);
                                             }}
                                         />
                                         <img
@@ -967,14 +979,14 @@ export default function Edit() {
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
                                             onClick={() => {
                                                 setImage("demo-image-2.jpg");
-                                                // const uniqueId =
-                                                //     crypto.randomUUID();
-                                                // setUuid(uniqueId);
-                                                // set(uniqueId, [
-                                                //     {
-                                                //         image: "demo-image-2.jpg",
-                                                //     },
-                                                // ]);
+                                                const uniqueId =
+                                                    crypto.randomUUID();
+                                                setUuid(uniqueId);
+                                                set(uniqueId, [
+                                                    {
+                                                        image: "demo-image-2.jpg",
+                                                    },
+                                                ]);
                                             }}
                                         />
                                         <img
@@ -982,14 +994,14 @@ export default function Edit() {
                                             className="w-14 h-14 onject-cover rounded-sm cursor-pointer"
                                             onClick={() => {
                                                 setImage("demo-image-1.jpg");
-                                                // const uniqueId =
-                                                //     crypto.randomUUID();
-                                                // setUuid(uniqueId);
-                                                // set(uniqueId, [
-                                                //     {
-                                                //         image: "demo-image-3.jpg",
-                                                //     },
-                                                // ]);
+                                                const uniqueId =
+                                                    crypto.randomUUID();
+                                                setUuid(uniqueId);
+                                                set(uniqueId, [
+                                                    {
+                                                        image: "demo-image-3.jpg",
+                                                    },
+                                                ]);
                                             }}
                                         />
                                     </div>

@@ -617,10 +617,10 @@ export const foodMoreData = [
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="w-[90%] h-[80%] lucide lucide-drumstick-icon lucide-drumstick"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-[90%] h-[80%] lucide lucide-drumstick-icon lucide-drumstick"
             >
                 <path d="M15.4 15.63a7.875 6 135 1 1 6.23-6.23 4.5 3.43 135 0 0-6.23 6.23" />
                 <path d="m8.29 12.71-2.6 2.6a2.5 2.5 0 1 0-1.65 4.65A2.5 2.5 0 1 0 8.7 18.3l2.59-2.59" />
@@ -640,7 +640,7 @@ export const foodMoreData = [
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-[90%] h-[80%] lucide lucide-egg-fried-icon lucide-egg-fried"
+                className="w-[90%] h-[80%] lucide lucide-egg-fried-icon lucide-egg-fried"
             >
                 <circle cx="11.5" cy="12.5" r="3.5" />
                 <path d="M3 8c0-3.5 2.5-6 6.5-6 5 0 4.83 3 7.5 5s5 2 5 6c0 4.5-2.5 6.5-7 6.5-2.5 0-2.5 2.5-6 2.5s-7-2-7-5.5c0-3 1.5-3 1.5-5C3.5 10 3 9 3 8Z" />
@@ -657,10 +657,10 @@ export const foodMoreData = [
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="w-[90%] h-[80%] lucide lucide-grape-icon lucide-grape"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-[90%] h-[80%] lucide lucide-grape-icon lucide-grape"
             >
                 <path d="M22 5V2l-5.89 5.89" />
                 <circle cx="16.6" cy="15.89" r="3" />
@@ -687,7 +687,7 @@ export const foodMoreData = [
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-[90%] h-[80%] lucide lucide-ham-icon lucide-ham"
+                className="w-[90%] h-[80%] lucide lucide-ham-icon lucide-ham"
             >
                 <path d="M13.144 21.144A7.274 10.445 45 1 0 2.856 10.856" />
                 <path d="M13.144 21.144A7.274 4.365 45 0 0 2.856 10.856a7.274 4.365 45 0 0 10.288 10.288" />
@@ -706,10 +706,10 @@ export const foodMoreData = [
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="w-[90%] h-[80%] lucide lucide-ice-cream-bowl-icon lucide-ice-cream-bowl"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-[90%] h-[80%] lucide lucide-ice-cream-bowl-icon lucide-ice-cream-bowl"
             >
                 <path d="M12 17c5 0 8-2.69 8-6H4c0 3.31 3 6 8 6m-4 4h8m-4-3v3M5.14 11a3.5 3.5 0 1 1 6.71 0" />
                 <path d="M12.14 11a3.5 3.5 0 1 1 6.71 0" />
@@ -769,9 +769,9 @@ export const foodMoreData = [
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 class="w-[90%] h-[80%] lucide lucide-nut-icon lucide-nut"
             >
                 <path d="M12 4V2" />
