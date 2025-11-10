@@ -1,6 +1,10 @@
 import React from "react";
+import { set } from "idb-keyval";
+import { get } from "idb-keyval";
+import { useParams } from "next/navigation";
 
 function Input({ textareaTextValue, setTextareaTextValue, setText }) {
+    const params = useParams();
     const handleText = (e) => {
         setTextareaTextValue(e.target.value);
     };

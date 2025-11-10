@@ -29,8 +29,8 @@ const Help = () => {
                                 1️⃣ Upload or Add Image
                             </h3>
                             <p className="text-gray-600">
-                                Click <b>Upload Image</b> or <b>Drag & Drop</b>{" "}
-                                your file. Supports JPG, PNG, and WEBP.
+                                Click <b>Upload Image</b> {" "}
+                                your file. Supports JPG, PNG.
                             </p>
                         </div>
                         <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
@@ -38,7 +38,7 @@ const Help = () => {
                                 2️⃣ Add or Edit Text
                             </h3>
                             <p className="text-gray-600">
-                                Click <b>Add Text</b> or select existing text to
+                                Click <b>Add Text</b> to
                                 modify font, color, and size instantly.
                             </p>
                         </div>

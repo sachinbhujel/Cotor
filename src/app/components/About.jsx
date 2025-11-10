@@ -3,7 +3,7 @@ import React from "react";
 
 function About() {
     return (
-        <div className="py-8 flex flex-col gap-16 sm:gap-24 2xl:gap-32">
+        <div className="py-8 flex flex-col gap-16 sm:gap-24">
             <div className="w-[93%] m-auto flex sm:flex-row flex-col sm:gap-20 gap-10">
                 <div className="sm:w-[50%] bg-red-200 h-100">
                     {/* <div>Hi</div> */}
@@ -13,11 +13,11 @@ function About() {
                     />
                 </div>
                 <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] 2xl:text-[5rem] text-3xl">
+                    <h2 className="sm:text-[2.5rem] text-3xl">
                         Fast and Easy to Edit Image Text Online
                     </h2>
                     <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] 2xl:text-[3rem] text-lg text-[#5a5f69] leading-[2]">
+                        <p className="sm:text-[1.3rem] text-lg text-[#5a5f69] leading-[2]">
                             Looking to modify text in an image? With Cotor, you
                             can edit text in images online within seconds. Just
                             upload your image, remove the existing text
@@ -29,7 +29,7 @@ function About() {
                             hassle-free image text editing.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
+                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                                 Edit Text Now
                             </p>
                         </Link>
@@ -38,11 +38,11 @@ function About() {
             </div>
             <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse sm:gap-20 gap-10">
                 <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] 2xl:text-[5rem] text-3xl">
+                    <h2 className="sm:text-[2.5rem] text-3xl">
                         Edit Text in Image With Same Font
                     </h2>
                     <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] 2xl:text-[3rem] text-[#5a5f69] leading-[2] text-lg">
+                        <p className="sm:text-[1.3rem] text-[#5a5f69] leading-[2] text-lg">
                             Want to edit text in image while keeping the same
                             font? Cotor’s got you covered. With over 1,000 fonts
                             in our font generator to choose from, you can
@@ -53,7 +53,7 @@ function About() {
                             images has never been so effortless and efficient.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
+                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                                 Edit Text Now
                             </p>
                         </Link>
@@ -76,11 +76,11 @@ function About() {
                     />
                 </div>
                 <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] 2xl:text-[5rem] text-3xl">
+                    <h2 className="sm:text-[2.5rem] text-3xl">
                         Update Marketing Visuals
                     </h2>
                     <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] 2xl:text-[3rem] text-[#5a5f69] leading-[2] text-lg">
+                        <p className="sm:text-[1.3rem] text-[#5a5f69] leading-[2] text-lg">
                             You don’t have to redesign your marketing materials
                             just for a simple text change. Now you can modify
                             the text in your brochures, flyers, and other
@@ -92,7 +92,7 @@ function About() {
                             information.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
+                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                                 Edit Text Now
                             </p>
                         </Link>
@@ -101,11 +101,11 @@ function About() {
             </div>
             <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse sm:gap-20 gap-10">
                 <div className="sm:w-[50%] flex flex-col gap-8">
-                    <h2 className="sm:text-[2.5rem] 2xl:text-[5rem] text-3xl">
+                    <h2 className="sm:text-[2.5rem] text-3xl">
                         Add Your Own Personal Touch
                     </h2>
                     <div className="flex flex-col gap-6">
-                        <p className="sm:text-[1.3rem] 2xl:text-[3rem] text-[#5a5f69] leading-[2] text-lg">
+                        <p className="sm:text-[1.3rem] text-[#5a5f69] leading-[2] text-lg">
                             Make birthday wishes extra special. With just a few
                             clicks, you can easily add text with your own
                             heartfelt messages and personal notes, making the
@@ -115,7 +115,7 @@ function About() {
                             text.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
+                            <p className="bg-[#2c7dfa] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#007aff] hover:bg-white hover:text-[#007aff]">
                                 Edit Text Now
                             </p>
                         </Link>

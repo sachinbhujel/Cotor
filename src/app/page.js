@@ -20,7 +20,7 @@ export default function Home() {
                             target="_blank"
                             className="hover:underline"
                         >
-                            <p className="2xl:text-[2rem] sm:text-[1rem] text-[14px]">
+                            <p className="sm:text-[1rem] text-[14px]">
                                 Color Palatte
                             </p>
                         </a>
@@ -39,7 +39,7 @@ export default function Home() {
                             <path d="m9 18 6-6-6-6" />
                         </svg>
                         <a href="https://cotor.vercel.app" target="_blank">
-                            <p className="2xl:text-[2rem] sm:text-[1rem] text-[14px] underline">
+                            <p className="sm:text-[1rem] text-[14px] underline">
                                 Edit Text in Image
                             </p>
                         </a>
@@ -47,10 +47,10 @@ export default function Home() {
                 </div>
                 <div className="hero-div w-[93%] m-auto flex sm:flex-row flex-col gap-20">
                     <div className="hero-text-div sm:w-[50%] flex flex-col gap-6">
-                        <h1 className="sm:text-[3rem] 2xl:text-[5rem] text-4xl text-white font-bold">
+                        <h1 className="sm:text-[3rem] text-4xl text-white font-bold">
                             Edit Text in Image
                         </h1>
-                        <div className="text-white leading-[2] sm:text-[1.3rem] text-lg 2xl:text-[3rem]">
+                        <div className="text-white leading-[2] sm:text-[1.3rem] text-lg">
                             <p>
                                 Change and edit text in images online quickly
                                 and effortlessly with Cotor.
@@ -62,13 +62,13 @@ export default function Home() {
                             </p>
                         </div>
                         <Link href="/edit" className="w-max">
-                            <div className="bg-white font-medium px-4 py-2 w-max rounded-md sm:text-[1rem] 2xl:text-[2rem] hover:bg-[#007aff] hover:border-2 border-white hover:text-white">
+                            <div className="bg-white font-medium px-4 py-2 w-max rounded-md sm:text-[1rem] hover:bg-[#007aff] hover:border-2 border-white hover:text-white">
                                 <p>Edit Text Now</p>
                             </div>
                         </Link>
                     </div>
                     <div className="hero-image-div sm:w-[50%] flex items-center gap-2">
-                        <div className="image-div relative w-[50%] h-100 w-full 2xl:h-250">
+                        <div className="image-div relative w-[50%] h-100 w-full">
                             <Image
                                 src={"/before-hero-image.jpg"}
                                 alt="Demo before image"
@@ -76,14 +76,14 @@ export default function Home() {
                                 className="object-cover rounded-md"
                             />
                             <p
-                                className="before-after-div absolute top-3 left-3 sm:text-[1rem] 2xl:text-[2.2rem] 
+                                className="before-after-div absolute top-3 left-3 sm:text-[1rem]
      text-white px-4 py-1 w-max rounded-full 
      bg-white/20 backdrop-blur-lg border border-white/20 shadow-md"
                             >
                                 Before
                             </p>
                         </div>
-                        <div className="image-div relative w-[50%] h-100 w-full 2xl:h-250">
+                        <div className="image-div relative w-[50%] h-100 w-full">
                             <Image
                                 src={"/after-hero-image.png"}
                                 alt="Demo after image"
@@ -91,7 +91,7 @@ export default function Home() {
                                 className="object-cover rounded-md"
                             />
                             <p
-                                className="before-after-div absolute top-3 right-3 sm:text-[1rem] 2xl:text-[2.2rem] 
+                                className="before-after-div absolute top-3 right-3 sm:text-[1rem]
      text-white px-4 py-1 w-max rounded-full 
      bg-white/20 backdrop-blur-lg border border-white/20 shadow-md"
                             >

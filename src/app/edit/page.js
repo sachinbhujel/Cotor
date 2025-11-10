@@ -898,7 +898,7 @@ export default function Edit() {
                                             <circle cx="9" cy="9" r="2" />
                                         </svg>
                                         <h2
-                                            className={`sm:text-[1.5rem] 2xl:text-[2.4rem] text-xl ${themeToggleClick
+                                            className={`sm:text-[1.5rem] text-xl ${themeToggleClick
                                                 ? "text-white"
                                                 : "text-[#414751]"
                                                 } font-bold text-center`}
@@ -941,7 +941,7 @@ export default function Edit() {
                                         </svg>
                                     </div>
                                 </label>
-                                <div className="absolute top-1/2 sm:mt-20 2xl:mt-23 mt-21 flex flex-col justify-center items-center gap-2 w-max">
+                                <div className="absolute top-1/2 sm:mt-20 mt-21 flex flex-col justify-center items-center gap-2 w-max">
                                     <p
                                         className={`${themeToggleClick ? "text-white" : ""
                                             } text-xs`}
