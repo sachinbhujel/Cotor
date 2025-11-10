@@ -4,7 +4,7 @@ import React from "react";
 function About() {
     return (
         <div className="py-8 flex flex-col gap-16 sm:gap-24">
-            <div className="w-[93%] m-auto flex sm:flex-row flex-col sm:gap-20 gap-10">
+            <div className="w-[93%] m-auto flex sm:flex-row flex-col items-center sm:gap-15 gap-10">
                 <div className="sm:w-[50%] bg-red-200 h-100">
                     {/* <div>Hi</div> */}
                     <img
@@ -36,7 +36,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse sm:gap-20 gap-10">
+            <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse items-center sm:gap-15 gap-10">
                 <div className="sm:w-[50%] flex flex-col gap-5">
                     <h2 className="sm:text-[2.5rem] text-3xl font-semibold">
                         Edit Text in Image With Same Font
@@ -67,7 +67,7 @@ function About() {
                     />
                 </div>
             </div>
-            <div className="w-[93%] m-auto flex sm:flex-row flex-col sm:gap-20 gap-10">
+            <div className="w-[93%] m-auto flex sm:flex-row flex-col items-center sm:gap-15 gap-10">
                 <div className="sm:w-[50%] bg-red-200 h-100">
                     {/* <div>Hi</div> */}
                     <img
@@ -99,7 +99,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse sm:gap-20 gap-10">
+            <div className="w-[93%] m-auto flex sm:flex-row flex-col-reverse items-center sm:gap-15 gap-10">
                 <div className="sm:w-[50%] flex flex-col gap-5">
                     <h2 className="sm:text-[2.5rem] text-3xl font-semibold">
                         Add Your Own Personal Touch

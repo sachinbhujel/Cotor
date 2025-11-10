@@ -12,15 +12,15 @@ export default function Home() {
     return (
         <div className="m-auto flex flex-col gap-6">
             <div className="bg-[#093b72] p-2 pb-14 flex flex-col gap-10">
-                <div className="flex flex-col gap-4 sm:px-6 px-4">
+                <div className="flex flex-col gap-6 sm:px-6 px-4">
                     <Navbar />
-                    <div className="text-white w-full flex items-center">
+                    <div className="sm:px-5 text-white flex items-center">
                         <a
                             href="https://palettepop.vercel.app"
                             target="_blank"
                             className="hover:underline"
                         >
-                            <p className="sm:text-[1rem] text-[14px]">
+                            <p className="text-sm">
                                 Color Palatte
                             </p>
                         </a>
@@ -39,13 +39,13 @@ export default function Home() {
                             <path d="m9 18 6-6-6-6" />
                         </svg>
                         <a href="https://cotor.vercel.app" target="_blank">
-                            <p className="sm:text-[1rem] text-[14px] underline">
+                            <p className="text-sm underline">
                                 Edit Text in Image
                             </p>
                         </a>
                     </div>
                 </div>
-                <div className="hero-div w-[93%] m-auto flex sm:flex-row flex-col gap-20">
+                <div className="hero-div w-[93%] m-auto flex sm:flex-row flex-col items-center gap-20">
                     <div className="hero-text-div sm:w-[50%] flex flex-col gap-5">
                         <h1 className="sm:text-[2.8rem] text-4xl text-white font-bold">
                             Edit Text in Image

@@ -100,7 +100,7 @@
     }
 }
 
-@media (width<409px) {
+@media (width<400px) {
     .hero-image-div {
         flex-direction: column;
     }
