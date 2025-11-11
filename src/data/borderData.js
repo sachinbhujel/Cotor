@@ -85,44 +85,110 @@ export const gradientFrameData = [{
 }]
 
 export const gradientFrameMoreData = [
-     {
-      id: 1,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-teal-400 via-emerald-500 to-green-600 bg-clip-border",
+    {
+        id: 1,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-teal-400 via-emerald-500 to-green-600 bg-clip-border",
     },
     {
-      id: 2,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 bg-clip-border",
+        id: 2,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 bg-clip-border",
     },
     {
-      id: 3,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-red-500 via-pink-600 to-purple-600 bg-clip-border",
+        id: 3,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-red-500 via-pink-600 to-purple-600 bg-clip-border",
     },
     {
-      id: 4,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 bg-clip-border",
+        id: 4,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-500 bg-clip-border",
     },
     {
-      id: 5,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-600 bg-clip-border",
+        id: 5,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-600 bg-clip-border",
     },
     {
-      id: 6,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-rose-400 via-pink-500 to-fuchsia-600 bg-clip-border",
+        id: 6,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-rose-400 via-pink-500 to-fuchsia-600 bg-clip-border",
     },
     {
-      id: 7,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-emerald-400 via-green-500 to-lime-600 bg-clip-border",
+        id: 7,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-emerald-400 via-green-500 to-lime-600 bg-clip-border",
     },
     {
-      id: 8,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-border",
+        id: 8,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-border",
     },
     {
-      id: 9,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 bg-clip-border",
+        id: 9,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 bg-clip-border",
     },
     {
-      id: 10,
-      data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-violet-400 via-purple-500 to-indigo-600 bg-clip-border",
+        id: 10,
+        data: "relative w-max h-max m-10 p-4 border-[6px] border-transparent rounded-2xl bg-gradient-to-r from-violet-400 via-purple-500 to-indigo-600 bg-clip-border",
+    },
+]
+
+export const glowFrameData = [
+    {
+        id: 1,
+        data: "relative w-max h-max m-10 p-4 border-4 border-blue-500 rounded-2xl shadow-[0_0_15px_#3b82f6]",
+    },
+    {
+        id: 2,
+        data: "relative w-max h-max m-10 p-4 border-4 border-pink-500 rounded-2xl shadow-[0_0_15px_#ec4899]",
+    },
+    {
+        id: 3,
+        data: "relative w-max h-max m-10 p-4 border-4 border-purple-500 rounded-2xl shadow-[0_0_15px_#a855f7]",
+    },
+    {
+        id: 4,
+        data: "relative w-max h-max m-10 p-4 border-4 border-green-500 rounded-2xl shadow-[0_0_15px_#22c55e]",
+    },
+    {
+        id: 5,
+        data: "relative w-max h-max m-10 p-4 border-4 border-yellow-400 rounded-2xl shadow-[0_0_15px_#facc15]",
+    }
+]
+
+export const glowFrameMoreData = [
+    {
+        id: 1,
+        data: "relative w-max h-max m-10 p-4 border-4 border-cyan-400 rounded-2xl shadow-[0_0_15px_#22d3ee]",
+    },
+    {
+        id: 2,
+        data: "relative w-max h-max m-10 p-4 border-4 border-orange-500 rounded-2xl shadow-[0_0_15px_#f97316]",
+    },
+    {
+        id: 3,
+        data: "relative w-max h-max m-10 p-4 border-4 border-red-500 rounded-2xl shadow-[0_0_15px_#ef4444]",
+    },
+    {
+        id: 4,
+        data: "relative w-max h-max m-10 p-4 border-4 border-teal-500 rounded-2xl shadow-[0_0_15px_#14b8a6]",
+    },
+    {
+        id: 5,
+        data: "relative w-max h-max m-10 p-4 border-4 border-indigo-500 rounded-2xl shadow-[0_0_15px_#6366f1]",
+    },
+    {
+        id: 6,
+        data: "relative w-max h-max m-10 p-4 border-4 border-fuchsia-500 rounded-2xl shadow-[0_0_15px_#d946ef]",
+    },
+    {
+        id: 7,
+        data: "relative w-max h-max m-10 p-4 border-4 border-rose-500 rounded-2xl shadow-[0_0_15px_#f43f5e]",
+    },
+    {
+        id: 8,
+        data: "relative w-max h-max m-10 p-4 border-4 border-lime-400 rounded-2xl shadow-[0_0_15px_#a3e635]",
+    },
+    {
+        id: 9,
+        data: "relative w-max h-max m-10 p-4 border-4 border-emerald-500 rounded-2xl shadow-[0_0_15px_#10b981]",
+    },
+    {
+        id: 10,
+        data: "relative w-max h-max m-10 p-4 border-4 border-sky-500 rounded-2xl shadow-[0_0_15px_#0ea5e9]",
     },
 ]
