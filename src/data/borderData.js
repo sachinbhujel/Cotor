@@ -192,3 +192,45 @@ export const glowFrameMoreData = [
         data: "relative w-max h-max m-10 p-4 border-4 border-sky-500 rounded-2xl shadow-[0_0_15px_#0ea5e9]",
     },
 ]
+
+export const shadowFrameData = [
+    { id: 1, data: "relative w-max h-max m-10 p-4 border-4 border-gray-300 rounded-2xl shadow-3xl" },
+    { id: 2, data: "relative w-max h-max m-10 p-4 border-4 border-gray-400 rounded-2xl shadow-3xl" },
+    { id: 3, data: "relative w-max h-max m-10 p-4 border-4 border-gray-500 rounded-2xl shadow-3xl" },
+    { id: 4, data: "relative w-max h-max m-10 p-4 border-4 border-red-300 rounded-2xl shadow-3xl" },
+    { id: 5, data: "relative w-max h-max m-10 p-4 border-4 border-red-400 rounded-2xl shadow-3xl" },
+];
+
+export const shadowFrameMoreData = [
+    { id: 1, data: "relative w-max h-max m-10 p-4 border-4 border-red-500 rounded-2xl shadow-3xl" },
+    { id: 2, data: "relative w-max h-max m-10 p-4 border-4 border-blue-300 rounded-2xl shadow-3xl" },
+    { id: 3, data: "relative w-max h-max m-10 p-4 border-4 border-blue-400 rounded-2xl shadow-3xl" },
+    { id: 4, data: "relative w-max h-max m-10 p-4 border-4 border-blue-500 rounded-2xl shadow-3xl" },
+    { id: 5, data: "relative w-max h-max m-10 p-4 border-4 border-green-300 rounded-2xl shadow-3xl" },
+    { id: 6, data: "relative w-max h-max m-10 p-4 border-4 border-green-400 rounded-2xl shadow-3xl" },
+    { id: 7, data: "relative w-max h-max m-10 p-4 border-4 border-green-500 rounded-2xl shadow-3xl" },
+    { id: 8, data: "relative w-max h-max m-10 p-4 border-4 border-purple-300 rounded-2xl shadow-3xl" },
+    { id: 9, data: "relative w-max h-max m-10 p-4 border-4 border-purple-400 rounded-2xl shadow-3xl" },
+    { id: 10, data: "relative w-max h-max m-10 p-4 border-4 border-purple-500 rounded-2xl shadow-3xl" },
+]
+
+export const dottedFrameData = [
+    { id: 1, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-red-400 rounded-2xl" },
+    { id: 2, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-green-400 rounded-2xl" },
+    { id: 3, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-blue-400 rounded-2xl" },
+    { id: 4, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-purple-400 rounded-2xl" },
+    { id: 5, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-pink-400 rounded-2xl" },
+];
+
+export const dottedFrameMoreData = [
+    { id: 1, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-orange-400 rounded-2xl" },
+    { id: 2, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-teal-400 rounded-2xl" },
+    { id: 3, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-cyan-400 rounded-2xl" },
+    { id: 4, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-amber-400 rounded-2xl" },
+    { id: 5, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-lime-400 rounded-2xl" },
+    { id: 6, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-emerald-400 rounded-2xl" },
+    { id: 7, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-fuchsia-400 rounded-2xl" },
+    { id: 7, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-rose-400 rounded-2xl" },
+    { id: 8, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-sky-400 rounded-2xl" },
+    { id: 9, data: "relative w-max h-max m-10 p-4 border-4 border-dashed border-indigo-400 rounded-2xl" },
+]
