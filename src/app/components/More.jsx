@@ -377,7 +377,7 @@ function More({ themeToggleClick, setThemeToggleClick }) {
             </div>
             <div className="relative">
                 <div className="rounded-sm h-50 bg-white">
-                    <img src={"hey-weather-site.png"} className="" />
+                    <img src={"hey-weather-site.png"} className="h-full object-cover" />
                     {/* <div className="flex flex-col gap-2 p-2">
                         <p
                             className="underline text-center flex items-center font-bold text-3xl text-[#4b2e05]
