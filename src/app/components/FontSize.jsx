@@ -53,8 +53,8 @@ import { smoochSansSizeData } from "@/data/fontSizeData";
 import { smoochSansSizeMoreData } from "@/data/fontSizeData";
 import { exo2SizeData } from "@/data/fontSizeData";
 import { exo2SizeMoreData } from "@/data/fontSizeData";
-import {rubikMonoOneSizeData} from "@/data/fontSizeData";
-import {rubikMonoOneSizeMoreData} from "@/data/fontSizeData";
+import { rubikMonoOneSizeData } from "@/data/fontSizeData";
+import { rubikMonoOneSizeMoreData } from "@/data/fontSizeData";
 
 function FontSize({
     text,
@@ -1110,6 +1110,34 @@ function FontSize({
                         )}
                     </div>
                 </div>
+
+                {/* Advertisement Div */}
+                <div className="relative">
+                    <div className="rounded-sm bg-white h-50"></div>
+                    <a href="mailto:sachinbhujel.np@gmail.com">
+                        <div className="absolute bottom-0 w-full flex bg-[linear-gradient(90deg,rgba(42,123,155,1)_0%,rgba(87,199,133,1)_50%,rgba(237,221,83,1)_100%)] p-2 items-center justify-between">
+                            <p className="font-semibold text-base text-white">
+                                Promote Site
+                            </p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-move-right-icon lucide-move-right"
+                            >
+                                <path d="M18 8L22 12L18 16" />
+                                <path d="M2 12H22" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
                 <div className="flex flex-col gap-2">
                     <div className="flex items-center justify-between">
                         <p className="font-semibold text-base text-white">
@@ -3783,7 +3811,9 @@ function FontSize({
                             className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
                                 rubikMonoOneMore ? "text-[#bbbbbb]" : ""
                             }`}
-                            onClick={() => setRubikMonoOneMore(!rubikMonoOneMore)}
+                            onClick={() =>
+                                setRubikMonoOneMore(!rubikMonoOneMore)
+                            }
                         >
                             <p className="text-sm font-semibold">More</p>
                             <svg

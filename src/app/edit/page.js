@@ -7,6 +7,7 @@ import Effects from "../components/Effects";
 import Elements from "../components/Elements";
 import FontFamily from "../components/FontFamily";
 import FontSize from "../components/FontSize";
+import BorderFrame from "../components/BorderFrame";
 import More from "../components/More";
 import Text from "../components/Text";
 import Uploads from "../components/Uploads";
@@ -20,6 +21,7 @@ export default function Edit() {
     const [fontSizeDivShow, setFontSizeDivShow] = useState(false);
     const [elementsDivShow, setElementsDivShow] = useState(false);
     const [textColorDivShow, setTextColorDivShow] = useState(false);
+    const [borderFrameDivShow, setBorderFrameDivShow] = useState(false);
     const [uploadsDivShow, setUploadsDivShow] = useState(false);
     const [moreDivShow, setMoreDivShow] = useState(false);
     const [image, setImage] = useState(null);
@@ -108,6 +110,7 @@ export default function Edit() {
         setTextColorDivShow(false);
         setUploadsDivShow(false);
         setMoreDivShow(false);
+        setBorderFrameDivShow(false);
     };
 
     const handleShowFontFamily = () => {
@@ -119,6 +122,7 @@ export default function Edit() {
         setTextColorDivShow(false);
         setUploadsDivShow(false);
         setMoreDivShow(false);
+        setBorderFrameDivShow(false);
     };
 
     const handleShowTextEffects = () => {
@@ -130,6 +134,7 @@ export default function Edit() {
         setTextColorDivShow(false);
         setUploadsDivShow(false);
         setMoreDivShow(false);
+        setBorderFrameDivShow(false);
     };
 
     const handleShowFontSize = () => {
@@ -141,6 +146,7 @@ export default function Edit() {
         setTextColorDivShow(false);
         setUploadsDivShow(false);
         setMoreDivShow(false);
+        setBorderFrameDivShow(false);
     };
 
     const handleShowElements = () => {
@@ -152,6 +158,7 @@ export default function Edit() {
         setTextColorDivShow(false);
         setUploadsDivShow(false);
         setMoreDivShow(false);
+        setBorderFrameDivShow(false);
     };
 
     const handleShowTextColor = () => {
@@ -161,6 +168,7 @@ export default function Edit() {
         setFontSizeDivShow(false);
         setElementsDivShow(false);
         setTextColorDivShow(true);
+        setBorderFrameDivShow(false);
         setUploadsDivShow(false);
         setMoreDivShow(false);
     };
@@ -174,7 +182,21 @@ export default function Edit() {
         setTextColorDivShow(false);
         setUploadsDivShow(true);
         setMoreDivShow(false);
+        setBorderFrameDivShow(false);
     };
+
+    const handleBorderFrame = () => {
+        setFontFamilyDivShow(false);
+        setTextDivShow(false);
+        setTextEffectsDivShow(false);
+        setFontSizeDivShow(false);
+        setBorderFrameDivShow(true);
+        setElementsDivShow(false);
+        setTextColorDivShow(false);
+        setUploadsDivShow(false);
+        setMoreDivShow(false);
+    };
+
 
     const handleShowMore = () => {
         setFontFamilyDivShow(false);
@@ -394,7 +416,7 @@ export default function Edit() {
                             <path d="m3 12 3.553-7.724a.5.5 0 0 1 .894 0L11 12" />
                             <path d="M3.92 10h6.16" />
                         </svg>
-                        <p className="text-xs text-center">Font-Family</p>
+                        <p className="text-xs text-center">Family</p>
                     </div>
                     <div
                         className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${textEffectsDivShow ? "bg-[#27282c] text-white" : ""
@@ -440,6 +462,28 @@ export default function Edit() {
                             <path d="M3.304 13h6.392" />
                         </svg>
                         <p className="text-xs text-center">Font Size</p>
+                    </div>
+                    <div
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${borderFrameDivShow ? "bg-[#27282c] text-white" : ""
+                            }`}
+                        onClick={handleBorderFrame}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-frame-icon lucide-frame">
+                            <line x1="22" x2="2" y1="6" y2="6" />
+                            <line x1="22" x2="2" y1="18" y2="18" />
+                            <line x1="6" x2="6" y1="2" y2="22" />
+                            <line x1="18" x2="18" y1="2" y2="22" />
+                        </svg>
+                        <p className="text-xs text-center">Frame</p>
                     </div>
                     <div
                         className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${elementsDivShow ? "bg-[#27282c] text-white" : ""
@@ -606,6 +650,9 @@ export default function Edit() {
                                 setTextFamilyClick={setTextFamilyClick}
                                 setFontSizeFamilyClick={setFontSizeFamilyClick}
                             />
+                        )}
+                        {borderFrameDivShow && (
+                            <BorderFrame />
                         )}
                         {elementsDivShow && (
                             <Elements setElements={setElements} />
