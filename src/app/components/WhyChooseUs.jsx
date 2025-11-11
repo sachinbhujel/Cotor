@@ -28,7 +28,7 @@ function WhyChooseUs() {
                     <p className="font-bold sm:text-[1.4rem] text-xl text-center">
                         Easy to Use
                     </p>
-                    <p className="text-center sm:text-[1.1rem] text-lg">
+                    <p className="text-center sm:text-[1.1rem] text-lg w-[94%]">
                         Edit, replace, remove, and add new text in images with
                         ease. No technical skills are required.
                     </p>
@@ -56,7 +56,7 @@ function WhyChooseUs() {
                     <p className="font-bold sm:text-[1.4rem] text-xl text-center">
                         Various Font Styles
                     </p>
-                    <p className="text-center sm:text-[1.1rem] text-lg">
+                    <p className="text-center sm:text-[1.1rem] text-lg w-[94%]">
                         A vast library of free fonts and text styles to match
                         your vision and enhance the impact of your text.
                     </p>
@@ -85,7 +85,7 @@ function WhyChooseUs() {
                     <p className="font-bold sm:text-[1.4rem] text-xl text-center">
                         Mobile Friendly
                     </p>
-                    <p className="text-center sm:text-[1.1rem] text-lg">
+                    <p className="text-center sm:text-[1.1rem] text-lg w-[94%]">
                         Works both on desktop and mobile devices. Enjoy the
                         flexibility of editing image text anytime and anywhere.
                     </p>

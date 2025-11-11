@@ -45,27 +45,29 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                     } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
-                        <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"
-                            >
-                                <circle cx="12" cy="12" r="10" />
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-                                <path d="M12 17h.01" />
-                            </svg>
-                            <p className="text-center text-xs text-gray-300">
-                                Ask for Cotor
-                            </p>
-                        </div>
+                        <a href="mailto:sachinbhujel.np@gamil.com?subject=Ask%20for%20Cotor&body=Title:%20%0D%0ADescription:%20Please%20tell%20us%20what%20you%20need%20help%20with.">
+                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"
+                                >
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                                    <path d="M12 17h.01" />
+                                </svg>
+                                <p className="text-center text-xs text-gray-300">
+                                    Ask for Cotor
+                                </p>
+                            </div>
+                        </a>
                         <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
