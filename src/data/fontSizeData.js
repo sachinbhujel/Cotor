@@ -858,3 +858,244 @@ export const stackSansSizeMoreData = [
         size: "text-3xl",
     },
 ];
+
+export const latoSizeData = [
+    {
+        id: 1,
+        fontFamily: "Lato",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Lato",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Lato",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Lato",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Lato",
+        size: "text-xl",
+    },
+];
+
+export const latoSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Lato",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Lato",
+        size: "text-3xl",
+    },
+];
+
+export const playwriteSizeData = [
+    {
+        id: 1,
+        fontFamily: "Playwrite HU",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Playwrite HU",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Playwrite HU",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Playwrite HU",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Playwrite HU",
+        size: "text-xl",
+    },
+];
+
+export const playwriteSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Playwrite HU",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Playwrite HU",
+        size: "text-3xl",
+    },
+];
+
+export const montserratSizeData = [
+    {
+        id: 1,
+        fontFamily: "Montserrat",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Montserrat",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Montserrat",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Montserrat",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Montserrat",
+        size: "text-xl",
+    },
+];
+
+export const montserratSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Montserrat",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Montserrat",
+        size: "text-3xl",
+    },
+];
+
+export const smoochSansSizeData = [
+    {
+        id: 1,
+        fontFamily: "Smooch Sans",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Smooch Sans",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Smooch Sans",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Smooch Sans",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Smooch Sans",
+        size: "text-xl",
+    },
+];
+
+export const smoochSansSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Smooch Sans",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Smooch Sans",
+        size: "text-3xl",
+    },
+];
+
+export const exo2SizeData = [
+    {
+        id: 1,
+        fontFamily: "Exo 2",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Exo 2",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Exo 2",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Exo 2",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Exo 2",
+        size: "text-xl",
+    },
+];
+
+export const exo2SizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Exo 2",
+        size: "text-2xl",
+    },
+    {
+        id: 2,
+        fontFamily: "Exo 2",
+        size: "text-3xl",
+    },
+];
+
+export const rubikMonoOneSizeData = [
+    {
+        id: 1,
+        fontFamily: "Rubik Mono One",
+        size: "text-xs",
+    },
+    {
+        id: 2,
+        fontFamily: "Rubik Mono One",
+        size: "text-sm",
+    },
+    {
+        id: 3,
+        fontFamily: "Rubik Mono One",
+        size: "text-base",
+    },
+    {
+        id: 4,
+        fontFamily: "Rubik Mono One",
+        size: "text-lg",
+    },
+    {
+        id: 5,
+        fontFamily: "Rubik Mono One",
+        size: "text-xl",
+    },
+];
+
+export const rubikMonoOneSizeMoreData = [
+    {
+        id: 1,
+        fontFamily: "Rubik Mono One",
+        size: "text-2xl",
+    },
+];

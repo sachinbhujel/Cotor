@@ -43,6 +43,18 @@ import { josefinSizeData } from "@/data/fontSizeData";
 import { josefinSizeMoreData } from "@/data/fontSizeData";
 import { stackSansSizeData } from "@/data/fontSizeData";
 import { stackSansSizeMoreData } from "@/data/fontSizeData";
+import { latoSizeData } from "@/data/fontSizeData";
+import { latoSizeMoreData } from "@/data/fontSizeData";
+import { playwriteSizeData } from "@/data/fontSizeData";
+import { playwriteSizeMoreData } from "@/data/fontSizeData";
+import { montserratSizeData } from "@/data/fontSizeData";
+import { montserratSizeMoreData } from "@/data/fontSizeData";
+import { smoochSansSizeData } from "@/data/fontSizeData";
+import { smoochSansSizeMoreData } from "@/data/fontSizeData";
+import { exo2SizeData } from "@/data/fontSizeData";
+import { exo2SizeMoreData } from "@/data/fontSizeData";
+import {rubikMonoOneSizeData} from "@/data/fontSizeData";
+import {rubikMonoOneSizeMoreData} from "@/data/fontSizeData";
 
 function FontSize({
     text,
@@ -73,6 +85,12 @@ function FontSize({
     const [cabinMore, setCabinMore] = useState(false);
     const [josefinMore, setJosefinMore] = useState(false);
     const [stackSansMore, setStackSansMore] = useState(false);
+    const [latoMore, setLatoMore] = useState(false);
+    const [playwriteMore, setPlaywriteMore] = useState(false);
+    const [montserratMore, setMontserratMore] = useState(false);
+    const [smoochSansMore, setSmoochSansMore] = useState(false);
+    const [exo2More, setExo2More] = useState(false);
+    const [rubikMonoOneMore, setRubikMonoOneMore] = useState(false);
 
     return (
         <div className="flex flex-col gap-6 py-1">
@@ -3016,6 +3034,846 @@ function FontSize({
                         {stackSansMore && (
                             <div className="grid grid-cols-3 gap-2 text-white">
                                 {stackSansSizeMoreData.map((font, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                            onClick={() => {
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontSizeData: `${font.size}`,
+                                                        fontFamilyData: `${font.fontFamily}`,
+                                                    };
+                                                    return newTextData;
+                                                });
+                                            }}
+                                        >
+                                            <h1
+                                                className={`font-bold ${font.size}`}
+                                                style={{
+                                                    fontFamily: `${font.fontFamily}`,
+                                                }}
+                                            >
+                                                Text
+                                            </h1>
+                                            <p className="text-gray-300 text-xs">
+                                                {font.size}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                        <p className="font-semibold text-base text-white">
+                            Lato
+                        </p>
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                latoMore ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setLatoMore(!latoMore)}
+                        >
+                            <p className="text-sm font-semibold">More</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                            >
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        className={`flex flex-col gap-2 ${
+                            latoMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
+                    >
+                        <div className="grid grid-cols-3 gap-2 text-white">
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                onClick={() => {
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontSizeData: "",
+                                        };
+                                        return newTextData;
+                                    });
+                                }}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                >
+                                    <path d="M4.929 4.929 19.07 19.071" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                            </div>
+                            {latoSizeData.map((font, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        onClick={() => {
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
+                                                    fontSizeData: `${font.size}`,
+                                                    fontFamilyData: `${font.fontFamily}`,
+                                                };
+                                                return newTextData;
+                                            });
+                                        }}
+                                    >
+                                        <h1
+                                            className={`font-bold ${font.size}`}
+                                            style={{
+                                                fontFamily: `${font.fontFamily}`,
+                                            }}
+                                        >
+                                            Text
+                                        </h1>
+                                        <p className="text-gray-300 text-xs">
+                                            {font.size}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        {latoMore && (
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                {latoSizeMoreData.map((font, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                            onClick={() => {
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontSizeData: `${font.size}`,
+                                                        fontFamilyData: `${font.fontFamily}`,
+                                                    };
+                                                    return newTextData;
+                                                });
+                                            }}
+                                        >
+                                            <h1
+                                                className={`font-bold ${font.size}`}
+                                                style={{
+                                                    fontFamily: `${font.fontFamily}`,
+                                                }}
+                                            >
+                                                Text
+                                            </h1>
+                                            <p className="text-gray-300 text-xs">
+                                                {font.size}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                        <p className="font-semibold text-base text-white">
+                            Playwrite HU
+                        </p>
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                playwriteMore ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setPlaywriteMore(!playwriteMore)}
+                        >
+                            <p className="text-sm font-semibold">More</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                            >
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        className={`flex flex-col gap-2 ${
+                            playwriteMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
+                    >
+                        <div className="grid grid-cols-3 gap-2 text-white">
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                onClick={() => {
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontSizeData: "",
+                                        };
+                                        return newTextData;
+                                    });
+                                }}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                >
+                                    <path d="M4.929 4.929 19.07 19.071" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                            </div>
+                            {playwriteSizeData.map((font, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        onClick={() => {
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
+                                                    fontSizeData: `${font.size}`,
+                                                    fontFamilyData: `${font.fontFamily}`,
+                                                };
+                                                return newTextData;
+                                            });
+                                        }}
+                                    >
+                                        <h1
+                                            className={`font-bold ${font.size}`}
+                                            style={{
+                                                fontFamily: `${font.fontFamily}`,
+                                            }}
+                                        >
+                                            Text
+                                        </h1>
+                                        <p className="text-gray-300 text-xs">
+                                            {font.size}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        {playwriteMore && (
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                {playwriteSizeMoreData.map((font, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                            onClick={() => {
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontSizeData: `${font.size}`,
+                                                        fontFamilyData: `${font.fontFamily}`,
+                                                    };
+                                                    return newTextData;
+                                                });
+                                            }}
+                                        >
+                                            <h1
+                                                className={`font-bold ${font.size}`}
+                                                style={{
+                                                    fontFamily: `${font.fontFamily}`,
+                                                }}
+                                            >
+                                                Text
+                                            </h1>
+                                            <p className="text-gray-300 text-xs">
+                                                {font.size}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                        <p className="font-semibold text-base text-white">
+                            Montserrat
+                        </p>
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                montserratMore ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setMontserratMore(!montserratMore)}
+                        >
+                            <p className="text-sm font-semibold">More</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                            >
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        className={`flex flex-col gap-2 ${
+                            montserratMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
+                    >
+                        <div className="grid grid-cols-3 gap-2 text-white">
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                onClick={() => {
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontSizeData: "",
+                                        };
+                                        return newTextData;
+                                    });
+                                }}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                >
+                                    <path d="M4.929 4.929 19.07 19.071" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                            </div>
+                            {montserratSizeData.map((font, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        onClick={() => {
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
+                                                    fontSizeData: `${font.size}`,
+                                                    fontFamilyData: `${font.fontFamily}`,
+                                                };
+                                                return newTextData;
+                                            });
+                                        }}
+                                    >
+                                        <h1
+                                            className={`font-bold ${font.size}`}
+                                            style={{
+                                                fontFamily: `${font.fontFamily}`,
+                                            }}
+                                        >
+                                            Text
+                                        </h1>
+                                        <p className="text-gray-300 text-xs">
+                                            {font.size}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        {montserratMore && (
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                {montserratSizeMoreData.map((font, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                            onClick={() => {
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontSizeData: `${font.size}`,
+                                                        fontFamilyData: `${font.fontFamily}`,
+                                                    };
+                                                    return newTextData;
+                                                });
+                                            }}
+                                        >
+                                            <h1
+                                                className={`font-bold ${font.size}`}
+                                                style={{
+                                                    fontFamily: `${font.fontFamily}`,
+                                                }}
+                                            >
+                                                Text
+                                            </h1>
+                                            <p className="text-gray-300 text-xs">
+                                                {font.size}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                        <p className="font-semibold text-base text-white">
+                            Smooch Sans
+                        </p>
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                smoochSansMore ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setSmoochSansMore(!smoochSansMore)}
+                        >
+                            <p className="text-sm font-semibold">More</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                            >
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        className={`flex flex-col gap-2 ${
+                            smoochSansMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
+                    >
+                        <div className="grid grid-cols-3 gap-2 text-white">
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                onClick={() => {
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontSizeData: "",
+                                        };
+                                        return newTextData;
+                                    });
+                                }}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                >
+                                    <path d="M4.929 4.929 19.07 19.071" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                            </div>
+                            {smoochSansSizeData.map((font, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        onClick={() => {
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
+                                                    fontSizeData: `${font.size}`,
+                                                    fontFamilyData: `${font.fontFamily}`,
+                                                };
+                                                return newTextData;
+                                            });
+                                        }}
+                                    >
+                                        <h1
+                                            className={`font-bold ${font.size}`}
+                                            style={{
+                                                fontFamily: `${font.fontFamily}`,
+                                            }}
+                                        >
+                                            Text
+                                        </h1>
+                                        <p className="text-gray-300 text-xs">
+                                            {font.size}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        {smoochSansMore && (
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                {smoochSansSizeMoreData.map((font, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                            onClick={() => {
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontSizeData: `${font.size}`,
+                                                        fontFamilyData: `${font.fontFamily}`,
+                                                    };
+                                                    return newTextData;
+                                                });
+                                            }}
+                                        >
+                                            <h1
+                                                className={`font-bold ${font.size}`}
+                                                style={{
+                                                    fontFamily: `${font.fontFamily}`,
+                                                }}
+                                            >
+                                                Text
+                                            </h1>
+                                            <p className="text-gray-300 text-xs">
+                                                {font.size}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                        <p className="font-semibold text-base text-white">
+                            Exo 2
+                        </p>
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                exo2More ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setExo2More(!exo2More)}
+                        >
+                            <p className="text-sm font-semibold">More</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                            >
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        className={`flex flex-col gap-2 ${
+                            exo2More ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
+                    >
+                        <div className="grid grid-cols-3 gap-2 text-white">
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                onClick={() => {
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontSizeData: "",
+                                        };
+                                        return newTextData;
+                                    });
+                                }}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                >
+                                    <path d="M4.929 4.929 19.07 19.071" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                            </div>
+                            {exo2SizeData.map((font, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        onClick={() => {
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
+                                                    fontSizeData: `${font.size}`,
+                                                    fontFamilyData: `${font.fontFamily}`,
+                                                };
+                                                return newTextData;
+                                            });
+                                        }}
+                                    >
+                                        <h1
+                                            className={`font-bold ${font.size}`}
+                                            style={{
+                                                fontFamily: `${font.fontFamily}`,
+                                            }}
+                                        >
+                                            Text
+                                        </h1>
+                                        <p className="text-gray-300 text-xs">
+                                            {font.size}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        {exo2More && (
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                {exo2SizeMoreData.map((font, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                            onClick={() => {
+                                                setText((prev) => {
+                                                    const newTextData = [
+                                                        ...prev,
+                                                    ];
+                                                    newTextData[
+                                                        prev.length - 1
+                                                    ] = {
+                                                        ...newTextData[
+                                                            prev.length - 1
+                                                        ],
+                                                        fontSizeData: `${font.size}`,
+                                                        fontFamilyData: `${font.fontFamily}`,
+                                                    };
+                                                    return newTextData;
+                                                });
+                                            }}
+                                        >
+                                            <h1
+                                                className={`font-bold ${font.size}`}
+                                                style={{
+                                                    fontFamily: `${font.fontFamily}`,
+                                                }}
+                                            >
+                                                Text
+                                            </h1>
+                                            <p className="text-gray-300 text-xs">
+                                                {font.size}
+                                            </p>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                        <p className="font-semibold text-base text-white">
+                            Rubik Mono One
+                        </p>
+                        <div
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                rubikMonoOneMore ? "text-[#bbbbbb]" : ""
+                            }`}
+                            onClick={() => setRubikMonoOneMore(!rubikMonoOneMore)}
+                        >
+                            <p className="text-sm font-semibold">More</p>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                            >
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div
+                        className={`flex flex-col gap-2 ${
+                            rubikMonoOneMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
+                    >
+                        <div className="grid grid-cols-3 gap-2 text-white">
+                            <div
+                                className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                onClick={() => {
+                                    setText((prev) => {
+                                        const newTextData = [...prev];
+                                        newTextData[prev.length - 1] = {
+                                            ...newTextData[prev.length - 1],
+                                            fontSizeData: "",
+                                        };
+                                        return newTextData;
+                                    });
+                                }}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                >
+                                    <path d="M4.929 4.929 19.07 19.071" />
+                                    <circle cx="12" cy="12" r="10" />
+                                </svg>
+                            </div>
+                            {rubikMonoOneSizeData.map((font, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        onClick={() => {
+                                            setText((prev) => {
+                                                const newTextData = [...prev];
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[
+                                                        prev.length - 1
+                                                    ],
+                                                    fontSizeData: `${font.size}`,
+                                                    fontFamilyData: `${font.fontFamily}`,
+                                                };
+                                                return newTextData;
+                                            });
+                                        }}
+                                    >
+                                        <h1
+                                            className={`font-bold ${font.size}`}
+                                            style={{
+                                                fontFamily: `${font.fontFamily}`,
+                                            }}
+                                        >
+                                            Text
+                                        </h1>
+                                        <p className="text-gray-300 text-xs">
+                                            {font.size}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        {rubikMonoOneMore && (
+                            <div className="grid grid-cols-3 gap-2 text-white">
+                                {rubikMonoOneSizeMoreData.map((font, index) => {
                                     return (
                                         <div
                                             key={index}
