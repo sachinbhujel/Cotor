@@ -485,7 +485,7 @@ function BorderFrame() {
                     )}
                 </div>
             </div>
-                <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <p className="font-semibold text-base text-white">
                         Dotted Frame
