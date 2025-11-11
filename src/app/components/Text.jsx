@@ -10,6 +10,8 @@ import { paraData } from "@/data/textData";
 import { paraMoreData } from "@/data/textData";
 
 function Text({
+    editIndex,
+    setEditIndex,
     textareaTextValue,
     setTextareaTextValue,
     text,
@@ -25,6 +27,8 @@ function Text({
             {textButtonClick && (
                 <div className="flex flex-col gap-6 py-1">
                     <Input
+                        editIndex={editIndex}
+                        setEditIndex={setEditIndex}
                         textareaTextValue={textareaTextValue}
                         setTextareaTextValue={setTextareaTextValue}
                         setText={setText}

@@ -1,33 +1,45 @@
 import React from "react";
-import { set } from "idb-keyval";
-import { get } from "idb-keyval";
-import { useParams } from "next/navigation";
 
-function Input({ textareaTextValue, setTextareaTextValue, setText }) {
-    const params = useParams();
+function Input({
+    textareaTextValue,
+    setTextareaTextValue,
+    setText,
+    editIndex,
+    setEditIndex,
+}) {
     const handleText = (e) => {
         setTextareaTextValue(e.target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setText((prev) => [
-            ...prev,
-            {
-                value: textareaTextValue,
-                textData: "",
-                fontFamilyData: "",
-                effectData: "",
-                fontSizeData: "",
-                fontSizeFamilyData: "",
-                boldData: "",
-                italicData: "",
-                underlineData: "",
-                spaceData: "",
-                shadowData: "",
-                colorData: "",
-            },
-        ]);
+        if (editIndex !== null) {
+            setText((prev) => {
+                const updated = [...prev];
+                updated[editIndex].value = textareaTextValue;
+                return updated;
+            });
+            setEditIndex(null);
+        } else {
+            setText((prev) => [
+                ...prev,
+                {
+                    value: textareaTextValue,
+                    textData: "",
+                    fontFamilyData: "",
+                    effectData: "",
+                    fontSizeData: "",
+                    fontSizeFamilyData: "",
+                    boldData: "",
+                    italicData: "",
+                    underlineData: "",
+                    spaceData: "",
+                    shadowData: "",
+                    colorData: "",
+                },
+            ]);
+        }
+
         setTextareaTextValue("");
     };
 
