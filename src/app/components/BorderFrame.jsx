@@ -1092,7 +1092,7 @@ function BorderFrame({ setText, setFrameClick }) {
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <p className="font-semibold text-base text-white">
-                        Animated Gradient Frame
+                        Animated Frame
                     </p>
                     <div
                         className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${animatedGradientFrameMore ? "text-[#bbbbbb]" : ""

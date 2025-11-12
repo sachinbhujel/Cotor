@@ -85,7 +85,7 @@ const Help = () => {
                         ].map((feature, index) => (
                             <div
                                 key={index}
-                                className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white rounded-2xl shadow-lg p-6 hover:scale-[1.02] transition"
+                                className="bg-[#093b72] text-white rounded-2xl shadow-lg p-6 hover:scale-[1.02] transition"
                             >
                                 <h3 className="text-xl font-semibold mb-2">
                                     {feature.title}
