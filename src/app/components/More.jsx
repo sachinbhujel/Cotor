@@ -11,16 +11,17 @@ function More({ themeToggleClick, setThemeToggleClick }) {
         setThemeToggleClick(!themeToggleClick);
     };
     return (
-        <div className="flex flex-col gap-6 py-1 h-full">
+        <div className="flex flex-col gap-6">
+            {/* More Tools Div */}
             <div className="flex flex-col gap-2">
+                {/* More Tools Header */}
                 <div className="flex items-center justify-between">
                     <p className="font-semibold text-base text-white">
                         More Tools
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            moreToolsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${moreToolsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() => setMoreToolsMore(!moreToolsMore)}
                     >
                         <p className="text-sm font-semibold">More</p>
@@ -40,12 +41,14 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         </svg>
                     </div>
                 </div>
+
+                {/* All Tools Div */}
                 <div
-                    className={`flex flex-col gap-2 ${
-                        moreToolsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${moreToolsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
+                        {/* Ask For Cotor */}
                         <a href="mailto:sachinbhujel.np@gmail.com?subject=Ask%20for%20Cotor&body=Tell%20us%20what%20features%20you%20want%20to%20add.">
                             <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
                                 <svg
@@ -69,26 +72,32 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </p>
                             </div>
                         </a>
-                        <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-square-pen-icon lucide-square-pen"
-                            >
-                                <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
-                            </svg>
-                            <p className="text-center text-xs text-gray-300">
-                                Feedback
-                            </p>
-                        </div>
+
+                        {/* Feedback */}
+                        <a href="mailto:sachinbhujel.np@gmail.com?subject=Feedback%20for%20Cotor&body=Tell%20us%20about%20your%20experience:">
+                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="lucide lucide-square-pen-icon lucide-square-pen"
+                                >
+                                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                </svg>
+                                <p className="text-center text-xs text-gray-300">
+                                    Feedback
+                                </p>
+                            </div>
+                        </a>
+
+                        {/* Theme Toggle */}
                         <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
                             {themeToggleClick ? (
                                 <>
@@ -148,6 +157,8 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </>
                             )}
                         </div>
+
+                        {/* Help */}
                         <Link href="/help">
                             <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
                                 <svg
@@ -174,15 +185,17 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                     </div>
                 </div>
             </div>
+
+            {/* Social Links Div */}
             <div className="flex flex-col gap-2">
+                {/* Social Links */}
                 <div className="flex items-center justify-between">
                     <p className="font-semibold text-base text-white">
                         Social Links
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            socialLinksMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${socialLinksMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() => setSocialLinksMore(!socialLinksMore)}
                     >
                         <p className="text-sm font-semibold">More</p>
@@ -202,12 +215,14 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         </svg>
                     </div>
                 </div>
+
+                {/* All Social Links */}
                 <div
-                    className={`flex flex-col gap-2 ${
-                        socialLinksMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${socialLinksMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
+                        {/* Instagram */}
                         <a
                             href="https://instagram.com/imsachinbhujel"
                             target="_blank"
@@ -246,6 +261,8 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </p>
                             </div>
                         </a>
+
+                        {/* Facebook */}
                         <a
                             href="https://facebook.com/imsachinbhujel"
                             target="_blank"
@@ -270,6 +287,8 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </p>
                             </div>
                         </a>
+
+                        {/* Twitter */}
                         <a href="https://x.com/imsachinbhujel" target="_blank">
                             <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
                                 <svg
@@ -291,6 +310,8 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </p>
                             </div>
                         </a>
+
+                        {/* Linkedin */}
                         <a
                             href="https://www.linkedin.com/in/sachin-bhujel-3b83a938a/"
                             target="_blank"
@@ -317,6 +338,8 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </p>
                             </div>
                         </a>
+
+                        {/* Github */}
                         <a
                             href="https://github.com/sachinbhujel"
                             target="_blank"
@@ -342,6 +365,8 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </p>
                             </div>
                         </a>
+
+                        {/* Youtube */}
                         <a
                             href="https://www.youtube.com/@sachinbhujel909"
                             target="_blank"
@@ -370,6 +395,7 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                     </div>
                     {socialLinksMore && (
                         <div className="grid grid-cols-3 gap-2 text-white">
+                            {/* Dribble */}
                             <a
                                 href="https://dribbble.com/sachin-bhujel"
                                 target="_blank"
@@ -397,10 +423,79 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                     </p>
                                 </div>
                             </a>
+
+                            {/* Pexels */}
+                            <a
+                                href="https://www.pexels.com/@sachin-bhujel-2155436356/"
+                                target="_blank"
+                            >
+                                <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="lucide lucide-image-icon lucide-image">
+                                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                                        <circle cx="9" cy="9" r="2" />
+                                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                                    </svg>
+                                    <p className="text-center text-xs text-gray-300">
+                                        Pexels
+                                    </p>
+                                </div>
+                            </a>
+
+                            {/* Reddit */}
+                            <a
+                                href="https://www.reddit.com/user/Delicious-Stable-594/"
+                                target="_blank"
+                            >
+                                <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor"
+                                        className="bi bi-reddit"
+                                        viewBox="0 0 16 16">
+                                        <path d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224q-.03.17-.029.353c0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165" />
+                                    </svg>
+                                    <p className="text-center text-xs text-gray-300">
+                                        Reddit
+                                    </p>
+                                </div>
+                            </a>
+
+                            {/* Medium */}
+                            <a
+                                href="https://www.reddit.com/user/Delicious-Stable-594/"
+                                target="_blank"
+                            >
+                                <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor"
+                                        class="bi bi-medium"
+                                        viewBox="0 0 16 16">
+                                        <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8m4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8M16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795" />
+                                    </svg>
+                                    <p className="text-center text-xs text-gray-300">
+                                        Medium
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     )}
                 </div>
             </div>
+
+            {/* Advertisement Div */}
             <div className="relative">
                 <div className="rounded-sm h-50 bg-white">
                     <img
