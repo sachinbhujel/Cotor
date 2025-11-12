@@ -67,6 +67,7 @@ export default function Edit() {
     const [textEditClick, setTextEditClick] = useState(false);
     const [textFamilyClick, setTextFamilyClick] = useState(false);
     const [textEffectClick, setTextEffectClick] = useState(false);
+    const [frameClick, setFrameClick] = useState(false);
     const [fontSizeFamilyClick, setFontSizeFamilyClick] = useState(false);
     const [themeToggleClick, setThemeToggleClick] = useState(false);
 
@@ -382,6 +383,7 @@ export default function Edit() {
         setEditIndex(index);
     }
 
+    console.log(text)
     return (
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
             <div
@@ -676,7 +678,9 @@ export default function Edit() {
                             />
                         )}
                         {borderFrameDivShow && (
-                            <BorderFrame />
+                            <BorderFrame
+                                setText={setText}
+                                setFrameClick={setFrameClick} />
                         )}
                         {elementsDivShow && (
                             <Elements setElements={setElements} />
@@ -909,7 +913,7 @@ export default function Edit() {
                                                 } ${textEffectClick
                                                     ? word.effectData
                                                     : ""
-                                                } ${word.fontSizeData}`}
+                                                } ${word.fontSizeData} ${frameClick ? word.frameData : ""}`}
                                         >
                                             {" "}
                                             {word.value}
@@ -921,10 +925,10 @@ export default function Edit() {
                                                             height="16"
                                                             viewBox="0 0 24 24"
                                                             fill="none" stroke="currentColor"
-                                                            stroke-width="2"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="lucide lucide-square-pen-icon lucide-square-pen">
+                                                            strokeWidth="2"
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            className="lucide lucide-square-pen-icon lucide-square-pen">
                                                             <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
                                                             <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
                                                         </svg>
@@ -936,10 +940,10 @@ export default function Edit() {
                                                             viewBox="0 0 24 24"
                                                             fill="none"
                                                             stroke="currentColor"
-                                                            stroke-width="2"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="lucide lucide-trash-icon lucide-trash">
+                                                            strokeWidth="2"
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            className="lucide lucide-trash-icon lucide-trash">
                                                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
                                                             <path d="M3 6h18" />
                                                             <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />

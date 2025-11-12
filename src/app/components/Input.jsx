@@ -30,6 +30,7 @@ function Input({
                     effectData: "",
                     fontSizeData: "",
                     fontSizeFamilyData: "",
+                    frameData: "",
                     boldData: "",
                     italicData: "",
                     underlineData: "",
