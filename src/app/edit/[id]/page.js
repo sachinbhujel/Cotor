@@ -501,7 +501,7 @@ export default function Edit() {
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            class="lucide lucide-frame-icon lucide-frame">
+                            className="lucide lucide-frame-icon lucide-frame">
                             <line x1="22" x2="2" y1="6" y2="6" />
                             <line x1="22" x2="2" y1="18" y2="18" />
                             <line x1="6" x2="6" y1="2" y2="22" />
