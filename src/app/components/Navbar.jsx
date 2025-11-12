@@ -29,7 +29,7 @@ function Navbar() {
                     </p>
                 </Link>
                 <Link href="https://github.com/sachinbhujel/Cotor" target="_blank">
-                    <p className="flex items-center gap-2 border-2 border-black rounded-full px-5 py-1 cursor-pointer bg-black text-white">
+                    <p className="flex items-center gap-2 border-2 border-[#bfc100] rounded-full px-5 py-1 cursor-pointer bg-black text-white">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="20"
                             height="20"
