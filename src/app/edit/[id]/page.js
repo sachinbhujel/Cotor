@@ -73,6 +73,7 @@ export default function Edit() {
     const [textColorClick, setTextColorClick] = useState(false);
     const [elementsColorClick, setElementsColorClick] = useState(false);
     const [editIndex, setEditIndex] = useState(null);
+    const [editAndDeleteShow, setEditAndDeleteShow] = useState(false);
 
 
     const handleImageUpload = (e) => {
@@ -857,13 +858,24 @@ export default function Edit() {
                                     <div
                                         className="absolute flex justify-center items-center w-[100%]"
                                         key={index}
+                                        onMouseEnter={() => {
+                                            setEditAndDeleteShow(true);
+                                        }}
+                                        onMouseLeave={() => {
+                                            setEditAndDeleteShow(false);
+                                        }}
+                                        onTouchEnd={() => {
+                                            setEditAndDeleteShow(false);
+                                        }}
                                     >
                                         <div
                                             onMouseDown={(e) =>
                                                 handleMouseDown(e, index)
                                             }
-                                            onTouchStart={(e) =>
-                                                handleTouchStart(e, index)
+                                            onTouchStart={(e) => {
+                                                handleTouchStart(e, index);
+                                                setEditAndDeleteShow(true);
+                                            }
                                             }
                                             style={{
                                                 fontFamily: word.fontFamilyData,
@@ -879,7 +891,7 @@ export default function Edit() {
                                                     ? word.colorData
                                                     : "",
                                             }}
-                                            className={`group relative p-2 max-w-[90%] ${textEditClick
+                                            className={`relative p-2 max-w-[90%] ${textEditClick
                                                 ? word.textData
                                                 : ""
                                                 } text-center ${boldClick ? word.boldData : ""
@@ -901,38 +913,40 @@ export default function Edit() {
                                         >
                                             {" "}
                                             {word.value}
-                                            <div className="invisible group-hover:visible transition-opacity duration-300 opacity-0 group-hover:opacity-100 rounded-sm absolute -top-10 right-0 flex w-16 p-1 items-center justify-between bg-white/70 z-50 cursor-pointer">
-                                                <div className="p-1 hover:bg-white rounded-sm text-gray-600 hover:text-green-600" onClick={() => handleEditText(word.value, index)}>
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        width="16"
-                                                        height="16"
-                                                        viewBox="0 0 24 24"
-                                                        fill="none" stroke="currentColor"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        class="lucide lucide-square-pen-icon lucide-square-pen">
-                                                        <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                                                        <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
-                                                    </svg>
+                                            {editAndDeleteShow && (
+                                                <div className="rounded-sm absolute -top-8 right-0 flex w-16 p-1 items-center justify-between bg-white/70 z-50 cursor-pointer">
+                                                    <div className="p-1 hover:bg-white rounded-sm text-gray-600 hover:text-green-600" onClick={() => handleEditText(word.value, index)}>
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none" stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-square-pen-icon lucide-square-pen">
+                                                            <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                                            <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div className="p-1 hover:bg-white rounded-sm text-gray-600 hover:text-red-600" onClick={() => handleDeleteText(index)}>
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="16"
+                                                            height="16"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-trash-icon lucide-trash">
+                                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                                            <path d="M3 6h18" />
+                                                            <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                                        </svg>
+                                                    </div>
                                                 </div>
-                                                <div className="p-1 hover:bg-white rounded-sm text-gray-600 hover:text-green-600" onClick={() => handleDeleteText(index)}>
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        width="16"
-                                                        height="16"
-                                                        viewBox="0 0 24 24"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        class="text-gray-600 hover:text-red-600 lucide lucide-trash-icon lucide-trash">
-                                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
-                                                        <path d="M3 6h18" />
-                                                        <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                                                    </svg>
-                                                </div>
-                                            </div>
+                                            )}
                                         </div>
                                     </div>
                                 ))}
