@@ -10,6 +10,21 @@ function More({ themeToggleClick, setThemeToggleClick }) {
     const handleTheme = () => {
         setThemeToggleClick(!themeToggleClick);
     };
+
+    const handleShareLink = () => {
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: "Cotor",
+                    url: "https://cotor.vercel.app",
+                })
+                .then(() => console.log("Shared successfully"))
+                .catch((error) => console.error("Error sharing:", error));
+        } else {
+            console.log("Share not supported");
+        }
+    };
+
     return (
         <div className="flex flex-col gap-6">
             {/* More Tools Div */}
@@ -182,6 +197,25 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                                 </p>
                             </div>
                         </Link>
+
+                        {/* Share Link */}
+                        <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer" onClick={handleShareLink}>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-link-icon lucide-link">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                            <p className="text-center text-xs text-gray-300">
+                                Share Link
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
