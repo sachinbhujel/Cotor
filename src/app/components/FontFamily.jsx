@@ -41,7 +41,7 @@ function FontFamily({
                             Sans-Serif
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 sansSerifMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setSansSerifMore(!sansSerifMore)}
@@ -187,7 +187,7 @@ function FontFamily({
                             Serif
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 serifMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setSerifMore(!serifMore)}
@@ -335,7 +335,7 @@ function FontFamily({
                             Decorative
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 decorativeMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setDecorativeMore(!decorativeMore)}
@@ -483,7 +483,7 @@ function FontFamily({
                             Script
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 scriptMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setScriptMore(!scriptMore)}
@@ -630,7 +630,7 @@ function FontFamily({
                             Monospace
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 monospaceMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setMonospaceMore(!monospaceMore)}

@@ -8,7 +8,7 @@ function Footer() {
                     © 2025{" "}
                     <a
                         href="https://cotor.vercel.app/"
-                        className="hover:underline"
+                        className="hover:underline active:underline"
                         target="_blank"
                     >
                         Cotor™

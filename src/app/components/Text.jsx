@@ -40,7 +40,7 @@ function Text({
                                     Title
                                 </p>
                                 <div
-                                    className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                    className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                         titleShowMore ? "text-[#bbbbbb]" : ""
                                     }`}
                                     onClick={() =>
@@ -170,7 +170,7 @@ function Text({
                                     Subtitle
                                 </p>
                                 <div
-                                    className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb]   ${
+                                    className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                         subTitleShowMore ? "text-[#bbbbbb]" : ""
                                     } `}
                                     onClick={() =>
@@ -306,7 +306,7 @@ function Text({
                                     Paragraph
                                 </p>
                                 <div
-                                    className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                    className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                         paraShowMore ? "text-[#bbbbbb]" : ""
                                     }`}
                                     onClick={() =>

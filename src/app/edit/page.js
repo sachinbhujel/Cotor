@@ -371,7 +371,7 @@ export default function Edit() {
                         } w-full sm:h-[100dvh] sm:gap-3 gap-1 bg-[#161619] text-[#9da2ad] py-2 overflow-y-auto scrollbar`}
                 >
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${textDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${textDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowText}
                     >
@@ -394,7 +394,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Add Text</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${fontFamilyDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowFontFamily}
                     >
@@ -419,7 +419,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Family</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${textEffectsDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${textEffectsDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowTextEffects}
                     >
@@ -440,7 +440,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Effects</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${fontSizeDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${fontSizeDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowFontSize}
                     >
@@ -464,7 +464,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Font Size</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${borderFrameDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${borderFrameDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleBorderFrame}
                     >
@@ -486,7 +486,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Frame</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${elementsDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${elementsDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowElements}
                     >
@@ -518,7 +518,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Elements</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${textColorDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${textColorDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowTextColor}
                     >
@@ -563,7 +563,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Color</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${uploadsDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${uploadsDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowUploads}
                     >
@@ -587,7 +587,7 @@ export default function Edit() {
                         <p className="text-xs text-center">Uploads</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white ${moreDivShow ? "bg-[#27282c] text-white" : ""
+                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${moreDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleShowMore}
                     >
@@ -766,7 +766,7 @@ export default function Edit() {
                         <div className="bg-[#161619] flex items-center gap-4">
                             <button
                                 onClick={handleZoomOut}
-                                className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
+                                className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500 active:bg-gray-500"
                             >
                                 -
                             </button>
@@ -775,20 +775,20 @@ export default function Edit() {
                             </span>
                             <button
                                 onClick={handleZoomIn}
-                                className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500"
+                                className="bg-[#27282c] text-white py-2 px-4 hover:bg-gray-500 active:bg-gray-500"
                             >
                                 +
                             </button>
                         </div>
                         <div className="flex items-center gap-2">
                             <div
-                                className="cursor-pointer bg-[#2c7dfa] hover:bg-[#0052d0] text-white font-medium px-4 py-2 w-max rounded-md text-[0.9rem]"
+                                className="cursor-pointer bg-[#2c7dfa] hover:bg-[#0052d0] active:bg-[#0052d0] text-white font-medium px-4 py-2 w-max rounded-md text-[0.9rem]"
                                 onClick={handleDownload}
                             >
                                 <button className="cursor-pointer">Save</button>
                             </div>
                             <div
-                                className="bg-black rounded-sm text-white p-[8.5px] hover:bg-white hover:text-black border hover:border-black cursor-pointer"
+                                className="bg-black rounded-sm text-white p-[8.5px] hover:bg-white active:bg-white hover:text-black active:text-black border hover:border-black active:border-black cursor-pointer"
                                 onClick={handleShareImage}
                             >
                                 <svg

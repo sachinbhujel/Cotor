@@ -131,7 +131,7 @@ function FontSize({
                             Lobster
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 lobsterMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setLobsterMore(!lobsterMore)}
@@ -272,7 +272,7 @@ function FontSize({
                             PT-Serif
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 sansSerifFontMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() =>
@@ -414,7 +414,7 @@ function FontSize({
                             Patrick Hand
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 patrickHandMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setPatrickHandMore(!patrickHandMore)}
@@ -554,7 +554,7 @@ function FontSize({
                             Fira Mono
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 firaMonoMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setFiraMonoMore(!firaMonoMore)}
@@ -694,7 +694,7 @@ function FontSize({
                             Courier Prime
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 courierPrimeMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() =>
@@ -836,7 +836,7 @@ function FontSize({
                             Courgette
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 courgetteMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setCourgetteMore(!courgetteMore)}
@@ -976,7 +976,7 @@ function FontSize({
                             Cousine
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 cousineMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setCousineMore(!cousineMore)}
@@ -1144,7 +1144,7 @@ function FontSize({
                             Amatic SC
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 amaticMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setAmaticMore(!amaticMore)}
@@ -1284,7 +1284,7 @@ function FontSize({
                             Arvo
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 arvoMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setArvoMore(!arvoMore)}
@@ -1424,7 +1424,7 @@ function FontSize({
                             Dancing Script
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 dancingScriptMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() =>
@@ -1568,7 +1568,7 @@ function FontSize({
                             Rock Salt
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 rockSaltMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setRockSaltMore(!rockSaltMore)}
@@ -1708,7 +1708,7 @@ function FontSize({
                             Bitter
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 bitterMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setBitterMore(!bitterMore)}
@@ -1848,7 +1848,7 @@ function FontSize({
                             Oxygen
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 oxygenMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setOxygenMore(!oxygenMore)}
@@ -1988,7 +1988,7 @@ function FontSize({
                             Raleway
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 ralewayMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setRalewayMore(!ralewayMore)}
@@ -2128,7 +2128,7 @@ function FontSize({
                             Ubuntu
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 ubuntuMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setUbuntuMore(!ubuntuMore)}
@@ -2268,7 +2268,7 @@ function FontSize({
                             Momo Signature
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 momoMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setMomoMore(!momoMore)}
@@ -2408,7 +2408,7 @@ function FontSize({
                             Indie Flower
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 indieFlowerMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setIndieFlowerMore(!indieFlowerMore)}
@@ -2548,7 +2548,7 @@ function FontSize({
                             Open Sans
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 openSansMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setOpenSansMore(!openSansMore)}
@@ -2688,7 +2688,7 @@ function FontSize({
                             Cabin
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 cabinMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setCabinMore(!cabinMore)}
@@ -2828,7 +2828,7 @@ function FontSize({
                             Josefin Sans
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 josefinMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setJosefinMore(!josefinMore)}
@@ -2968,7 +2968,7 @@ function FontSize({
                             Stack Sans
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 stackSansMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setStackSansMore(!stackSansMore)}
@@ -3108,7 +3108,7 @@ function FontSize({
                             Lato
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 latoMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setLatoMore(!latoMore)}
@@ -3248,7 +3248,7 @@ function FontSize({
                             Playwrite HU
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 playwriteMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setPlaywriteMore(!playwriteMore)}
@@ -3388,7 +3388,7 @@ function FontSize({
                             Montserrat
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 montserratMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setMontserratMore(!montserratMore)}
@@ -3528,7 +3528,7 @@ function FontSize({
                             Smooch Sans
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 smoochSansMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setSmoochSansMore(!smoochSansMore)}
@@ -3668,7 +3668,7 @@ function FontSize({
                             Exo 2
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 exo2More ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() => setExo2More(!exo2More)}
@@ -3808,7 +3808,7 @@ function FontSize({
                             Rubik Mono One
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                 rubikMonoOneMore ? "text-[#bbbbbb]" : ""
                             }`}
                             onClick={() =>

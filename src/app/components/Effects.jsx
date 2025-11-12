@@ -39,7 +39,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Color Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             colorEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() => setColorEffectsMore(!colorEffectsMore)}
@@ -158,7 +158,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Simple Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             simpleEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() => setSimpleEffectsMore(!simpleEffectsMore)}
@@ -277,7 +277,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Metallic Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             metallicEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() =>
@@ -398,7 +398,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Neon Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             neonEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() => setNeonEffectsMore(!neonEffectsMore)}
@@ -517,7 +517,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Outline Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             outlineEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() =>
@@ -638,7 +638,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Outline Neon Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             outlineAndNeonEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() =>
@@ -767,7 +767,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Outline Stroke Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             outlineAndStrokeEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() =>
@@ -896,7 +896,7 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Shadow Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             shadowEffectsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() =>

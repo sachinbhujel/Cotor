@@ -18,7 +18,7 @@ export default function Home() {
                         <a
                             href="https://palettepop.vercel.app"
                             target="_blank"
-                            className="hover:underline"
+                            className="hover:underline active:underline"
                         >
                             <p className="text-sm">
                                 Color Palatte
@@ -59,7 +59,7 @@ export default function Home() {
                             </p>
                         </div>
                         <Link href="/edit" className="w-max">
-                            <div className="bg-white font-medium px-4 py-2 w-max rounded-md sm:text-[1rem] hover:bg-[#093b72] border-2 border-white hover:text-white">
+                            <div className="bg-white font-medium px-4 py-2 w-max rounded-md sm:text-[1rem] hover:bg-[#093b72] active:bg-[#093b72] border-2 border-white hover:text-white active:text-white">
                                 <p>Edit Text Now</p>
                             </div>
                         </Link>

@@ -96,7 +96,7 @@ function Elements({ setElements }) {
                                 Shapes
                             </p>
                             <div
-                                className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                     shapesMore ? "text-[#bbbbbb]" : ""
                                 }`}
                                 onClick={() => setShapesMore(!shapesMore)}
@@ -198,7 +198,7 @@ function Elements({ setElements }) {
                                 Food
                             </p>
                             <div
-                                className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                     foodMore ? "text-[#bbbbbb]" : ""
                                 }`}
                                 onClick={() => setFoodMore(!foodMore)}
@@ -300,7 +300,7 @@ function Elements({ setElements }) {
                                 Vehicle
                             </p>
                             <div
-                                className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                                className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                                     vehicleMore ? "text-[#bbbbbb]" : ""
                                 }`}
                                 onClick={() => setVehicleMore(!vehicleMore)}

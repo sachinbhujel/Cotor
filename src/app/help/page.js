@@ -1,5 +1,12 @@
 import React from "react";
 
+export const metadata = {
+    title: `Help | Cotor - Edit Text in Image Online`,
+    description: "Get help using Cotor. Learn how to edit images, change text, and make your visuals stand out.",
+    keywords: "help, support, cotor, edit text in image, image editing, text editing, online tool",
+};
+
+
 const Help = () => {
     return (
         <div className="font-sans bg-white text-gray-800 min-h-screen">
@@ -24,7 +31,7 @@ const Help = () => {
                         Getting Started
                     </h2>
                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg active:shadow-lg transition">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                 1️⃣ Upload or Add Image
                             </h3>
@@ -33,7 +40,7 @@ const Help = () => {
                                 your file. Supports JPG, PNG.
                             </p>
                         </div>
-                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg active:shadow-lg transition">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                 2️⃣ Add or Edit Text
                             </h3>
@@ -42,7 +49,7 @@ const Help = () => {
                                 modify font, color, and size instantly.
                             </p>
                         </div>
-                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg active:shadow-lg transition">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                 3️⃣ Move or Resize Text
                             </h3>
@@ -51,7 +58,7 @@ const Help = () => {
                                 easily using the corner handles.
                             </p>
                         </div>
-                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+                        <div className="bg-white border border-blue-100 rounded-2xl shadow-md p-6 hover:shadow-lg active:shadow-lg transition">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                 4️⃣ Save or Download
                             </h3>
@@ -85,7 +92,7 @@ const Help = () => {
                         ].map((feature, index) => (
                             <div
                                 key={index}
-                                className="bg-[#093b72] text-white rounded-2xl shadow-lg p-6 hover:scale-[1.02] transition"
+                                className="bg-[#093b72] text-white rounded-2xl shadow-lg p-6 hover:scale-[1.02] active:scale-[1.02] transition"
                             >
                                 <h3 className="text-xl font-semibold mb-2">
                                     {feature.title}
@@ -149,7 +156,7 @@ const Help = () => {
                         Reach us at{" "}
                         <a
                             href="mailto:support@cotor.app"
-                            className="text-[#093b72] font-medium hover:underline"
+                            className="text-[#093b72] font-medium hover:underline active:underline"
                         >
                             sachinbhujel.np@gmail.com
                         </a>{" "}

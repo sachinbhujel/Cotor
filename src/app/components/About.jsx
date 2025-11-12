@@ -25,7 +25,7 @@ function About() {
                             editing made for everyone.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72]">
+                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72] active:border-[#093b72] active:bg-white active:text-[#093b72]">
                                 Edit Text Now
                             </p>
                         </Link>
@@ -46,7 +46,7 @@ function About() {
                             and effortless image text editing.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72]">
+                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72] active:border-[#093b72] active:bg-white active:text-[#093b72]">
                                 Edit Text Now
                             </p>
                         </Link>
@@ -82,7 +82,7 @@ function About() {
                             seconds.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72]">
+                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72] active:border-[#093b72] active:bg-white active:text-[#093b72]">
                                 Edit Text Now
                             </p>
                         </Link>
@@ -102,7 +102,7 @@ function About() {
                             greetings that make someone’s day truly special.
                         </p>
                         <Link href="/edit">
-                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72]">
+                            <p className="bg-[#093b72] text-white font-medium px-10 py-3 w-max rounded-md sm:text-[1rem] text-lg border-2 hover:border-[#093b72] hover:bg-white hover:text-[#093b72] active:border-[#093b72] active:bg-white active:text-[#093b72]">
                                 Edit Text Now
                             </p>
                         </Link>

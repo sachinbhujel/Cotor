@@ -129,6 +129,7 @@ function Color({
                     <div
                         className="absolute bottom-0 w-full flex bg-[linear-gradient(90deg,rgba(131,58,180,1)_0%,rgba(253,29,29,1)_50%,rgba(252,176,69,1)_100%)] 
                     hover:bg-[linear-gradient(90deg,rgba(252,176,69,1)_0%,rgba(253,29,29,1)_50%,rgba(131,58,180,1)_100%)]
+                      active:bg-[linear-gradient(90deg,rgba(252,176,69,1)_0%,rgba(253,29,29,1)_50%,rgba(131,58,180,1)_100%)]
                      p-2 items-center justify-between"
                     >
                         <p className="font-semibold text-base text-white">
@@ -159,9 +160,8 @@ function Color({
                             Suggested Colors
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
-                                colorsMore ? "text-[#bbbbbb]" : ""
-                            }`}
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${colorsMore ? "text-[#bbbbbb]" : ""
+                                }`}
                             onClick={() => setColorsMore(!colorsMore)}
                         >
                             <p className="text-sm font-semibold">More</p>
@@ -232,9 +232,8 @@ function Color({
                             Styles & alignments
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
-                                toolsMore ? "text-[#bbbbbb]" : ""
-                            }`}
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${toolsMore ? "text-[#bbbbbb]" : ""
+                                }`}
                             onClick={() => setToolsMore(!toolsMore)}
                         >
                             <p className="text-sm font-semibold">More</p>
@@ -256,9 +255,8 @@ function Color({
                     </div>
 
                     <div
-                        className={`flex flex-col gap-2 ${
-                            toolsMore ? "h-60" : ""
-                        } overflow-y-auto scrollbar`}
+                        className={`flex flex-col gap-2 ${toolsMore ? "h-60" : ""
+                            } overflow-y-auto scrollbar`}
                     >
                         <div className="grid grid-cols-3 gap-2 text-white">
                             <div

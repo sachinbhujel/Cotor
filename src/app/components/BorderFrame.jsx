@@ -42,7 +42,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Color Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${colorFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${colorFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setColorFrameMore(!colorFrameMore)}
                     >
@@ -159,7 +159,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Gradient Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${gradientFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${gradientFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setGradientFrameMore(!gradientFrameMore)}
                     >
@@ -276,7 +276,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Glow Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${glowFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${glowFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setGlowFrameMore(!glowFrameMore)}
                     >
@@ -393,7 +393,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Shadow Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${shadowFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${shadowFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setShadowFrameMore(!shadowFrameMore)}
                     >
@@ -510,7 +510,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Dotted Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${dottedFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${dottedFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setDottedFrameMore(!dottedFrameMore)}
                     >
@@ -627,7 +627,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Double Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${doubleFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${doubleFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setDoubleFrameMore(!doubleFrameMore)}
                     >
@@ -744,7 +744,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Glass Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${glassFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${glassFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setGlassFrameMore(!glassFrameMore)}
                     >
@@ -861,7 +861,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Pixel Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${pixelFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${pixelFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setPixelFrameMore(!pixelFrameMore)}
                     >
@@ -978,7 +978,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Outline Shadow Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${outlineShadowFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${outlineShadowFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setOutlineShadowFrameMore(!outlineShadowFrameMore)}
                     >
@@ -1095,7 +1095,7 @@ function BorderFrame({ setText, setFrameClick }) {
                         Animated Frame
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${animatedGradientFrameMore ? "text-[#bbbbbb]" : ""
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${animatedGradientFrameMore ? "text-[#bbbbbb]" : ""
                             }`}
                         onClick={() => setAnimatedGradientFrameMore(!animatedGradientFrameMore)}
                     >

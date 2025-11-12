@@ -15,7 +15,7 @@ function Navbar() {
             </div>
             <div className="flex items-center gap-4 sm:text-[1rem] text-sm text-white">
                 <Link href="/help">
-                    <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0">
+                    <p className="border-2 rounded-full px-5 py-1 cursor-pointer hover:bg-white hover:text-black hover:border-0 active:bg-white active:text-black active:border-0">
                         Help
                     </p>
                 </Link>

@@ -61,7 +61,7 @@ function Input({
                         }
                     }}
                 ></textarea>
-                <button className="font-semibold bg-blue-600 rounded-sm text-white w-full p-2 flex justify-center items-center gap-2 hover:bg-blue-700 cursor-pointer">
+                <button className="font-semibold bg-blue-600 rounded-sm text-white w-full p-2 flex justify-center items-center gap-2 hover:bg-blue-700 active:bg-blue-700 cursor-pointer">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"

@@ -18,7 +18,7 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         More Tools
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             moreToolsMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() => setMoreToolsMore(!moreToolsMore)}
@@ -180,7 +180,7 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         Social Links
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] ${
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
                             socialLinksMore ? "text-[#bbbbbb]" : ""
                         }`}
                         onClick={() => setSocialLinksMore(!socialLinksMore)}
