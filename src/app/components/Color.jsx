@@ -186,7 +186,8 @@ function Color({
                             return (
                                 <div
                                     key={index}
-                                    className={`w-6 bg-[${name.color}] h-6 rounded-full cursor-pointer`}
+                                    style={{ background: name.color }}
+                                    className={`w-6 h-6 rounded-full cursor-pointer`}
                                     onClick={() =>
                                         handleFontColor(`${name.color}`)
                                     }

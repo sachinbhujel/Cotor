@@ -10,17 +10,16 @@ Live preview – https://cotor.vercel.app
 
 ## 🚀 Features
 
--   **🖋️ Drag & edit elements** – Move and position text freely on the canvas.  
--   **🎨 Custom styling** – Change colors, fonts, and text effects easily.  
--   **📱 Responsive layout** – Works seamlessly across all screen sizes.  
--   **⚡ Lightweight & fast** – Minimal design for smooth performance.  
+-   **🖋️ Drag & edit elements** – Move and position text freely on the canvas.
+-   **🎨 Custom styling** – Change colors, fonts, and text effects easily.
+-   **📱 Responsive layout** – Works seamlessly across all screen sizes.
+-   **⚡ Lightweight & fast** – Minimal design for smooth performance.
 
 ---
 
 ## 🛠️ Tech Stack
 
--   **Framework:** Next.js  
--   **Styling:** TailwindCSS  
--   **Frontend Logic:** React (Hooks & Components)  
+-   **Framework:** Next.js
+-   **Styling:** TailwindCSS
 
 ---
