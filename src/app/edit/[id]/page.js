@@ -866,7 +866,9 @@ export default function Edit() {
                                             setEditAndDeleteShow(true);
                                         }}
                                         onMouseLeave={() => {
-                                            setEditAndDeleteShow(false);
+                                              setTimeout(() => {
+                                                setEditAndDeleteShow(false);
+                                            }, 2000)
                                         }}
                                         onTouchEnd={() => {
                                             setEditAndDeleteShow(false);

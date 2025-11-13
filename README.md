@@ -23,3 +23,14 @@ Live preview – https://cotor.vercel.app
 -   **Styling:** TailwindCSS
 
 ---
+
+## License
+
+This project is licensed under the MIT License – you are free to use and modify it.
+
+---
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome.  
+Feel free to open an issue or submit a pull request.
