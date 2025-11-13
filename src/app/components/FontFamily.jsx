@@ -41,9 +41,8 @@ function FontFamily({
                             Sans-Serif
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                                sansSerifMore ? "text-[#bbbbbb]" : ""
-                            }`}
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${sansSerifMore ? "text-[#bbbbbb]" : ""
+                                }`}
                             onClick={() => setSansSerifMore(!sansSerifMore)}
                         >
                             <p className="text-sm font-semibold">More</p>
@@ -64,9 +63,8 @@ function FontFamily({
                         </div>
                     </div>
                     <div
-                        className={`flex flex-col gap-2 ${
-                            sansSerifMore ? "h-60" : ""
-                        } overflow-y-auto scrollbar`}
+                        className={`flex flex-col gap-2 ${sansSerifMore ? "h-60" : ""
+                            } overflow-y-auto scrollbar`}
                     >
                         <div className="grid grid-cols-3 gap-2 text-white">
                             <div
@@ -110,7 +108,7 @@ function FontFamily({
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
                                                     ...newTextData[
-                                                        prev.length - 1
+                                                    prev.length - 1
                                                     ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
@@ -153,7 +151,7 @@ function FontFamily({
                                                         prev.length - 1
                                                     ] = {
                                                         ...newTextData[
-                                                            prev.length - 1
+                                                        prev.length - 1
                                                         ],
                                                         fontFamilyData: `${font.name}`,
                                                     };
@@ -187,9 +185,8 @@ function FontFamily({
                             Serif
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                                serifMore ? "text-[#bbbbbb]" : ""
-                            }`}
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${serifMore ? "text-[#bbbbbb]" : ""
+                                }`}
                             onClick={() => setSerifMore(!serifMore)}
                         >
                             <p className="text-sm font-semibold">More</p>
@@ -210,9 +207,8 @@ function FontFamily({
                         </div>
                     </div>
                     <div
-                        className={`flex flex-col gap-2 ${
-                            serifMore ? "h-60" : ""
-                        } overflow-y-auto scrollbar`}
+                        className={`flex flex-col gap-2 ${serifMore ? "h-60" : ""
+                            } overflow-y-auto scrollbar`}
                     >
                         <div className="grid grid-cols-3 gap-2 text-white">
                             <div
@@ -257,7 +253,7 @@ function FontFamily({
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
                                                     ...newTextData[
-                                                        prev.length - 1
+                                                    prev.length - 1
                                                     ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
@@ -301,7 +297,7 @@ function FontFamily({
                                                         prev.length - 1
                                                     ] = {
                                                         ...newTextData[
-                                                            prev.length - 1
+                                                        prev.length - 1
                                                         ],
                                                         fontFamilyData: `${font.name}`,
                                                     };
@@ -335,9 +331,8 @@ function FontFamily({
                             Decorative
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                                decorativeMore ? "text-[#bbbbbb]" : ""
-                            }`}
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${decorativeMore ? "text-[#bbbbbb]" : ""
+                                }`}
                             onClick={() => setDecorativeMore(!decorativeMore)}
                         >
                             <p className="text-sm font-semibold">More</p>
@@ -358,9 +353,8 @@ function FontFamily({
                         </div>
                     </div>
                     <div
-                        className={`flex flex-col gap-2 ${
-                            decorativeMore ? "h-60" : ""
-                        } overflow-y-auto scrollbar`}
+                        className={`flex flex-col gap-2 ${decorativeMore ? "h-60" : ""
+                            } overflow-y-auto scrollbar`}
                     >
                         <div className="grid grid-cols-3 gap-2 text-white">
                             <div
@@ -406,7 +400,7 @@ function FontFamily({
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
                                                     ...newTextData[
-                                                        prev.length - 1
+                                                    prev.length - 1
                                                     ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
@@ -449,7 +443,7 @@ function FontFamily({
                                                         prev.length - 1
                                                     ] = {
                                                         ...newTextData[
-                                                            prev.length - 1
+                                                        prev.length - 1
                                                         ],
                                                         fontFamilyData: `${font.name}`,
                                                     };
@@ -483,9 +477,8 @@ function FontFamily({
                             Script
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                                scriptMore ? "text-[#bbbbbb]" : ""
-                            }`}
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${scriptMore ? "text-[#bbbbbb]" : ""
+                                }`}
                             onClick={() => setScriptMore(!scriptMore)}
                         >
                             <p className="text-sm font-semibold">More</p>
@@ -506,9 +499,8 @@ function FontFamily({
                         </div>
                     </div>
                     <div
-                        className={`flex flex-col gap-2 ${
-                            scriptMore ? "h-60" : ""
-                        } overflow-y-auto scrollbar`}
+                        className={`flex flex-col gap-2 ${scriptMore ? "h-60" : ""
+                            } overflow-y-auto scrollbar`}
                     >
                         <div className="grid grid-cols-3 gap-2 text-white">
                             <div
@@ -553,7 +545,7 @@ function FontFamily({
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
                                                     ...newTextData[
-                                                        prev.length - 1
+                                                    prev.length - 1
                                                     ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
@@ -596,7 +588,7 @@ function FontFamily({
                                                         prev.length - 1
                                                     ] = {
                                                         ...newTextData[
-                                                            prev.length - 1
+                                                        prev.length - 1
                                                         ],
                                                         fontFamilyData: `${font.name}`,
                                                     };
@@ -630,9 +622,8 @@ function FontFamily({
                             Monospace
                         </p>
                         <div
-                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                                monospaceMore ? "text-[#bbbbbb]" : ""
-                            }`}
+                            className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${monospaceMore ? "text-[#bbbbbb]" : ""
+                                }`}
                             onClick={() => setMonospaceMore(!monospaceMore)}
                         >
                             <p className="text-sm font-semibold">More</p>
@@ -653,9 +644,8 @@ function FontFamily({
                         </div>
                     </div>
                     <div
-                        className={`flex flex-col gap-2 ${
-                            monospaceMore ? "h-60" : ""
-                        } overflow-y-auto scrollbar`}
+                        className={`flex flex-col gap-2 ${monospaceMore ? "h-60" : ""
+                            } overflow-y-auto scrollbar`}
                     >
                         <div className="grid grid-cols-3 gap-2 text-white">
                             <div
@@ -700,7 +690,7 @@ function FontFamily({
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
                                                     ...newTextData[
-                                                        prev.length - 1
+                                                    prev.length - 1
                                                     ],
                                                     fontFamilyData: `${font.name}`,
                                                 };
@@ -743,7 +733,7 @@ function FontFamily({
                                                         prev.length - 1
                                                     ] = {
                                                         ...newTextData[
-                                                            prev.length - 1
+                                                        prev.length - 1
                                                         ],
                                                         fontFamilyData: `${font.name}`,
                                                     };
@@ -777,8 +767,8 @@ function FontFamily({
             <div className="relative">
                 <div className="rounded-sm bg-white h-50"></div>
                 <a href="mailto:sachinbhujel.np@gmail.com">
-                    <div className="absolute bottom-0 w-full flex bg-[linear-gradient(90deg,rgba(42,123,155,1)_0%,rgba(87,199,133,1)_50%,rgba(237,221,83,1)_100%)] p-2 items-center justify-between">
-                        <p className="font-semibold text-base text-white">
+                    <div className="absolute bottom-0 w-full flex bg-[linear-gradient(169deg,rgba(168,254,255,1)_24%,rgba(253,149,45,1)_100%)] p-2 items-center justify-between">
+                        <p className="font-semibold text-base text-black">
                             Promote Site
                         </p>
                         <svg
