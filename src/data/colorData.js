@@ -29,10 +29,6 @@ export const colorNames = [
     },
     {
         id: 8,
-        color: "#4c00ff",
-    },
-    {
-        id: 9,
         color: "#00fbff",
     },
 ];

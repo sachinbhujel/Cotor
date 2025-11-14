@@ -2,7 +2,6 @@
 
 import * as htmlToImage from "html-to-image";
 import { set } from "idb-keyval";
-import Color from "../components/Color";
 import Effects from "../components/Effects";
 import Elements from "../components/Elements";
 import FontFamily from "../components/FontFamily";
@@ -51,14 +50,12 @@ export default function Edit() {
     const [textEditClick, setTextEditClick] = useState(false);
     const [textFamilyClick, setTextFamilyClick] = useState(false);
     const [textEffectClick, setTextEffectClick] = useState(false);
-    const [fontSizeFamilyClick, setFontSizeFamilyClick] = useState(false);
     const [themeToggleClick, setThemeToggleClick] = useState(false);
 
     const [textColorClick, setTextColorClick] = useState(false);
     const [elementsColorClick, setElementsColorClick] = useState(false);
 
     const uniqueId = useRef(crypto.randomUUID());
-    console.log(uniqueId)
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
@@ -137,18 +134,6 @@ export default function Edit() {
         setBorderFrameDivShow(false);
     };
 
-    const handleShowFontSize = () => {
-        setFontFamilyDivShow(false);
-        setTextDivShow(false);
-        setTextEffectsDivShow(false);
-        setFontSizeDivShow(true);
-        setElementsDivShow(false);
-        setTextColorDivShow(false);
-        setUploadsDivShow(false);
-        setMoreDivShow(false);
-        setBorderFrameDivShow(false);
-    };
-
     const handleShowElements = () => {
         setFontFamilyDivShow(false);
         setTextDivShow(false);
@@ -159,18 +144,6 @@ export default function Edit() {
         setUploadsDivShow(false);
         setMoreDivShow(false);
         setBorderFrameDivShow(false);
-    };
-
-    const handleShowTextColor = () => {
-        setFontFamilyDivShow(false);
-        setTextDivShow(false);
-        setTextEffectsDivShow(false);
-        setFontSizeDivShow(false);
-        setElementsDivShow(false);
-        setTextColorDivShow(true);
-        setBorderFrameDivShow(false);
-        setUploadsDivShow(false);
-        setMoreDivShow(false);
     };
 
     const handleShowUploads = () => {
@@ -440,30 +413,6 @@ export default function Edit() {
                         <p className="text-xs text-center">Effects</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${fontSizeDivShow ? "bg-[#27282c] text-white" : ""
-                            }`}
-                        onClick={handleShowFontSize}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18"
-                            height="18"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-aarrow-up-icon lucide-a-arrow-up"
-                        >
-                            <path d="m14 11 4-4 4 4" />
-                            <path d="M18 16V7" />
-                            <path d="m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" />
-                            <path d="M3.304 13h6.392" />
-                        </svg>
-                        <p className="text-xs text-center">Font Size</p>
-                    </div>
-                    <div
                         className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${borderFrameDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleBorderFrame}
@@ -517,51 +466,7 @@ export default function Edit() {
                         </svg>
                         <p className="text-xs text-center">Elements</p>
                     </div>
-                    <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${textColorDivShow ? "bg-[#27282c] text-white" : ""
-                            }`}
-                        onClick={handleShowTextColor}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18"
-                            height="18"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-palette-icon lucide-palette"
-                        >
-                            <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
-                            <circle
-                                cx="13.5"
-                                cy="6.5"
-                                r=".5"
-                                fill="currentColor"
-                            />
-                            <circle
-                                cx="17.5"
-                                cy="10.5"
-                                r=".5"
-                                fill="currentColor"
-                            />
-                            <circle
-                                cx="6.5"
-                                cy="12.5"
-                                r=".5"
-                                fill="currentColor"
-                            />
-                            <circle
-                                cx="8.5"
-                                cy="7.5"
-                                r=".5"
-                                fill="currentColor"
-                            />
-                        </svg>
-                        <p className="text-xs text-center">Color</p>
-                    </div>
+
                     <div
                         className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${uploadsDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
@@ -629,7 +534,6 @@ export default function Edit() {
                             <FontFamily
                                 text={text}
                                 setText={setText}
-                                setFontSizeFamilyClick={setFontSizeFamilyClick}
                                 textFamilyClick={textFamilyClick}
                                 setTextFamilyClick={setTextFamilyClick}
                             />
@@ -641,41 +545,13 @@ export default function Edit() {
                                 setTextEffectClick={setTextEffectClick}
                             />
                         )}
-                        {fontSizeDivShow && (
-                            <FontSize
-                                text={text}
-                                setText={setText}
-                                fontSize={fontSize}
-                                setFontSize={setFontSize}
-                                setTextFamilyClick={setTextFamilyClick}
-                                setFontSizeFamilyClick={setFontSizeFamilyClick}
-                            />
-                        )}
                         {borderFrameDivShow && (
                             <BorderFrame />
                         )}
                         {elementsDivShow && (
                             <Elements setElements={setElements} />
                         )}
-                        {textColorDivShow && (
-                            <Color
-                                text={text}
-                                setText={setText}
-                                setElements={setElements}
-                                setTextColorClick={setTextColorClick}
-                                setElementsColorClick={setElementsColorClick}
-                                boldClick={boldClick}
-                                setBoldClick={setBoldClick}
-                                italicClick={italicClick}
-                                setItalicClick={setItalicClick}
-                                underlineClick={underlineClick}
-                                setUnderlineClick={setUnderlineClick}
-                                spaceClick={spaceClick}
-                                setSpaceClick={setSpaceClick}
-                                textShadowClick={textShadowClick}
-                                setTextShadowClick={setTextShadowClick}
-                            />
-                        )}
+
                         {uploadsDivShow && <Uploads setImage={setImage} />}
                         {moreDivShow && (
                             <More

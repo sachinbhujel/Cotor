@@ -2,7 +2,6 @@
 
 import * as htmlToImage from "html-to-image";
 import { set } from "idb-keyval";
-import Color from "../../components/Color";
 import Effects from "../../components/Effects";
 import Elements from "../../components/Elements";
 import FontFamily from "../../components/FontFamily";
@@ -68,7 +67,6 @@ export default function Edit() {
     const [textFamilyClick, setTextFamilyClick] = useState(false);
     const [textEffectClick, setTextEffectClick] = useState(false);
     const [frameClick, setFrameClick] = useState(false);
-    const [fontSizeFamilyClick, setFontSizeFamilyClick] = useState(false);
     const [themeToggleClick, setThemeToggleClick] = useState(false);
 
     const [textColorClick, setTextColorClick] = useState(false);
@@ -464,30 +462,6 @@ export default function Edit() {
                         <p className="text-xs text-center">Effects</p>
                     </div>
                     <div
-                        className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${fontSizeDivShow ? "bg-[#27282c] text-white" : ""
-                            }`}
-                        onClick={handleShowFontSize}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18"
-                            height="18"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-aarrow-up-icon lucide-a-arrow-up"
-                        >
-                            <path d="m14 11 4-4 4 4" />
-                            <path d="M18 16V7" />
-                            <path d="m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" />
-                            <path d="M3.304 13h6.392" />
-                        </svg>
-                        <p className="text-xs text-center">Font Size</p>
-                    </div>
-                    <div
                         className={`sm:w-full min-w-[80px] cursor-pointer p-2 gap-1 flex flex-col items-center justify-center hover:bg-[#27282c] hover:text-white active:bg-[#27282c] active:text-white ${borderFrameDivShow ? "bg-[#27282c] text-white" : ""
                             }`}
                         onClick={handleBorderFrame}
@@ -649,46 +623,6 @@ export default function Edit() {
                                 setText={setText}
                                 textButtonClick={textButtonClick}
                                 setTextEditClick={setTextEditClick}
-                            />
-                        )}
-                        {fontFamilyDivShow && (
-                            <FontFamily
-                                text={text}
-                                setText={setText}
-                                setFontSizeFamilyClick={setFontSizeFamilyClick}
-                                textFamilyClick={textFamilyClick}
-                                setTextFamilyClick={setTextFamilyClick}
-                            />
-                        )}
-                        {textEffectsDivShow && (
-                            <Effects
-                                text={text}
-                                setText={setText}
-                                setTextEffectClick={setTextEffectClick}
-                            />
-                        )}
-                        {fontSizeDivShow && (
-                            <FontSize
-                                text={text}
-                                setText={setText}
-                                fontSize={fontSize}
-                                setFontSize={setFontSize}
-                                setTextFamilyClick={setTextFamilyClick}
-                                setFontSizeFamilyClick={setFontSizeFamilyClick}
-                            />
-                        )}
-                        {borderFrameDivShow && (
-                            <BorderFrame
-                                setText={setText}
-                                setFrameClick={setFrameClick} />
-                        )}
-                        {elementsDivShow && (
-                            <Elements setElements={setElements} />
-                        )}
-                        {textColorDivShow && (
-                            <Color
-                                text={text}
-                                setText={setText}
                                 setElements={setElements}
                                 setTextColorClick={setTextColorClick}
                                 setElementsColorClick={setElementsColorClick}
@@ -703,6 +637,29 @@ export default function Edit() {
                                 textShadowClick={textShadowClick}
                                 setTextShadowClick={setTextShadowClick}
                             />
+                        )}
+                        {fontFamilyDivShow && (
+                            <FontFamily
+                                text={text}
+                                setText={setText}
+                                textFamilyClick={textFamilyClick}
+                                setTextFamilyClick={setTextFamilyClick}
+                            />
+                        )}
+                        {textEffectsDivShow && (
+                            <Effects
+                                text={text}
+                                setText={setText}
+                                setTextEffectClick={setTextEffectClick}
+                            />
+                        )}
+                        {borderFrameDivShow && (
+                            <BorderFrame
+                                setText={setText}
+                                setFrameClick={setFrameClick} />
+                        )}
+                        {elementsDivShow && (
+                            <Elements setElements={setElements} />
                         )}
                         {uploadsDivShow && <Uploads setImage={setImage} />}
                         {moreDivShow && (

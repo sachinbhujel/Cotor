@@ -17,7 +17,6 @@ function FontFamily({
     text,
     textFamilyClick,
     setTextFamilyClick,
-    setFontSizeFamilyClick,
 }) {
     const [sansSerifMore, setSansSerifMore] = useState(false);
     const [serifMore, setSerifMore] = useState(false);
@@ -103,7 +102,6 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -142,7 +140,7 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                setFontSizeFamilyClick(false);
+
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -248,7 +246,6 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -287,8 +284,6 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-
-                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -394,8 +389,6 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-
-                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -434,7 +427,6 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -540,7 +532,6 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -579,7 +570,6 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
@@ -685,7 +675,6 @@ function FontFamily({
                                         className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setTextFamilyClick(true);
-                                            setFontSizeFamilyClick(false);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 newTextData[prev.length - 1] = {
@@ -724,7 +713,6 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-                                                setFontSizeFamilyClick(false);
                                                 setText((prev) => {
                                                     const newTextData = [
                                                         ...prev,
