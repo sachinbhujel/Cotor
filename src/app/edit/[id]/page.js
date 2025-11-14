@@ -55,7 +55,7 @@ export default function Edit() {
     const [textareaTextValue, setTextareaTextValue] = useState("");
     const [text, setText] = useState([]);
     const [textButtonClick, setTextButtonClick] = useState(true);
-    const [fontSize, setFontSize] = useState(200);
+    const [fontSize, setFontSize] = useState(20);
 
     const [boldClick, setBoldClick] = useState(false);
     const [italicClick, setItalicClick] = useState(false);
@@ -74,6 +74,8 @@ export default function Edit() {
     const [elementsColorClick, setElementsColorClick] = useState(false);
     const [editIndex, setEditIndex] = useState(null);
     const [editAndDeleteShow, setEditAndDeleteShow] = useState(false);
+    const [activeText, setActiveText] = useState(null);
+    const [activeTextClick, setActiveTextClick] = useState(false);
 
 
     const handleImageUpload = (e) => {
@@ -143,18 +145,6 @@ export default function Edit() {
         setTextDivShow(false);
         setTextEffectsDivShow(true);
         setFontSizeDivShow(false);
-        setElementsDivShow(false);
-        setTextColorDivShow(false);
-        setUploadsDivShow(false);
-        setMoreDivShow(false);
-        setBorderFrameDivShow(false);
-    };
-
-    const handleShowFontSize = () => {
-        setFontFamilyDivShow(false);
-        setTextDivShow(false);
-        setTextEffectsDivShow(false);
-        setFontSizeDivShow(true);
         setElementsDivShow(false);
         setTextColorDivShow(false);
         setUploadsDivShow(false);
@@ -381,6 +371,9 @@ export default function Edit() {
         setTextareaTextValue(textValue);
         setEditIndex(index);
     }
+
+    console.log(text);
+    console.log("ActiveText", activeText);
 
     return (
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
@@ -615,6 +608,8 @@ export default function Edit() {
                     >
                         {textDivShow && (
                             <Text
+                                activeTextClick={activeTextClick}
+                                activeText={activeText}
                                 fontSize={fontSize}
                                 setFontSize={setFontSize}
                                 editIndex={editIndex}
@@ -814,6 +809,10 @@ export default function Edit() {
                                     <div
                                         className="absolute flex justify-center items-center w-[100%]"
                                         key={index}
+                                        onClick={() => {
+                                            setActiveText(word.id);
+                                            setActiveTextClick(true);
+                                        }}
                                         onMouseEnter={() => {
                                             setEditAndDeleteShow(true);
                                         }}
@@ -848,7 +847,7 @@ export default function Edit() {
                                                 color: textColorClick
                                                     ? word.colorData
                                                     : "",
-                                                fontSize: fontSize,
+                                                fontSize: word.size,
                                             }}
                                             className={`relative p-2 max-w-[90%] ${textEditClick
                                                 ? word.textData

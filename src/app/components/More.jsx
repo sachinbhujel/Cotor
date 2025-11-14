@@ -6,6 +6,7 @@ import React, { useState } from "react";
 function More({ themeToggleClick, setThemeToggleClick }) {
     const [moreToolsMore, setMoreToolsMore] = useState(false);
     const [socialLinksMore, setSocialLinksMore] = useState(false);
+    const [activeLinks, setActiveLinks] = useState("");
 
     const handleTheme = () => {
         setThemeToggleClick(!themeToggleClick);
@@ -24,6 +25,10 @@ function More({ themeToggleClick, setThemeToggleClick }) {
             console.log("Share not supported");
         }
     };
+
+    const handleSocialLinks = (linkName) => {
+        setActiveLinks(linkName);
+    }
 
     return (
         <div className="flex flex-col gap-6">
@@ -260,8 +265,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         <a
                             href="https://instagram.com/imsachinbhujel"
                             target="_blank"
+                            onClick={() => {handleSocialLinks("instagram")}}
                         >
-                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                            <div className={`${activeLinks === "instagram" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"

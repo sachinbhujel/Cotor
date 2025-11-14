@@ -12,6 +12,8 @@ import { colorNames } from "@/data/colorData";
 import FontSize from "./FontSize";
 
 function Text({
+    activeText,
+    activeTextClick,
     fontSize,
     setFontSize,
     editIndex,
@@ -41,10 +43,17 @@ function Text({
         setTextColorClick(true);
         setText((prev) => {
             const newTextData = [...prev];
-            newTextData[prev.length - 1] = {
-                ...newTextData[prev.length - 1],
-                colorData: `${color}`,
-            };
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    colorData: `${color}`,
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    colorData: `${color}`,
+                };
+            }
             return newTextData;
         });
         setElements((prev) => {
@@ -62,10 +71,17 @@ function Text({
         setTextColorClick(true);
         setText((prev) => {
             const newTextData = [...prev];
-            newTextData[prev.length - 1] = {
-                ...newTextData[prev.length - 1],
-                colorData: `${e.target.value}`,
-            };
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    colorData: `${e.target.value}`,
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    colorData: `${e.target.value}`,
+                };
+            }
             return newTextData;
         });
     };
@@ -75,10 +91,17 @@ function Text({
         setBoldClick(true);
         setText((prev) => {
             const newTextData = [...prev];
-            newTextData[prev.length - 1] = {
-                ...newTextData[prev.length - 1],
-                boldData: "font-bold",
-            };
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    boldData: "font-bold",
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    boldData: "font-bold",
+                };
+            }
             return newTextData;
         });
     };
@@ -88,10 +111,17 @@ function Text({
         setItalicClick(true);
         setText((prev) => {
             const newTextData = [...prev];
-            newTextData[prev.length - 1] = {
-                ...newTextData[prev.length - 1],
-                italicData: "italic",
-            };
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    italicData: "italic",
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    italicData: "italic",
+                };
+            }
             return newTextData;
         });
     };
@@ -101,10 +131,17 @@ function Text({
         setUnderlineClick(true);
         setText((prev) => {
             const newTextData = [...prev];
-            newTextData[prev.length - 1] = {
-                ...newTextData[prev.length - 1],
-                underlineData: "underline",
-            };
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    underlineData: "underline",
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    underlineData: "underline",
+                };
+            }
             return newTextData;
         });
     };
@@ -114,10 +151,17 @@ function Text({
         setSpaceClick(true);
         setText((prev) => {
             const newTextData = [...prev];
-            newTextData[prev.length - 1] = {
-                ...newTextData[prev.length - 1],
-                spaceData: "tracking-widest",
-            };
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    spaceData: "tracking-widest",
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    spaceData: "tracking-widest",
+                };
+            }
             return newTextData;
         });
     };
@@ -127,14 +171,44 @@ function Text({
         setTextShadowClick(true);
         setText((prev) => {
             const newTextData = [...prev];
-            newTextData[prev.length - 1] = {
-                ...newTextData[prev.length - 1],
-                shadowData:
-                    "text-3xl text-white [text-shadow:_-1px_-1px_0_black,_1px_-1px_0_black,_-1px_1px_0_black,_1px_1px_0_black]",
-            };
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    shadowData:
+                        "text-3xl text-white [text-shadow:_-1px_-1px_0_black,_1px_-1px_0_black,_-1px_1px_0_black,_1px_1px_0_black]",
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    shadowData:
+                        "text-3xl text-white [text-shadow:_-1px_-1px_0_black,_1px_-1px_0_black,_-1px_1px_0_black,_1px_1px_0_black]",
+                };
+            }
             return newTextData;
         });
     };
+
+
+    const handleFontSize = (size, sizeName) => {
+        setActiveSize(sizeName);
+        // setFontSize(size);
+
+        setText((prev) => {
+            const newTextData = [...prev];
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    size: size,
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    size: size,
+                };
+            }
+            return newTextData;
+        });
+    }
 
     const handleCustomDiv = () => {
         setCustomDivClick(true);
@@ -156,43 +230,37 @@ function Text({
                         setTextareaTextValue={setTextareaTextValue}
                         setText={setText}
                     />
-                    <div className="flex gap-4 flex-col">
+                    <div className="flex gap-5 flex-col">
                         {/* Font Size */}
                         <div className="text-white flex flex-col gap-1">
                             <p className="font-semibold">Font Size</p>
                             <div className="flex items-center gap-1.5 text-sm">
                                 <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "sm" ? "bg-black text-white" : ""}`}
                                     onClick={() => {
-                                        setFontSize(14);
-                                        setActiveSize("sm");
+                                        handleFontSize(12, "sm");
                                     }}>S</p>
                                 <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black  ${activeSize === "base" ? "bg-black text-white" : ""}`}
                                     onClick={() => {
-                                        setFontSize(16);
-                                        setActiveSize("base");
+                                        handleFontSize(16, "base");
                                     }}>M</p>
                                 <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "lg" ? "bg-black text-white" : ""}`}
                                     onClick={() => {
-                                        setFontSize(18);
-                                        setActiveSize("lg");
+                                        handleFontSize(22, "lg");
                                     }}>L</p>
                                 <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "xl" ? "bg-black text-white" : ""}`}
                                     onClick={() => {
-                                        setFontSize(20);
-                                        setActiveSize("xl");
+                                        handleFontSize(28, "xl");
                                     }}>XL</p>
                                 <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "2xl" ? "bg-black text-white" : ""}`}
                                     onClick={() => {
-                                        setFontSize(24);
-                                        setActiveSize("2xl");
+                                        handleFontSize(34, "2xl");
                                     }}>2XL</p>
-
                                 {customDivClick ? (
                                     <input type="number" placeholder="size"
                                         value={fontSize}
                                         min="1"
                                         max="199"
-                                        className="rounded-md border py-1 px-2 w-16 flex justify-center cursor-pointer"
+                                        className="rounded-md border py-1 px-2 w-17 flex justify-center cursor-pointer"
                                         onChange={(e) => {
                                             handleCustomFont(e);
                                         }
@@ -239,29 +307,6 @@ function Text({
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* <div className="bg-black text-white rounded-full p-0.5">
-                                        <div
-                                            className="w-5 h-5 flex justify-center items-center cursor-pointer"
-                                            onClick={handleColorPicker}
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="15"
-                                                height="15"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                className="lucide lucide-plus-icon lucide-plus"
-                                            >
-                                                <path d="M5 12h14" />
-                                                <path d="M12 5v14" />
-                                            </svg>
-                                        </div>
-                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -306,7 +351,7 @@ function Text({
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            className={`${activeStyle ? "text-white" : "text-red-500"} lucide lucide-ban-icon lucide-ban`}
+                                            className={`${activeStyle === "none" ? "text-white" : "text-red-500"} lucide lucide-ban-icon lucide-ban`}
                                         >
                                             <path d="M4.929 4.929 19.07 19.071" />
                                             <circle cx="12" cy="12" r="10" />

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 function Input({
     textareaTextValue,
@@ -7,10 +9,10 @@ function Input({
     editIndex,
     setEditIndex,
 }) {
+    const [idValue, setIdValue] = useState(0);
     const handleText = (e) => {
         setTextareaTextValue(e.target.value);
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         if (editIndex !== null) {
@@ -24,11 +26,13 @@ function Input({
             setText((prev) => [
                 ...prev,
                 {
+                    id: idValue,
                     value: textareaTextValue,
                     textData: "",
                     fontFamilyData: "",
                     effectData: "",
                     fontSizeData: "",
+                    size: "",
                     fontSizeFamilyData: "",
                     frameData: "",
                     boldData: "",
@@ -39,8 +43,8 @@ function Input({
                     colorData: "",
                 },
             ]);
+            setIdValue(idValue + 1);
         }
-
         setTextareaTextValue("");
     };
 
