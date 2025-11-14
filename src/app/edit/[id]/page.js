@@ -630,6 +630,8 @@ export default function Edit() {
                         )}
                         {fontFamilyDivShow && (
                             <FontFamily
+                                activeTextClick={activeTextClick}
+                                activeText={activeText}
                                 text={text}
                                 setText={setText}
                                 textFamilyClick={textFamilyClick}

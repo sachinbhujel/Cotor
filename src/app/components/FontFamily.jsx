@@ -13,6 +13,8 @@ import { monospaceData } from "@/data/fontFamilyData";
 import { monospaceMoreData } from "@/data/fontFamilyData";
 
 function FontFamily({
+    activeTextClick,
+    activeText,
     setText,
     text,
     textFamilyClick,
@@ -104,12 +106,17 @@ function FontFamily({
                                             setTextFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    fontFamilyData: `${font.name}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -140,19 +147,19 @@ function FontFamily({
                                             className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
                                             onClick={() => {
                                                 setTextFamilyClick(true);
-
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                        prev.length - 1
-                                                        ],
-                                                        fontFamilyData: `${font.name}`,
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}
@@ -248,12 +255,17 @@ function FontFamily({
                                             setTextFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    fontFamilyData: `${font.name}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -285,17 +297,18 @@ function FontFamily({
                                             onClick={() => {
                                                 setTextFamilyClick(true);
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                        prev.length - 1
-                                                        ],
-                                                        fontFamilyData: `${font.name}`,
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}
@@ -391,12 +404,17 @@ function FontFamily({
                                             setTextFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    fontFamilyData: `${font.name}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -428,17 +446,18 @@ function FontFamily({
                                             onClick={() => {
                                                 setTextFamilyClick(true);
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                        prev.length - 1
-                                                        ],
-                                                        fontFamilyData: `${font.name}`,
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}
@@ -534,12 +553,17 @@ function FontFamily({
                                             setTextFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    fontFamilyData: `${font.name}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -571,17 +595,18 @@ function FontFamily({
                                             onClick={() => {
                                                 setTextFamilyClick(true);
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                        prev.length - 1
-                                                        ],
-                                                        fontFamilyData: `${font.name}`,
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}
@@ -677,12 +702,17 @@ function FontFamily({
                                             setTextFamilyClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    fontFamilyData: `${font.name}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        fontFamilyData: `${font.name}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -714,17 +744,18 @@ function FontFamily({
                                             onClick={() => {
                                                 setTextFamilyClick(true);
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                        prev.length - 1
-                                                        ],
-                                                        fontFamilyData: `${font.name}`,
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            fontFamilyData: `${font.name}`,
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}
