@@ -649,6 +649,8 @@ export default function Edit() {
                         )}
                         {borderFrameDivShow && (
                             <BorderFrame
+                                activeTextClick={activeTextClick}
+                                activeText={activeText}
                                 setText={setText}
                                 setFrameClick={setFrameClick} />
                         )}
@@ -1046,6 +1048,7 @@ export default function Edit() {
                     )}
                 </div>
             </div>
+
         </div>
     );
 }

@@ -22,7 +22,7 @@ import { animatedGradientFrameData } from "@/data/borderData";
 import { animatedGradientFrameMoreData } from "@/data/borderData";
 import { useState } from "react";
 
-function BorderFrame({ setText, setFrameClick }) {
+function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
     const [colorFrameMore, setColorFrameMore] = useState(false);
     const [gradientFrameMore, setGradientFrameMore] = useState(false);
     const [glowFrameMore, setGlowFrameMore] = useState(false);
@@ -107,10 +107,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -133,12 +140,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -224,10 +236,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -250,12 +269,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -341,10 +365,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -367,12 +398,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -458,10 +494,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -484,12 +527,17 @@ function BorderFrame({ setText, setFrameClick }) {
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -573,12 +621,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                     className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                     onClick={() => {
                                         setText((prev) => {
-                                            setFrameClick(true);
+                                            setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -599,14 +654,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setText((prev) => {
-                                                setFrameClick(true);
+                                                setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -690,12 +750,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                     className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                     onClick={() => {
                                         setText((prev) => {
-                                            setFrameClick(true);
+                                            setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -716,14 +783,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setText((prev) => {
-                                                setFrameClick(true);
+                                                setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -807,12 +879,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                     className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                     onClick={() => {
                                         setText((prev) => {
-                                            setFrameClick(true);
+                                            setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -833,14 +912,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setText((prev) => {
-                                                setFrameClick(true);
+                                                setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -924,12 +1008,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                     className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                     onClick={() => {
                                         setText((prev) => {
-                                            setFrameClick(true);
+                                            setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -950,14 +1041,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setText((prev) => {
-                                                setFrameClick(true);
+                                                setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -1041,12 +1137,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                     className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                     onClick={() => {
                                         setText((prev) => {
-                                            setFrameClick(true);
+                                            setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -1067,14 +1170,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                         className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                         onClick={() => {
                                             setText((prev) => {
-                                                setFrameClick(true);
+                                                setFrameClick(true)
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                    prev.length - 1
-                                                    ],
-                                                    frameData: `${frame.data}`,
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -1158,12 +1266,19 @@ function BorderFrame({ setText, setFrameClick }) {
                                     className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
                                     onClick={() => {
                                         setText((prev) => {
-                                            setFrameClick(true);
+                                            setFrameClick(true)
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    frameData: `${frame.data}`,
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -1182,31 +1297,38 @@ function BorderFrame({ setText, setFrameClick }) {
                     {animatedGradientFrameMore && (
                         <div className="grid grid-cols-3 gap-2 text-white">
                             {animatedGradientFrameMoreData.map((frame, index) => {
-                                  return (
-                                <div
-                                    key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
-                                    onClick={() => {
-                                        setText((prev) => {
-                                            setFrameClick(true);
-                                            const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                frameData: `${frame.data}`,
-                                            };
-                                            return newTextData;
-                                        });
-                                    }}
-                                >
-                                    <p className={`${frame.data} text-sm w-max h-max m-10 p-5 rounded-2xl gradient-frame`}
-                                        style={{
-                                            background: `${frame.data}`,
-                                            backgroundSize: "200% 200%",
-                                        }}>
-                                        Text
-                                    </p>
-                                </div>
-                            );
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        onClick={() => {
+                                            setText((prev) => {
+                                                setFrameClick(true)
+                                                const newTextData = [...prev];
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        frameData: `${frame.data}`,
+                                                    };
+                                                }
+                                                return newTextData;
+                                            });
+                                        }}
+                                    >
+                                        <p className={`${frame.data} text-sm w-max h-max m-10 p-5 rounded-2xl gradient-frame`}
+                                            style={{
+                                                background: `${frame.data}`,
+                                                backgroundSize: "200% 200%",
+                                            }}>
+                                            Text
+                                        </p>
+                                    </div>
+                                );
                             })}
                         </div>
                     )}
