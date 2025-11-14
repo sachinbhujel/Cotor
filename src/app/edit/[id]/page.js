@@ -741,8 +741,7 @@ export default function Edit() {
             <div className="relative w-[100%]">
                 {image && (
                     <div
-                        className="absolute top-0 left-0 z-[100] flex items-center justify-between w-full p-1 
-     bg-white/30 backdrop-blur-lg border border-white/20 shadow-md"
+                        className="absolute top-0 left-0 z-[100] flex items-center justify-between w-full p-1 bg-white/30 backdrop-blur-lg border border-white/20 shadow-md"
                     >
                         <div className="bg-[#161619] flex items-center gap-4">
                             <button
@@ -855,7 +854,7 @@ export default function Edit() {
                                                     : "",
                                                 fontSize: word.size,
                                             }}
-                                            className={`relative p-2 max-w-[90%] ${textEditClick
+                                            className={`gradient-frame relative p-2 max-w-[90%] ${textEditClick
                                                 ? word.textData
                                                 : ""
                                                 } text-center ${boldClick ? word.boldData : ""
@@ -1048,7 +1047,19 @@ export default function Edit() {
                     )}
                 </div>
             </div>
+            <style jsx>{`
+        @keyframes gradientX {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
 
+        .gradient-frame {
+          background-size: 200% 200%;
+          animation: gradientX 5s ease infinite;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+        }
+      `}</style>
         </div>
     );
 }
