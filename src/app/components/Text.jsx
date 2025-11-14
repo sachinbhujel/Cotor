@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import Input from "./Input";
 import { titleData } from "@/data/textData";
 import { titleMoreData } from "@/data/textData";
@@ -30,8 +30,11 @@ function Text({
     setElementsColorClick,
 }) {
     const [activeSize, setActiveSize] = useState("base");
+    const [activeStyle, setActiveStyle] = useState("");
     const [activeColor, setActiveColor] = useState(null);
     const [customDivClick, setCustomDivClick] = useState(false);
+
+    console.log(activeStyle);
 
     const handleFontColor = (color) => {
         setElementsColorClick(true);
@@ -68,6 +71,7 @@ function Text({
     };
 
     const handleTextBold = () => {
+        setActiveStyle("bold");
         setBoldClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -80,6 +84,7 @@ function Text({
     };
 
     const handleTextItalic = () => {
+        setActiveStyle("italic");
         setItalicClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -92,6 +97,7 @@ function Text({
     };
 
     const handleTextUnderline = () => {
+        setActiveStyle("underline");
         setUnderlineClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -104,6 +110,7 @@ function Text({
     };
 
     const handleTextSpace = () => {
+        setActiveStyle("space");
         setSpaceClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -116,6 +123,7 @@ function Text({
     };
 
     const handleTextShadow = () => {
+        setActiveStyle("shadow");
         setTextShadowClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -270,7 +278,7 @@ function Text({
                             >
                                 <div className="grid grid-cols-3 gap-2 text-white">
                                     <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer ${activeStyle === "none" ? "bg-red-600" : ""}`}
                                         onClick={() => {
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -285,6 +293,7 @@ function Text({
                                                 };
                                                 return newTextData;
                                             });
+                                            setActiveStyle("none");
                                         }}
                                     >
                                         <svg
@@ -297,14 +306,14 @@ function Text({
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            className="text-red-500 lucide lucide-ban-icon lucide-ban"
+                                            className={`${activeStyle ? "text-white" : "text-red-500"} lucide lucide-ban-icon lucide-ban`}
                                         >
                                             <path d="M4.929 4.929 19.07 19.071" />
                                             <circle cx="12" cy="12" r="10" />
                                         </svg>
                                     </div>
                                     <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                        className={`h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer ${activeStyle === "bold" ? "bg-black" : ""}`}
                                         onClick={handleTextBold}
                                     >
                                         <svg
@@ -326,7 +335,7 @@ function Text({
                                         </p>
                                     </div>
                                     <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                        className={`h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer ${activeStyle === "italic" ? "bg-black" : ""}`}
                                         onClick={handleTextItalic}
                                     >
                                         <svg
@@ -350,7 +359,7 @@ function Text({
                                         </p>
                                     </div>
                                     <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                        className={`h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer ${activeStyle === "underline" ? "bg-black" : ""}`}
                                         onClick={handleTextUnderline}
                                     >
                                         <svg
@@ -373,7 +382,7 @@ function Text({
                                         </p>
                                     </div>
                                     <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                        className={`h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer ${activeStyle === "space" ? "bg-black" : ""}`}
                                         onClick={handleTextSpace}
                                     >
                                         <svg
@@ -395,7 +404,7 @@ function Text({
                                         </p>
                                     </div>
                                     <div
-                                        className="h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer"
+                                        className={`h-18 bg-[#3c3d3f] rounded-sm text-white flex flex-col gap-2 justify-center items-center p-2 cursor-pointer ${activeStyle === "shadow" ? "bg-black" : ""}`}
                                         onClick={handleTextShadow}
                                     >
                                         <svg
