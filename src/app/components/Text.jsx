@@ -9,31 +9,30 @@ import { subTitleMoreData } from "@/data/textData";
 import { paraData } from "@/data/textData";
 import { paraMoreData } from "@/data/textData";
 import { colorNames } from "@/data/colorData";
+import FontSize from "./FontSize";
 
 function Text({
+    fontSize,
+    setFontSize,
     editIndex,
     setEditIndex,
     textareaTextValue,
     setTextareaTextValue,
-    text,
     setText,
     textButtonClick,
-    setTextEditClick,
     setElements,
-    boldClick,
     setBoldClick,
-    italicClick,
     setItalicClick,
-    underlineClick,
     setUnderlineClick,
-    spaceClick,
     setSpaceClick,
-    textShadowClick,
     setTextShadowClick,
     setTextColorClick,
     setElementsColorClick,
 }) {
     const [toolsMore, setToolsMore] = useState(false);
+    const [activeSize, setActiveSize] = useState("base");
+    const [customDivClick, setCustomDivClick] = useState(false);
+    const [customFontSize, setCustomFontSize] = useState(null);
 
 
     const handleFontColor = (color) => {
@@ -130,6 +129,15 @@ function Text({
         });
     };
 
+    const handleCustomDiv = () => {
+        setCustomDivClick(true);
+        setActiveSize("");
+    }
+
+    const handleCustomFont = (e) => {
+        setFontSize(Number(e.target.value));
+    };
+
     return (
         <div>
             {textButtonClick && (
@@ -146,12 +154,45 @@ function Text({
                         <div className="text-white flex flex-col gap-1">
                             <p className="font-semibold">Font Size</p>
                             <div className="flex items-center gap-1.5 text-sm">
-                                <p className="rounded-md border py-1 px-2 w-8 flex justify-center">S</p>
-                                <p className="rounded-md border py-1 px-2 w-8 flex justify-center">M</p>
-                                <p className="rounded-md border py-1 px-2 w-8 flex justify-center">L</p>
-                                <p className="rounded-md border py-1 px-2 w-8 flex justify-center">XL</p>
-                                <p className="rounded-md border py-1 px-2 w-8 flex justify-center">2XL</p>
-                                <p className="rounded-md border py-1 px-2 w-max flex justify-center">Custom</p>
+                                <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "sm" ? "bg-black text-white" : ""}`}
+                                    onClick={() => {
+                                        setFontSize(14);
+                                        setActiveSize("sm");
+                                    }}>S</p>
+                                <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black  ${activeSize === "base" ? "bg-black text-white" : ""}`}
+                                    onClick={() => {
+                                        setFontSize(16);
+                                        setActiveSize("base");
+                                    }}>M</p>
+                                <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "lg" ? "bg-black text-white" : ""}`}
+                                    onClick={() => {
+                                        setFontSize(18);
+                                        setActiveSize("lg");
+                                    }}>L</p>
+                                <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "xl" ? "bg-black text-white" : ""}`}
+                                    onClick={() => {
+                                        setFontSize(20);
+                                        setActiveSize("xl");
+                                    }}>XL</p>
+                                <p className={`rounded-md border py-1 px-2 w-8 flex justify-center cursor-pointer hover:bg-black active:bg-black ${activeSize === "2xl" ? "bg-black text-white" : ""}`}
+                                    onClick={() => {
+                                        setFontSize(24);
+                                        setActiveSize("2xl");
+                                    }}>2XL</p>
+
+                                {customDivClick ? (
+                                    <input type="number" placeholder="size"
+                                        value={fontSize}
+                                        min="1"
+                                        max="199"
+                                        className="rounded-md border py-1 px-2 w-18 flex justify-center cursor-pointer"
+                                        onChange={(e) => {
+                                            handleCustomFont(e);
+                                        }
+                                        } />
+                                ) : (
+                                    <p className="rounded-md border py-1 px-2 w-max flex justify-center cursor-pointer" onClick={handleCustomDiv}>Custom</p>
+                                )}
                             </div>
                         </div>
 

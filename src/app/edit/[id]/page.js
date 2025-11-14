@@ -55,7 +55,8 @@ export default function Edit() {
     const [textareaTextValue, setTextareaTextValue] = useState("");
     const [text, setText] = useState([]);
     const [textButtonClick, setTextButtonClick] = useState(true);
-    const [fontSize, setFontSize] = useState(22);
+    const [fontSize, setFontSize] = useState(200);
+
     const [boldClick, setBoldClick] = useState(false);
     const [italicClick, setItalicClick] = useState(false);
     const [underlineClick, setUnderlineClick] = useState(false);
@@ -381,7 +382,6 @@ export default function Edit() {
         setEditIndex(index);
     }
 
-    console.log(text)
     return (
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
             <div
@@ -615,26 +615,21 @@ export default function Edit() {
                     >
                         {textDivShow && (
                             <Text
+                                fontSize={fontSize}
+                                setFontSize={setFontSize}
                                 editIndex={editIndex}
                                 setEditIndex={setEditIndex}
                                 textareaTextValue={textareaTextValue}
                                 setTextareaTextValue={setTextareaTextValue}
-                                text={text}
                                 setText={setText}
                                 textButtonClick={textButtonClick}
-                                setTextEditClick={setTextEditClick}
                                 setElements={setElements}
                                 setTextColorClick={setTextColorClick}
                                 setElementsColorClick={setElementsColorClick}
-                                boldClick={boldClick}
                                 setBoldClick={setBoldClick}
-                                italicClick={italicClick}
                                 setItalicClick={setItalicClick}
-                                underlineClick={underlineClick}
                                 setUnderlineClick={setUnderlineClick}
-                                spaceClick={spaceClick}
                                 setSpaceClick={setSpaceClick}
-                                textShadowClick={textShadowClick}
                                 setTextShadowClick={setTextShadowClick}
                             />
                         )}
@@ -853,6 +848,7 @@ export default function Edit() {
                                                 color: textColorClick
                                                     ? word.colorData
                                                     : "",
+                                                fontSize: fontSize,
                                             }}
                                             className={`relative p-2 max-w-[90%] ${textEditClick
                                                 ? word.textData
@@ -872,7 +868,7 @@ export default function Edit() {
                                                 } ${textEffectClick
                                                     ? word.effectData
                                                     : ""
-                                                } ${word.fontSizeData} ${frameClick ? word.frameData : ""}`}
+                                                } ${frameClick ? word.frameData : ""}`}
                                         >
                                             {" "}
                                             {word.value}
