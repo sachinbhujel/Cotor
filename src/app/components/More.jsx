@@ -265,7 +265,7 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         <a
                             href="https://instagram.com/imsachinbhujel"
                             target="_blank"
-                            onClick={() => {handleSocialLinks("instagram")}}
+                            onClick={() => { handleSocialLinks("instagram") }}
                         >
                             <div className={`${activeLinks === "instagram" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                 <svg
@@ -306,8 +306,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         <a
                             href="https://facebook.com/imsachinbhujel"
                             target="_blank"
+                            onClick={() => { handleSocialLinks("facebook") }}
                         >
-                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                            <div className={`${activeLinks === "facebook" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
@@ -329,8 +330,10 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         </a>
 
                         {/* Twitter */}
-                        <a href="https://x.com/imsachinbhujel" target="_blank">
-                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                        <a href="https://x.com/imsachinbhujel"
+                            target="_blank"
+                            onClick={() => { handleSocialLinks("twitter") }}>
+                            <div className={`${activeLinks === "twitter" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
@@ -355,8 +358,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         <a
                             href="https://www.linkedin.com/in/sachin-bhujel-3b83a938a/"
                             target="_blank"
+                            onClick={() => { handleSocialLinks("linkedin") }}
                         >
-                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                            <div className={`${activeLinks === "linkedin" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
@@ -383,8 +387,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         <a
                             href="https://github.com/sachinbhujel"
                             target="_blank"
+                            onClick={() => { handleSocialLinks("github") }}
                         >
-                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                            <div className={`${activeLinks === "github" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
@@ -410,8 +415,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                         <a
                             href="https://www.youtube.com/@sachinbhujel909"
                             target="_blank"
+                            onClick={() => { handleSocialLinks("youtube") }}
                         >
-                            <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                            <div className={`${activeLinks === "youtube" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="20"
@@ -439,8 +445,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                             <a
                                 href="https://dribbble.com/sachin-bhujel"
                                 target="_blank"
+                                onClick={() => { handleSocialLinks("dribble") }}
                             >
-                                <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                <div className={`${activeLinks === "dribble" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"
@@ -468,8 +475,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                             <a
                                 href="https://www.pexels.com/@sachin-bhujel-2155436356/"
                                 target="_blank"
+                                onClick={() => { handleSocialLinks("pexels") }}
                             >
-                                <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                <div className={`${activeLinks === "pexels" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         width="20"
                                         height="20"
@@ -494,8 +502,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                             <a
                                 href="https://www.reddit.com/user/Delicious-Stable-594/"
                                 target="_blank"
+                                onClick={() => { handleSocialLinks("reddit") }}
                             >
-                                <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                <div className={`${activeLinks === "reddit" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         width="20"
                                         height="20"
@@ -515,8 +524,9 @@ function More({ themeToggleClick, setThemeToggleClick }) {
                             <a
                                 href="https://www.reddit.com/user/Delicious-Stable-594/"
                                 target="_blank"
+                                onClick={() => { handleSocialLinks("medium") }}
                             >
-                                <div className="h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer">
+                                <div className={`${activeLinks === "medium" ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex flex-col gap-1 justify-center items-center cursor-pointer`}>
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         width="20"
                                         height="20"
