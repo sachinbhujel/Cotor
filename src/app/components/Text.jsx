@@ -29,11 +29,9 @@ function Text({
     setTextColorClick,
     setElementsColorClick,
 }) {
-    const [toolsMore, setToolsMore] = useState(false);
     const [activeSize, setActiveSize] = useState("base");
+    const [activeColor, setActiveColor] = useState(null);
     const [customDivClick, setCustomDivClick] = useState(false);
-    const [customFontSize, setCustomFontSize] = useState(null);
-
 
     const handleFontColor = (color) => {
         setElementsColorClick(true);
@@ -57,6 +55,7 @@ function Text({
     };
 
     const handleFontColorPicker = (e) => {
+        setActiveColor(null);
         setTextColorClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -210,9 +209,11 @@ function Text({
                                             <div
                                                 key={index}
                                                 style={{ background: name.color }}
-                                                className={`w-6 h-6 rounded-full cursor-pointer`}
-                                                onClick={() =>
-                                                    handleFontColor(`${name.color}`)
+                                                className={`w-6 h-6 rounded-full cursor-pointer ${index === activeColor ? "border-2" : ""}`}
+                                                onClick={() => {
+                                                    handleFontColor(`${name.color}`);
+                                                    setActiveColor(index);
+                                                }
                                                 }
                                             ></div>
                                         );
