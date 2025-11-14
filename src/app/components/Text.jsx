@@ -192,7 +192,7 @@ function Text({
                                         value={fontSize}
                                         min="1"
                                         max="199"
-                                        className="rounded-md border py-1 px-2 w-18 flex justify-center cursor-pointer"
+                                        className="rounded-md border py-1 px-2 w-16 flex justify-center cursor-pointer"
                                         onChange={(e) => {
                                             handleCustomFont(e);
                                         }
