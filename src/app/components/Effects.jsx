@@ -19,7 +19,7 @@ import { shadowEffectMoreData } from "@/data/effectData";
 
 import React, { useState } from "react";
 
-function Effects({ text, setText, setTextEffectClick }) {
+function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
     const [colorEffectsMore, setColorEffectsMore] = useState(false);
     const [simpleEffectsMore, setSimpleEffectsMore] = useState(false);
     const [metallicEffectsMore, setMetallicEffectsMore] = useState(false);
@@ -39,9 +39,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Color Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            colorEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${colorEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() => setColorEffectsMore(!colorEffectsMore)}
                     >
                         <p className="text-sm font-semibold">More</p>
@@ -62,9 +61,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        colorEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${colorEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -106,11 +104,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -131,13 +137,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                        prev.length - 1
-                                                    ],
-                                                    effectData: `${color.data}`,
-                                                    textData: "",
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -158,9 +170,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Simple Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            simpleEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${simpleEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() => setSimpleEffectsMore(!simpleEffectsMore)}
                     >
                         <p className="text-sm font-semibold">More</p>
@@ -181,9 +192,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        simpleEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${simpleEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -225,11 +235,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -250,13 +268,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                        prev.length - 1
-                                                    ],
-                                                    effectData: `${color.data}`,
-                                                    textData: "",
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -277,9 +301,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Metallic Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            metallicEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${metallicEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() =>
                             setMetallicEffectsMore(!metallicEffectsMore)
                         }
@@ -302,9 +325,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        metallicEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${metallicEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -346,11 +368,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -371,13 +401,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                        prev.length - 1
-                                                    ],
-                                                    effectData: `${color.data}`,
-                                                    textData: "",
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -398,9 +434,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Neon Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            neonEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${neonEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() => setNeonEffectsMore(!neonEffectsMore)}
                     >
                         <p className="text-sm font-semibold">More</p>
@@ -421,9 +456,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        neonEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${neonEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -465,11 +499,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -490,13 +532,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                        prev.length - 1
-                                                    ],
-                                                    effectData: `${color.data}`,
-                                                    textData: "",
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -517,9 +565,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Outline Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            outlineEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${outlineEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() =>
                             setOutlineEffectsMore(!outlineEffectsMore)
                         }
@@ -542,9 +589,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        outlineEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${outlineEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -586,11 +632,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -611,13 +665,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
-                                                newTextData[prev.length - 1] = {
-                                                    ...newTextData[
-                                                        prev.length - 1
-                                                    ],
-                                                    effectData: `${color.data}`,
-                                                    textData: "",
-                                                };
+                                                if (activeTextClick) {
+                                                    newTextData[activeText] = {
+                                                        ...newTextData[activeText],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                } else {
+                                                    newTextData[prev.length - 1] = {
+                                                        ...newTextData[prev.length - 1],
+                                                        effectData: `${color.data}`,
+                                                        textData: "",
+                                                    };
+                                                }
                                                 return newTextData;
                                             });
                                         }}
@@ -638,9 +698,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Outline Neon Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            outlineAndNeonEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${outlineAndNeonEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() =>
                             setOutlineAndNeonEffectsMore(
                                 !outlineAndNeonEffectsMore
@@ -665,9 +724,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        outlineAndNeonEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${outlineAndNeonEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -709,11 +767,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -734,18 +800,20 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             onClick={() => {
                                                 setTextEffectClick(true);
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                            prev.length - 1
-                                                        ],
-                                                        effectData: `${color.data}`,
-                                                        textData: "",
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            effectData: `${color.data}`,
+                                                            textData: "",
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            effectData: `${color.data}`,
+                                                            textData: "",
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}
@@ -767,9 +835,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                         Outline Stroke Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            outlineAndStrokeEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${outlineAndStrokeEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() =>
                             setOutlineAndStrokeEffectsMore(
                                 !outlineAndStrokeEffectsMore
@@ -794,9 +861,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        outlineAndStrokeEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${outlineAndStrokeEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -838,11 +904,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -863,18 +937,20 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             onClick={() => {
                                                 setTextEffectClick(true);
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                            prev.length - 1
-                                                        ],
-                                                        effectData: `${color.data}`,
-                                                        textData: "",
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            effectData: `${color.data}`,
+                                                            textData: "",
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            effectData: `${color.data}`,
+                                                            textData: "",
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}
@@ -890,15 +966,14 @@ function Effects({ text, setText, setTextEffectClick }) {
                     )}
                 </div>
             </div>
-             <div className="flex flex-col gap-2 py-1">
+            <div className="flex flex-col gap-2 py-1">
                 <div className="flex items-center justify-between">
                     <p className="font-semibold text-base text-white">
                         Shadow Effects
                     </p>
                     <div
-                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${
-                            shadowEffectsMore ? "text-[#bbbbbb]" : ""
-                        }`}
+                        className={`flex items-center text-[#838383] cursor-pointer hover:text-[#bbbbbb] active:text-[#bbbbbb] ${shadowEffectsMore ? "text-[#bbbbbb]" : ""
+                            }`}
                         onClick={() =>
                             setShadowEffectsMore(
                                 !shadowEffectsMore
@@ -923,9 +998,8 @@ function Effects({ text, setText, setTextEffectClick }) {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col gap-2 ${
-                        shadowEffectsMore ? "h-60" : ""
-                    } overflow-y-auto scrollbar`}
+                    className={`flex flex-col gap-2 ${shadowEffectsMore ? "h-60" : ""
+                        } overflow-y-auto scrollbar`}
                 >
                     <div className="grid grid-cols-3 gap-2 text-white">
                         <div
@@ -967,11 +1041,19 @@ function Effects({ text, setText, setTextEffectClick }) {
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
-                                            newTextData[prev.length - 1] = {
-                                                ...newTextData[prev.length - 1],
-                                                effectData: `${color.data}`,
-                                                textData: "",
-                                            };
+                                            if (activeTextClick) {
+                                                newTextData[activeText] = {
+                                                    ...newTextData[activeText],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            } else {
+                                                newTextData[prev.length - 1] = {
+                                                    ...newTextData[prev.length - 1],
+                                                    effectData: `${color.data}`,
+                                                    textData: "",
+                                                };
+                                            }
                                             return newTextData;
                                         });
                                     }}
@@ -992,18 +1074,20 @@ function Effects({ text, setText, setTextEffectClick }) {
                                             onClick={() => {
                                                 setTextEffectClick(true);
                                                 setText((prev) => {
-                                                    const newTextData = [
-                                                        ...prev,
-                                                    ];
-                                                    newTextData[
-                                                        prev.length - 1
-                                                    ] = {
-                                                        ...newTextData[
-                                                            prev.length - 1
-                                                        ],
-                                                        effectData: `${color.data}`,
-                                                        textData: "",
-                                                    };
+                                                    const newTextData = [...prev];
+                                                    if (activeTextClick) {
+                                                        newTextData[activeText] = {
+                                                            ...newTextData[activeText],
+                                                            effectData: `${color.data}`,
+                                                            textData: "",
+                                                        };
+                                                    } else {
+                                                        newTextData[prev.length - 1] = {
+                                                            ...newTextData[prev.length - 1],
+                                                            effectData: `${color.data}`,
+                                                            textData: "",
+                                                        };
+                                                    }
                                                     return newTextData;
                                                 });
                                             }}

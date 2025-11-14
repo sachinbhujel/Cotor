@@ -640,6 +640,8 @@ export default function Edit() {
                         )}
                         {textEffectsDivShow && (
                             <Effects
+                                activeTextClick={activeTextClick}
+                                activeText={activeText}
                                 text={text}
                                 setText={setText}
                                 setTextEffectClick={setTextEffectClick}
