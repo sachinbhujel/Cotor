@@ -1,6 +1,6 @@
 "use client";
 
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Input from "./Input";
 import { titleData } from "@/data/textData";
 import { titleMoreData } from "@/data/textData";
@@ -10,6 +10,7 @@ import { paraData } from "@/data/textData";
 import { paraMoreData } from "@/data/textData";
 import { colorNames } from "@/data/colorData";
 import FontSize from "./FontSize";
+import { get, set } from "idb-keyval";
 
 function Text({
     activeText,
@@ -35,12 +36,29 @@ function Text({
     const [activeStyle, setActiveStyle] = useState("");
     const [activeColor, setActiveColor] = useState(null);
     const [customDivClick, setCustomDivClick] = useState(false);
+    const [customColorSelect, setCustomColorSelect] = useState(false);
 
-    console.log(activeStyle);
+    useEffect(() => {
+        get("active style").then((active) => {
+            setActiveStyle(active);
+        })
+        get("active font").then((active) => {
+            setActiveSize(active);
+        })
+        get("active color").then((active) => {
+            setActiveColor(active);
+        })
+        get("active custom click").then((active) => {
+            setCustomColorSelect(active);
+        })
+    }, [])
 
-    const handleFontColor = (color) => {
+    const handleFontColor = (color, index) => {
+        setCustomColorSelect(false);
         setElementsColorClick(true);
         setTextColorClick(true);
+        set("active color", index);
+        set("active custom click", false);
         setText((prev) => {
             const newTextData = [...prev];
             if (activeTextClick) {
@@ -67,8 +85,11 @@ function Text({
     };
 
     const handleFontColorPicker = (e) => {
+        setCustomColorSelect(true)
         setActiveColor(null);
         setTextColorClick(true);
+        set("active color", e.target.value);
+        set("active custom click", true);
         setText((prev) => {
             const newTextData = [...prev];
             if (activeTextClick) {
@@ -88,6 +109,7 @@ function Text({
 
     const handleTextBold = () => {
         setActiveStyle("bold");
+        set("active style", "bold");
         setBoldClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -108,6 +130,7 @@ function Text({
 
     const handleTextItalic = () => {
         setActiveStyle("italic");
+        set("active style", "italic");
         setItalicClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -128,6 +151,7 @@ function Text({
 
     const handleTextUnderline = () => {
         setActiveStyle("underline");
+        set("active style", "underline");
         setUnderlineClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -148,6 +172,7 @@ function Text({
 
     const handleTextSpace = () => {
         setActiveStyle("space");
+        set("active style", "space");
         setSpaceClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -168,6 +193,7 @@ function Text({
 
     const handleTextShadow = () => {
         setActiveStyle("shadow");
+        set("active style", "shadow");
         setTextShadowClick(true);
         setText((prev) => {
             const newTextData = [...prev];
@@ -188,11 +214,11 @@ function Text({
         });
     };
 
-
     const handleFontSize = (size, sizeName) => {
         setActiveSize(sizeName);
-        // setFontSize(size);
-
+        setCustomDivClick(false);
+        setFontSize(size);
+        set("active font", sizeName);
         setText((prev) => {
             const newTextData = [...prev];
             if (activeTextClick) {
@@ -212,13 +238,30 @@ function Text({
 
     const handleCustomDiv = () => {
         setCustomDivClick(true);
+        set("active font", "custom");
         setActiveSize("");
     }
 
     const handleCustomFont = (e) => {
         setFontSize(Number(e.target.value));
+        setText((prev) => {
+            const newTextData = [...prev];
+            if (activeTextClick) {
+                newTextData[activeText] = {
+                    ...newTextData[activeText],
+                    size: Number(e.target.value),
+                };
+            } else {
+                newTextData[prev.length - 1] = {
+                    ...newTextData[prev.length - 1],
+                    size: Number(e.target.value),
+                };
+            }
+            return newTextData;
+        });
     };
 
+    console.log(customColorSelect);
     return (
         <div>
             {textButtonClick && (
@@ -266,7 +309,7 @@ function Text({
                                         }
                                         } />
                                 ) : (
-                                    <p className="rounded-md border py-1 px-2 w-max flex justify-center cursor-pointer" onClick={handleCustomDiv}>Custom</p>
+                                    <p className={`rounded-md border py-1 px-2 w-max flex justify-center cursor-pointer ${activeSize === "custom" ? "bg-black text-white" : ""}`} onClick={handleCustomDiv}>Custom</p>
                                 )}
                             </div>
                         </div>
@@ -287,14 +330,14 @@ function Text({
                                                 style={{ background: name.color }}
                                                 className={`w-6 h-6 rounded-full cursor-pointer ${index === activeColor ? "border-2" : ""}`}
                                                 onClick={() => {
-                                                    handleFontColor(`${name.color}`);
+                                                    handleFontColor(name.color, index);
                                                     setActiveColor(index);
                                                 }
                                                 }
                                             ></div>
                                         );
                                     })}
-                                    <div className="text-white flex text-sm">
+                                    <div className={`${customColorSelect ? "border-2 border-black" : ""} text-white flex text-sm rounded-full`}>
                                         <div className="relative inline-block h-[26px] flex items-center">
                                             <input
                                                 type="color"
