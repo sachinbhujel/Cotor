@@ -68,7 +68,6 @@ export default function Edit() {
 
     const handleDemoImage = (imageURL) => {
         set(uniqueId.current, [{ image: imageURL }]);
-        console.log("hihihih");
         redirect(`/edit/${uniqueId.current}`);
     }
 

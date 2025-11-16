@@ -261,7 +261,18 @@ function Text({
         });
     };
 
-    console.log(customColorSelect);
+    window.addEventListener("load", () => {
+        const entries = performance.getEntriesByType("navigation");
+        if (entries.length > 0 && entries[0].type === "reload") {
+            console.log("User reloaded the page");
+            set("active font", "");
+            set("active style", "");
+            set("active custom click", "");
+            set("active color", "");
+        }
+    });
+
+
     return (
         <div>
             {textButtonClick && (

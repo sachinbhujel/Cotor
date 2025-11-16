@@ -11,6 +11,7 @@ import { scriptData } from "@/data/fontFamilyData";
 import { scriptMoreData } from "@/data/fontFamilyData";
 import { monospaceData } from "@/data/fontFamilyData";
 import { monospaceMoreData } from "@/data/fontFamilyData";
+import { set } from "idb-keyval";
 
 function FontFamily({
     activeTextClick,
@@ -25,6 +26,11 @@ function FontFamily({
     const [decorativeMore, setDecorativeMore] = useState(false);
     const [scriptMore, setScriptMore] = useState(false);
     const [monospaceMore, setMonospaceMore] = useState(false);
+    const [activeFamilyName, setActiveFamilyName] = useState(null);
+
+    const handleFontFamily = (name) => {
+        setActiveFamilyName(name);
+    };
 
     return (
         <div className="flex flex-col gap-6 py-1">
@@ -101,9 +107,11 @@ function FontFamily({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active family", font.name);
                                             setTextFamilyClick(true);
+                                            handleFontFamily(font.name)
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 if (activeTextClick) {
@@ -144,9 +152,11 @@ function FontFamily({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active family", font.name);
                                                 setTextFamilyClick(true);
+                                                handleFontFamily(font.name)
                                                 setText((prev) => {
                                                     const newTextData = [...prev];
                                                     if (activeTextClick) {
@@ -250,9 +260,12 @@ function FontFamily({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active family", font.name);
                                             setTextFamilyClick(true);
+                                            handleFontFamily(font.name)
+                                            set("active family", font.name);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 if (activeTextClick) {
@@ -293,9 +306,11 @@ function FontFamily({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active family", font.name);
                                                 setTextFamilyClick(true);
+                                                handleFontFamily(font.name)
                                                 setText((prev) => {
                                                     const newTextData = [...prev];
                                                     if (activeTextClick) {
@@ -399,9 +414,11 @@ function FontFamily({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active family", font.name);
                                             setTextFamilyClick(true);
+                                            handleFontFamily(font.name)
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 if (activeTextClick) {
@@ -442,9 +459,11 @@ function FontFamily({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active family", font.name);
                                                 setTextFamilyClick(true);
+                                                handleFontFamily(font.name)
                                                 setText((prev) => {
                                                     const newTextData = [...prev];
                                                     if (activeTextClick) {
@@ -548,9 +567,11 @@ function FontFamily({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active family", font.name);
                                             setTextFamilyClick(true);
+                                            handleFontFamily(font.name)
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 if (activeTextClick) {
@@ -591,9 +612,11 @@ function FontFamily({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active family", font.name);
                                                 setTextFamilyClick(true);
+                                                handleFontFamily(font.name)
                                                 setText((prev) => {
                                                     const newTextData = [...prev];
                                                     if (activeTextClick) {
@@ -697,9 +720,11 @@ function FontFamily({
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active family", font.name);
                                             setTextFamilyClick(true);
+                                            handleFontFamily(font.name)
                                             setText((prev) => {
                                                 const newTextData = [...prev];
                                                 if (activeTextClick) {
@@ -740,9 +765,11 @@ function FontFamily({
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeFamilyName === font.name ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active family", font.name);
                                                 setTextFamilyClick(true);
+                                                handleFontFamily(font.name)
                                                 setText((prev) => {
                                                     const newTextData = [...prev];
                                                     if (activeTextClick) {

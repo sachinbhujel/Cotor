@@ -22,7 +22,6 @@ export default function Edit() {
         if (params.id) {
             setUuid(params.id);
             get(params.id).then((allData) => {
-                console.log(allData)
                 setImage(allData[0].image);
             })
         }
@@ -363,7 +362,6 @@ export default function Edit() {
     };
 
     const handleDeleteText = (index) => {
-        console.log(index);
         setText((prev) => prev.filter((_, i) => i !== index))
     }
 
@@ -371,9 +369,6 @@ export default function Edit() {
         setTextareaTextValue(textValue);
         setEditIndex(index);
     }
-
-    console.log(text);
-    console.log("ActiveText", activeText);
 
     return (
         <div className="relative flex w-full sm:flex-row flex-col-reverse">
