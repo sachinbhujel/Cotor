@@ -16,8 +16,9 @@ import { outlineAndNeonEffectData } from "@/data/effectData";
 import { outlineAndNeonEffectMoreData } from "@/data/effectData";
 import { shadowEffectData } from "@/data/effectData";
 import { shadowEffectMoreData } from "@/data/effectData";
+import { set, get } from "idb-keyval";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
     const [colorEffectsMore, setColorEffectsMore] = useState(false);
@@ -30,6 +31,17 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
     const [outlineAndStrokeEffectsMore, setOutlineAndStrokeEffectsMore] =
         useState(false);
     const [shadowEffectsMore, setShadowEffectsMore] = useState(false);
+    const [activeEffectName, setActiveEffectName] = useState(null);
+
+    const handleActiveEffect = (name) => {
+        setActiveEffectName(name);
+    };
+
+    useEffect(() => {
+        get("active effect").then((active) => {
+            setActiveEffectName(active);
+        })
+    }, [])
 
     return (
         <div className="flex flex-col gap-4">
@@ -99,8 +111,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -132,8 +146,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active effect", color.data);
+                                            handleActiveEffect(color.data)
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -230,8 +246,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -263,8 +281,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active effect", color.data);
+                                            handleActiveEffect(color.data)
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -363,8 +383,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -396,8 +418,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active effect", color.data);
+                                            handleActiveEffect(color.data)
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -494,8 +518,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -527,8 +553,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active effect", color.data);
+                                            handleActiveEffect(color.data)
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -627,8 +655,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -660,8 +690,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                        className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active effect", color.data);
+                                            handleActiveEffect(color.data)
                                             setTextEffectClick(true);
                                             setText((prev) => {
                                                 const newTextData = [...prev];
@@ -762,8 +794,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -796,8 +830,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active effect", color.data);
+                                                handleActiveEffect(color.data)
                                                 setTextEffectClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [...prev];
@@ -899,8 +935,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -933,8 +971,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active effect", color.data);
+                                                handleActiveEffect(color.data)
                                                 setTextEffectClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [...prev];
@@ -1036,8 +1076,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                    className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active effect", color.data);
+                                        handleActiveEffect(color.data)
                                         setTextEffectClick(true);
                                         setText((prev) => {
                                             const newTextData = [...prev];
@@ -1070,8 +1112,10 @@ function Effects({ activeTextClick, activeText, setText, setTextEffectClick }) {
                                     return (
                                         <div
                                             key={index}
-                                            className="h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer"
+                                            className={`${activeEffectName === color.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] rounded-sm flex justify-center items-center cursor-pointer`}
                                             onClick={() => {
+                                                set("active effect", color.data);
+                                                handleActiveEffect(color.data)
                                                 setTextEffectClick(true);
                                                 setText((prev) => {
                                                     const newTextData = [...prev];

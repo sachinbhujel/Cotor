@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { sansSerifData } from "@/data/fontFamilyData";
 import { sansSerifMoreData } from "@/data/fontFamilyData";
 import { serifData } from "@/data/fontFamilyData";
@@ -11,7 +11,7 @@ import { scriptData } from "@/data/fontFamilyData";
 import { scriptMoreData } from "@/data/fontFamilyData";
 import { monospaceData } from "@/data/fontFamilyData";
 import { monospaceMoreData } from "@/data/fontFamilyData";
-import { set } from "idb-keyval";
+import { set, get } from "idb-keyval";
 
 function FontFamily({
     activeTextClick,
@@ -31,6 +31,12 @@ function FontFamily({
     const handleFontFamily = (name) => {
         setActiveFamilyName(name);
     };
+
+    useEffect(() => {
+        get("active family").then((active) => {
+            setActiveFamilyName(active);
+        })
+    }, [])
 
     return (
         <div className="flex flex-col gap-6 py-1">

@@ -269,9 +269,10 @@ function Text({
             set("active style", "");
             set("active custom click", "");
             set("active color", "");
+            set("active family", "");
+            set("active effect", "");
         }
     });
-
 
     return (
         <div>
