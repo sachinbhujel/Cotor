@@ -20,7 +20,8 @@ import { outlineShadowFrameData } from "@/data/borderData";
 import { outlineShadowFrameMoreData } from "@/data/borderData";
 import { animatedGradientFrameData } from "@/data/borderData";
 import { animatedGradientFrameMoreData } from "@/data/borderData";
-import { useState } from "react";
+import { set, get } from "idb-keyval";
+import { useState, useEffect } from "react";
 
 function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
     const [colorFrameMore, setColorFrameMore] = useState(false);
@@ -33,6 +34,18 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
     const [pixelFrameMore, setPixelFrameMore] = useState(false);
     const [outlineShadowFrameMore, setOutlineShadowFrameMore] = useState(false);
     const [animatedGradientFrameMore, setAnimatedGradientFrameMore] = useState(false);
+    const [activeFrameName, setActiveFrameName] = useState(null);
+
+    const handleFrame = (name) => {
+        setActiveFrameName(name);
+    };
+
+    useEffect(() => {
+        get("active frame").then((active) => {
+            setActiveFrameName(active);
+            console.log("border", active);
+        })
+    }, [])
 
     return (
         <div className="flex flex-col gap-6">
@@ -102,8 +115,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -135,8 +150,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -231,8 +248,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -264,8 +283,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -360,8 +381,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -393,8 +416,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -489,8 +514,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -522,8 +549,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -618,8 +647,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -651,8 +682,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -747,8 +780,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -780,8 +815,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -876,8 +913,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -909,8 +948,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -1005,8 +1046,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -1038,8 +1081,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -1134,8 +1179,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -1167,8 +1214,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
@@ -1263,8 +1312,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                             return (
                                 <div
                                     key={index}
-                                    className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                    className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                     onClick={() => {
+                                        set("active frame", frame.data);
+                                        handleFrame(frame.data)
                                         setText((prev) => {
                                             setFrameClick(true)
                                             const newTextData = [...prev];
@@ -1300,8 +1351,10 @@ function BorderFrame({ activeTextClick, activeText, setText, setFrameClick }) {
                                 return (
                                     <div
                                         key={index}
-                                        className="h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer"
+                                        className={`${activeFrameName === frame.data ? "bg-black" : ""} h-18 bg-[#3c3d3f] text-white rounded-sm flex flex-col justify-center items-center cursor-pointer`}
                                         onClick={() => {
+                                            set("active frame", frame.data);
+                                            handleFrame(frame.data)
                                             setText((prev) => {
                                                 setFrameClick(true)
                                                 const newTextData = [...prev];
